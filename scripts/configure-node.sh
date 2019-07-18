@@ -77,7 +77,7 @@ curl_check http://127.0.0.1:8091/pools/default -d memoryQuota=256 -d indexMemory
 echo
 
 echo "Configuring Services with curl:"
-curl_check http://127.0.0.1:8091/node/controller/setupServices -d services=kv%2Cn1ql%2Cindex%2Cfts%2Ccbas
+curl_check http://127.0.0.1:8091/node/controller/setupServices -d services='kv%2Cn1ql%2Cindex%2Cfts%2Ccbas'
 echo
 
 echo "Setting up credentials with curl:"

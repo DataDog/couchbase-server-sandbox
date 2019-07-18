@@ -5,7 +5,9 @@ Couchbase Sandbox
 
 You should need nothing installed on your machine except Docker. Type:
 
-    docker run -d --name couchbase-sandbox -p 8091-8095:8091-8095 -p 11210:11210 -v $(pwd)/couchbase_demo:/opt/couchbase/var couchbase/server-sandbox:6.0.1
+```
+docker run --rm -p 8091-8095:8091-8095 -p 11210:11210 $(docker build -q --no-cache .)
+```
 
 (Replace "6.0.1" with the version of Couchbase Server you wish to explore.)
 
