@@ -88,14 +88,28 @@ echo "Enabling memory-optimized indexes with curl:"
 curl_check -u Administrator:password -X POST http://127.0.0.1:8091/settings/indexes -d 'storageMode=memory_optimized'
 echo
 
-echo "Loading travel-sample with curl:"
-curl_check -u Administrator:password -X POST http://127.0.0.1:8091/sampleBuckets/install -d '["travel-sample"]'
+echo "Create 'dd-bucket' bucket"
+curl_check -u Administrator:password -X POST http://127.0.0.1:8091/pools/default/buckets -d name=datadog-test -d ramQuotaMB=100 -d authType=sasl \
+                                                                                         -d replicaNumber=0 -d bucketType=couchbase
+echo "Add document to bucket"
+curl_check -u Administrator:password -X POST http://127.0.0.1:8093/query/service \
+  -d 'statement=INSERT INTO `datadog-test` ( KEY, VALUE )
+                VALUES
+                (
+                  "landmark_1",
+                  {
+                    "id": "1",
+                    "type": "landmark",
+                    "name": "La Tour Eiffel",
+                    "location": "France"
+                  }
+                )'
 echo
 
 wait_for_uri http://127.0.0.1:8094/api/index 403
 
 echo "Creating hotels FTS index with curl:"
-curl_check -u Administrator:password -X PUT http://127.0.0.1:8094/api/index/hotels -H Content-Type:application/json -d @/opt/couchbase/create-index.json
+curl_check -u Administrator:password -X PUT http://127.0.0.1:8094/api/index/test -H Content-Type:application/json -d @/opt/couchbase/create-index.json
 rm /opt/couchbase/create-index.json
 echo
 

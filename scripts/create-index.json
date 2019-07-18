@@ -1,8 +1,8 @@
 {
     "type": "fulltext-index",
-    "name": "hotels",
+    "name": "test",
     "sourceType": "couchbase",
-    "sourceName": "travel-sample",
+    "sourceName": "datadog-test",
     "planParams": {
       "maxPartitionsPerPIndex": 171
     },
