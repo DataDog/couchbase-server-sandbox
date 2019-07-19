@@ -88,7 +88,7 @@ wait_for_uri http://127.0.0.1:8093/query/service 400
 
 wait_for_uri http://127.0.0.1:8094/api/index 403
 
-echo "Creating hotels FTS index with curl:"
+echo "Creating test FTS index with curl:"
 curl_check -u Administrator:password -X PUT http://127.0.0.1:8094/api/index/test -H Content-Type:application/json -d @/opt/couchbase/create-index.json
 rm /opt/couchbase/create-index.json
 echo
