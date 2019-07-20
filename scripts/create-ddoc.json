@@ -1,0 +1,7 @@
+{
+  "views": {
+    "by_name": {
+      "map": "function (doc, meta) {\n if (doc.type && doc.type == 'landmark') {\n emit(doc.name, null)\n }\n }"
+    }
+  }
+}

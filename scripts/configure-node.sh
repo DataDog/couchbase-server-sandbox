@@ -2,16 +2,24 @@
 
 # Log all subsequent commands to logfile. FD 3 is now the console
 # for things we want to show up in "docker logs".
+LOGFILE=/opt/couchbase/var/lib/couchbase/logs/container-startup.log
 # exec 3>&1 1>>${LOGFILE} 2>&1
 
+CONFIG_DONE_FILE=/opt/couchbase/var/lib/couchbase/container-configured
 config_done() {
+  touch ${CONFIG_DONE_FILE}
   echo "Couchbase Admin UI: http://localhost:8091" \
      "\nLogin credentials: Administrator / password" | tee /dev/fd/3
   echo "Stopping config-couchbase service"
   sv stop /etc/service/config-couchbase
 }
 
-echo "Configuring Couchbase Server.  Please wait (~60 sec)..." | tee /dev/fd/3
+if [ -e ${CONFIG_DONE_FILE} ]; then
+  echo "Container previously configured." | tee /dev/fd/3	
+  config_done	
+else	
+  echo "Configuring Couchbase Server.  Please wait (~60 sec)..." | tee /dev/fd/3	
+fi
 
 export PATH=/opt/couchbase/bin:${PATH}
 
@@ -21,6 +29,23 @@ wait_for_uri() {
   echo "Waiting for $uri to be available..."
   while true; do
     status=$(curl -s -w "%{http_code}" -o /dev/null $uri)
+    if [ "x$status" = "x$expected" ]; then
+      break
+    fi
+    echo "$uri not up yet, waiting 2 seconds..."
+    sleep 2
+  done
+  echo "$uri ready, continuing"
+}
+
+
+wait_for_uri_with_auth_and_data() {
+  uri=$1
+  data=$2
+  expected=$3
+  echo "Waiting for $uri to be available..."
+  while true; do
+    status=$(curl -s -u Administrator:password -w "%{http_code}" -o /dev/null $uri -d "$data")
     if [ "x$status" = "x$expected" ]; then
       break
     fi
@@ -65,7 +90,7 @@ curl_check() {
 wait_for_uri http://127.0.0.1:8091/ui/index.html 200
 
 echo "Setting memory quotas with curl"
-curl_check http://127.0.0.1:8091/pools/default -d memoryQuota=256 -d indexMemoryQuota=256 -d ftsMemoryQuota=256 -d cbasMemoryQuota=1024
+curl http://127.0.0.1:8091/pools/default -d memoryQuota=256 -d indexMemoryQuota=256 -d ftsMemoryQuota=256 -d cbasMemoryQuota=1024
 echo
 
 echo "Configuring Services with curl"
@@ -84,13 +109,32 @@ echo "Creating 'datadog-test' bucket with curl"
 curl_check -u Administrator:password -X POST http://127.0.0.1:8091/pools/default/buckets -d name=datadog-test -d ramQuotaMB=100 -d authType=sasl \
                                                                                          -d replicaNumber=0 -d bucketType=couchbase
 
-wait_for_uri http://127.0.0.1:8093/query/service 400
+wait_for_uri_with_auth_and_data http://127.0.0.1:8093/query/service 'statement=SELECT 1' 200
+
+echo "Adding document to test bucket with curl"
+curl -u Administrator:password -X POST http://127.0.0.1:8093/query/service \
+-d 'statement=INSERT INTO `datadog-test` ( KEY, VALUE )
+                VALUES
+                  (
+                    "landmark_1",
+                    {
+                     "id": "1",
+                     "type": "landmark",
+                     "name": "La Tour Eiffel",
+                     "location": "France"
+                    }
+                  )'
 
 wait_for_uri http://127.0.0.1:8094/api/index 403
 
-echo "Creating test FTS index with curl:"
+echo "Creating test FTS index with curl"
 curl_check -u Administrator:password -X PUT http://127.0.0.1:8094/api/index/test -H Content-Type:application/json -d @/opt/couchbase/create-index.json
 rm /opt/couchbase/create-index.json
+echo
+
+echo "Creating datadoc design document"
+curl_check -u Administrator:password -X PUT http://127.0.0.1:8092/datadog-test/_design/datadoc -H Content-Type:application/json -d @/opt/couchbase/create-ddoc.json
+rm /opt/couchbase/create-ddoc.json
 echo
 
 echo "Creating RBAC 'admin' user on datadog-test bucket"
