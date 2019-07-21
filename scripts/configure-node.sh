@@ -90,11 +90,11 @@ curl_check() {
 wait_for_uri http://127.0.0.1:8091/ui/index.html 200
 
 echo "Setting memory quotas with curl"
-curl http://127.0.0.1:8091/pools/default -d memoryQuota=256 -d indexMemoryQuota=256 -d ftsMemoryQuota=256 -d cbasMemoryQuota=1024
+curl -v http://127.0.0.1:8091/pools/default -d memoryQuota=256 -d indexMemoryQuota=256 -d ftsMemoryQuota=256 -d cbasMemoryQuota=1024
 echo
 
 echo "Configuring Services with curl"
-curl_check http://127.0.0.1:8091/node/controller/setupServices -d services='kv%2Cn1ql%2Cindex%2Cfts%2Ccbas'
+curl -v http://127.0.0.1:8091/node/controller/setupServices -d services='kv%2Cn1ql%2Cindex%2Cfts%2Ccbas'
 echo
 
 echo "Setting up credentials with curl"
