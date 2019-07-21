@@ -1,0 +1,1 @@
+{"storage":"scorch","index_type":"scorch","config":{"asyncErrorCallbackName":"scorchAsyncErrorCallbacks","create_if_missing":true,"error_if_exists":true,"eventCallbackName":"scorchEventCallbacks","indexType":"scorch","kvStoreName":"scorch","numSnapshotsToKeep":3,"unsafe_batch":true}}

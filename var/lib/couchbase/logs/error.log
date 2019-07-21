@@ -1,0 +1,38 @@
+[ns_server:error,2019-07-21T21:58:19.510Z,ns_1@127.0.0.1:query_stats_collector<0.400.0>:rest_utils:get_json_local:63]Request to (n1ql) /admin/stats failed: {error,
+                                        {econnrefused,
+                                         [{lhttpc_client,send_request,1,
+                                           [{file,
+                                             "/home/couchbase/jenkins/workspace/couchbase-server-unix/couchdb/src/lhttpc/lhttpc_client.erl"},
+                                            {line,220}]},
+                                          {lhttpc_client,execute,9,
+                                           [{file,
+                                             "/home/couchbase/jenkins/workspace/couchbase-server-unix/couchdb/src/lhttpc/lhttpc_client.erl"},
+                                            {line,169}]},
+                                          {lhttpc_client,request,9,
+                                           [{file,
+                                             "/home/couchbase/jenkins/workspace/couchbase-server-unix/couchdb/src/lhttpc/lhttpc_client.erl"},
+                                            {line,92}]}]}}
+[ns_server:error,2019-07-21T21:58:22.781Z,ns_1@127.0.0.1:service_agent-fts<0.728.0>:service_agent:handle_call:182]Got rebalance-only call {if_rebalance,<0.1320.0>,unset_rebalancer} that doesn't match rebalancer pid undefined
+[ns_server:error,2019-07-21T21:58:22.781Z,ns_1@127.0.0.1:service_rebalancer-fts<0.1320.0>:service_agent:process_bad_results:810]Service call unset_rebalancer (service fts) failed on some nodes:
+[{'ns_1@127.0.0.1',nack}]
+[ns_server:error,2019-07-21T21:58:22.781Z,ns_1@127.0.0.1:cleanup_process<0.1254.0>:service_janitor:maybe_init_topology_aware_service:87]Initial rebalance for `fts` failed: {error,
+                                     {initial_rebalance_failed,fts,
+                                      {rebalance_failed,
+                                       {service_error,
+                                        <<"nodes: sample, res: (*http.Response)(nil), urlUUID: monitor.UrlUUID{Url:\"http://127.0.0.1:8094\", UUID:\"8ba1ce2e183ff908d4723b87c7fdb9b3\"}, kind: /api/stats, err: Unable to find given hostport in cbauth database: `127.0.0.1:8094'">>}}}}
+[ns_server:error,2019-07-21T21:58:27.616Z,ns_1@127.0.0.1:service_agent-fts<0.728.0>:service_agent:handle_call:182]Got rebalance-only call {if_rebalance,<0.1641.0>,unset_rebalancer} that doesn't match rebalancer pid undefined
+[ns_server:error,2019-07-21T21:58:27.616Z,ns_1@127.0.0.1:service_rebalancer-fts<0.1641.0>:service_agent:process_bad_results:810]Service call unset_rebalancer (service fts) failed on some nodes:
+[{'ns_1@127.0.0.1',nack}]
+[ns_server:error,2019-07-21T21:58:27.617Z,ns_1@127.0.0.1:cleanup_process<0.1640.0>:service_janitor:maybe_init_topology_aware_service:87]Initial rebalance for `fts` failed: {error,
+                                     {initial_rebalance_failed,fts,
+                                      {rebalance_failed,
+                                       {service_error,
+                                        <<"nodes: sample, res: (*http.Response)(nil), urlUUID: monitor.UrlUUID{Url:\"http://127.0.0.1:8094\", UUID:\"8ba1ce2e183ff908d4723b87c7fdb9b3\"}, kind: /api/stats, err: Unable to find given hostport in cbauth database: `127.0.0.1:8094'">>}}}}
+[ns_server:error,2019-07-21T21:58:32.589Z,ns_1@127.0.0.1:service_agent-fts<0.728.0>:service_agent:handle_call:182]Got rebalance-only call {if_rebalance,<0.1898.0>,unset_rebalancer} that doesn't match rebalancer pid undefined
+[ns_server:error,2019-07-21T21:58:32.590Z,ns_1@127.0.0.1:service_rebalancer-fts<0.1898.0>:service_agent:process_bad_results:810]Service call unset_rebalancer (service fts) failed on some nodes:
+[{'ns_1@127.0.0.1',nack}]
+[ns_server:error,2019-07-21T21:58:32.590Z,ns_1@127.0.0.1:cleanup_process<0.1897.0>:service_janitor:maybe_init_topology_aware_service:87]Initial rebalance for `fts` failed: {error,
+                                     {initial_rebalance_failed,fts,
+                                      {rebalance_failed,
+                                       {service_error,
+                                        <<"nodes: sample, res: (*http.Response)(nil), urlUUID: monitor.UrlUUID{Url:\"http://127.0.0.1:8094\", UUID:\"8ba1ce2e183ff908d4723b87c7fdb9b3\"}, kind: /api/stats, err: Unable to find given hostport in cbauth database: `127.0.0.1:8094'">>}}}}

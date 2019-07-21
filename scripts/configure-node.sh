@@ -38,14 +38,12 @@ wait_for_uri() {
   echo "$uri ready, continuing"
 }
 
-
-wait_for_uri_with_auth_and_data() {
+wait_for_uri_with_auth() {
   uri=$1
-  data=$2
-  expected=$3
+  expected=$2
   echo "Waiting for $uri to be available..."
   while true; do
-    status=$(curl -s -u Administrator:password -w "%{http_code}" -o /dev/null $uri -d "$data")
+    status=$(curl -u Administrator:password -s -w "%{http_code}" -o /dev/null $uri)
     if [ "x$status" = "x$expected" ]; then
       break
     fi
@@ -90,11 +88,11 @@ curl_check() {
 wait_for_uri http://127.0.0.1:8091/ui/index.html 200
 
 echo "Setting memory quotas with curl"
-curl -v http://127.0.0.1:8091/pools/default -d memoryQuota=256 -d indexMemoryQuota=256 -d ftsMemoryQuota=256 -d cbasMemoryQuota=1024
+curl_check http://127.0.0.1:8091/pools/default -d memoryQuota=256 -d indexMemoryQuota=256 -d ftsMemoryQuota=256 -d cbasMemoryQuota=1024
 echo
 
 echo "Configuring Services with curl"
-curl -v http://127.0.0.1:8091/node/controller/setupServices -d services='kv%2Cn1ql%2Cindex%2Cfts%2Ccbas'
+curl_check http://127.0.0.1:8091/node/controller/setupServices -d services='kv%2Cn1ql%2Cindex%2Cfts%2Ccbas'
 echo
 
 echo "Setting up credentials with curl"
@@ -106,28 +104,25 @@ curl_check -u Administrator:password -X POST http://127.0.0.1:8091/settings/inde
 echo
 
 echo "Creating 'datadog-test' bucket with curl"
-curl_check -u Administrator:password -X POST http://127.0.0.1:8091/pools/default/buckets -d name=datadog-test -d ramQuotaMB=100 -d authType=sasl \
-                                                                                         -d replicaNumber=0 -d bucketType=couchbase
+curl_check -u Administrator:password -X POST http://127.0.0.1:8091/pools/default/buckets -d name=datadog-test -d ramQuotaMB=100 -d authType=sasl -d replicaNumber=0 -d bucketType=couchbase
+sleep 3
+echo
 
-wait_for_uri_with_auth_and_data http://127.0.0.1:8093/query/service 'statement=SELECT 1' 200
+echo "Creating RBAC 'admin' user on datadog-test bucket"
+couchbase_cli_check user-manage --set \
+  --rbac-username admin --rbac-password password \
+  --roles 'bucket_full_access[datadog-test]' --auth-domain local \
+  -c 127.0.0.1 -u Administrator -p password
+echo
+
 
 echo "Adding document to test bucket with curl"
-curl -u Administrator:password -X POST http://127.0.0.1:8093/query/service \
--d 'statement=INSERT INTO `datadog-test` ( KEY, VALUE )
-                VALUES
-                  (
-                    "landmark_1",
-                    {
-                     "id": "1",
-                     "type": "landmark",
-                     "name": "La Tour Eiffel",
-                     "location": "France"
-                    }
-                  )'
-
-wait_for_uri http://127.0.0.1:8094/api/index 403
+curl_check -u Administrator:password -X POST http://127.0.0.1:8093/query/service -d @/opt/couchbase/create-document.txt
+rm /opt/couchbase/create-document.txt
+echo
 
 echo "Creating test FTS index with curl"
+wait_for_uri http://127.0.0.1:8094/api/index 403
 curl_check -u Administrator:password -X PUT http://127.0.0.1:8094/api/index/test -H Content-Type:application/json -d @/opt/couchbase/create-index.json
 rm /opt/couchbase/create-index.json
 echo
@@ -137,11 +132,11 @@ curl_check -u Administrator:password -X PUT http://127.0.0.1:8092/datadog-test/_
 rm /opt/couchbase/create-ddoc.json
 echo
 
-echo "Creating RBAC 'admin' user on datadog-test bucket"
-couchbase_cli_check user-manage --set \
-  --rbac-username admin --rbac-password password \
-  --roles 'bucket_full_access[datadog-test]' --auth-domain local \
-  -c 127.0.0.1 -u Administrator -p password
+echo "Creating datatest analytics dataset"
+wait_for_uri_with_auth http://127.0.0.1:8095/query/service 405
+sleep 3
+curl_check -u Administrator:password -X POST http://127.0.0.1:8095/query/service -H Content-Type:application/json -d @/opt/couchbase/create-dataset.json
+rm /opt/couchbase/create-dataset.json
 echo
 
 echo "Configuration completed!" | tee /dev/fd/3

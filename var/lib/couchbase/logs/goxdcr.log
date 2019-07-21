@@ -1,0 +1,31 @@
+2019-07-21T21:58:17.776Z INFO GOXDCR.ReplMgr: GOMAXPROCS=4
+2019-07-21T21:58:17.794Z INFO GOXDCR.AuditSvc: Created audit service.
+2019-07-21T21:58:17.794Z INFO GOXDCR.UILogSvc: Created ui log service.
+2019-07-21T21:58:17.797Z INFO GOXDCR.ReplSpecSvc: Cache has been initialized for ReplicationSpecService
+2019-07-21T21:58:17.804Z INFO GOXDCR.IntSettSvc: Internal settings not found. Using default values
+2019-07-21T21:58:17.804Z INFO GOXDCR.ReplMgr: pollEOF: About to start stdin polling
+2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: XDCR internal settings: map[RetryIntervalTargetStats:1000 MemStatsLogInterval:120 RefreshRemoteClusterRefInterval:15 XmemMaxRetryInterval:300 ThresholdForThroughSeqnoComputation:100 MaxCheckpointRecordsToRead:5 CapiDataChanSizeMultiplier:1 PercentageOfBytesToSendAsMin:30 MaxRetryCapiService:5 StatsLogInterval:30 MaxCheckpointRecordsToKeep:5 CapiRetryInterval:500 XmemMaxIdleCount:60 CapiBatchTimeout:180 MaxRetryForLiveUpdatePipeline:5 CapiWriteTimeout:10 XmemBackoffWaitTime:10 ReplicationSpecGCCnt:4 MaxTopologyStableCountBeforeRestart:30 XmemBackoffTimeNewConn:1000 TimeoutRuntimeContextStop:5 CapiMaxRetryBatchUpdateDocs:6 TimeoutCheckpointBeforeStop:180 XmemDefaultRespTimeout:1000 UprFeedDataChanLength:20000 UprFeedBufferSize:1048576 NumberOfSlotsForBandwidthThrottling:10 TimeoutPartsStart:30 BypassSanInCertificateCheck:0 TimeoutDcpCloseUprStreams:3 DefaultHttpTimeout:180 HELOTimeout:120 ReplSpecCheckInterval:15 CapiReadTimeout:60 AuditReadTimeout:1 XmemMaxDataChanSize:10485760 WaitTimeBetweenMetadataChangeListeners:1000 ThresholdPercentageForEventChanSizeLogging:90 XmemMaxRetry:5 XmemWriteTimeout:120 MaxLengthSnapshotHistory:200 TimeoutDcpCloseUprFeed:3 MaxRetryTargetStats:6 XmemMaxBatchSize:50 TimeoutPartsStop:10 MaxTopologyChangeCountBeforeRestart:30 XmemSelfMonitorInterval:6 MaxNumOfMetakvRetries:4 KeepAlivePeriod:30 XmemMaxReadDownTime:60 MaxNumberOfAsyncListeners:4 ShortHttpTimeout:20 WaitTimeForLiveUpdatePipeline:2000 TopologyChangeCheckInterval:10 AuditWriteTimeout:1 XmemReadTimeout:120 TimeoutRuntimeContextStart:30 XmemMaxRetryNewConn:10 RetryIntervalMetakv:500 MaxWorkersForCheckpointing:5]
+2019-07-21T21:58:17.810Z INFO GOXDCR.GenericSupervisor: Adding child PipelineMasterSupervisor to supervisor ReplicationManagerSupervisor
+2019-07-21T21:58:17.810Z INFO GOXDCR.PipelineMgr: Pipeline Manager is constucted
+2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: Replication manager is initialized
+2019-07-21T21:58:17.810Z INFO GOXDCR.GenericSupervisor: Starting supervisor PipelineMasterSupervisor.
+2019-07-21T21:58:17.810Z INFO GOXDCR.GenericSupervisor: Started supervisor PipelineMasterSupervisor.
+2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: Master supervisor has started
+2019-07-21T21:58:17.810Z INFO GOXDCR.GenericSupervisor: Starting supervisor ReplicationManagerSupervisor.
+2019-07-21T21:58:17.810Z INFO GOXDCR.GenericSupervisor: Started supervisor ReplicationManagerSupervisor.
+2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: initReplications succeeded
+2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: upgradeRemoteClusterRefs started.
+2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: upgradeRemoteClusterRefs exited
+2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: checkReplicationStatus started.
+2019-07-21T21:58:17.810Z INFO GOXDCR.GlobalSettingChangeListener: Started MetakvChangeListener GlobalSettingChangeListener
+2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: logMemStats started.
+2019-07-21T21:58:18.811Z INFO GOXDCR.InternalSettingChangeListener: Started MetakvChangeListener InternalSettingsChangeListener
+2019-07-21T21:58:19.811Z INFO GOXDCR.RemoteClusterChangeListener: Started MetakvChangeListener RemoteClusterChangeListener
+2019-07-21T21:58:20.812Z INFO GOXDCR.ReplicationSpecChangeListener: Started MetakvChangeListener ReplicationSpecChangeListener
+2019-07-21T21:58:21.812Z INFO GOXDCR.AdminPort: Constructed adminport
+2019-07-21T21:58:21.812Z INFO GOXDCR.ReplMgr: Admin port has been launched
+2019-07-21T21:58:21.812Z INFO GOXDCR.GenericSupervisor: Adding child AdminportSupervisor to supervisor ReplicationManagerSupervisor
+2019-07-21T21:58:21.812Z INFO GOXDCR.ReplMgr: ReplicationManager is running
+2019-07-21T21:58:21.813Z INFO GOXDCR.HttpServer: [xdcr:127.0.0.1:9998] new http server xdcr 127.0.0.1:9998 /
+2019-07-21T21:58:21.813Z INFO GOXDCR.AdminPort: http server started 127.0.0.1:9998 !
+2019-07-21T21:58:21.813Z INFO GOXDCR.HttpServer: [xdcr:127.0.0.1:9998] starting ...

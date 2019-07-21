@@ -1,0 +1,11 @@
+statement=INSERT INTO `datadog-test` ( KEY, VALUE )
+          VALUES
+          (
+            "landmark_1",
+            {
+              "id": "1",
+              "type": "landmark",
+              "name": "La Tour Eiffel",
+              "location": "France"
+            }
+          )

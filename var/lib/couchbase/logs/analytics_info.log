@@ -1,0 +1,274 @@
+2019-07-21T21:58:19.923+00:00 INFO CBAS.cbas ++++++++++++ starting cbas main ++++++++++++
+2019-07-21T21:58:19.924+00:00 INFO CBAS.cbas uuid: 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:19.924+00:00 INFO CBAS.cbas A single io device was provided; auto-adjusting...
+2019-07-21T21:58:19.930+00:00 INFO CBAS.cbas configuring io devices based on available memory (1024): 1
+2019-07-21T21:58:19.930+00:00 INFO CBAS.cbas io devices were adjusted to a total of: 1
+2019-07-21T21:58:19.930+00:00 INFO CBAS.cbas initializing audit service at: http://127.0.0.1:8091
+2019-07-21T21:58:19.963+00:00 [INFO] Using plain authentication for user <ud>@cbas</ud> 
+2019-07-21T21:58:19.964+00:00 [INFO] Using plain authentication for user <ud>@cbas</ud> 
+2019-07-21T21:58:19.965+00:00 [INFO] Using plain authentication for user <ud>@cbas</ud> 
+2019-07-21T21:58:19.966+00:00 [INFO] Using plain authentication for user <ud>@cbas</ud> 
+2019-07-21T21:58:19.968+00:00 [INFO] Using plain authentication for user <ud>@cbas</ud> 
+2019-07-21T21:58:19.968+00:00 INFO CBAS.cbas audit: created new audit service
+2019-07-21T21:58:19.971+00:00 INFO CBAS.cbas setting java.home to bundled jre (/opt/couchbase/lib/cbas/runtime)
+2019-07-21T21:58:20.116+00:00 WARN CBAS.cbas TLS config has been refreshed by ns server
+2019-07-21T21:58:22.565+00:00 WARN CBAS.cbas Updating log level to DEBUG
+2019-07-21T21:58:22.565+00:00 DEBU CBAS.cbas +StartTopologyChange change:{ID:4bec35391580dcd1385d52ee27c6ab27 CurrentTopologyRev:[] Type:topology-change-rebalance KeepNodes:[{NodeInfo:{NodeID:8ba1ce2e183ff908d4723b87c7fdb9b3 Priority:0 Opaque:map[host:127.0.0.1 num-iodevices:1 cc-http-port:9111]} RecoveryType:recovery-full}] EjectNodes:[]}
+2019-07-21T21:58:22.579+00:00 DEBU CBAS.cbas Keeping node 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:22.585+00:00 DEBU CBAS.cbas Adding new node 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:22.585+00:00 DEBU CBAS.cbas updateStateLOCKED: new rev: 2 (0xc4202e8300)
+2019-07-21T21:58:22.585+00:00 DEBU CBAS.cbas notifyWaitersLOCKED: 2
+2019-07-21T21:58:22.585+00:00 DEBU CBAS.cbas notifyWaitersLOCKED: 2
+2019-07-21T21:58:22.585+00:00 INFO CBAS.cbas Initialized starting partitionId to 0 for node 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:22.585+00:00 INFO CBAS.cbas Initialized controllerId to 0 for node 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:22.585+00:00 DEBU CBAS.cbas Setting /cbas/nextPartitionId to 1 for 0xc42038f3d0
+2019-07-21T21:58:22.585+00:00 DEBU CBAS.cbas notified; returning {{[{8ba1ce2e183ff908d4723b87c7fdb9b3 0 map[cc-http-port:9111 host:127.0.0.1 num-iodevices:1 starting-partition-id:0 controller-id:0]}]  topology-change-rebalance   0 0 1 balanced false} 2 0xc420184770 <nil> 0}
+2019-07-21T21:58:22.585+00:00 DEBU CBAS.cbas -wait rev:1
+2019-07-21T21:58:22.585+00:00 DEBU CBAS.cbas notified; returning {{[{8ba1ce2e183ff908d4723b87c7fdb9b3 0 map[cc-http-port:9111 host:127.0.0.1 num-iodevices:1 starting-partition-id:0 controller-id:0]}]  topology-change-rebalance   0 0 1 balanced false} 2 0xc420184770 <nil> 0}
+2019-07-21T21:58:22.585+00:00 DEBU CBAS.cbas -wait rev:1
+2019-07-21T21:58:22.590+00:00 DEBU CBAS.cbas Setting /cbas/nextControllerId to 1 for 0xc42038f3d8
+2019-07-21T21:58:22.593+00:00 INFO CBAS.cbas no CC / Metadata node defined in metakv- will pick *this* node, 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:22.593+00:00 DEBU CBAS.cbas +GetNodeInfo
+2019-07-21T21:58:22.593+00:00 DEBU CBAS.cbas node info: &{8ba1ce2e183ff908d4723b87c7fdb9b3 0 map[cc-http-port:9111 host:127.0.0.1 num-iodevices:1 starting-partition-id:0 controller-id:0]}
+2019-07-21T21:58:22.593+00:00 DEBU CBAS.cbas -GetNodeInfo
+2019-07-21T21:58:22.593+00:00 DEBU CBAS.cbas writing topology: {[{8ba1ce2e183ff908d4723b87c7fdb9b3 0 map[num-iodevices:1 starting-partition-id:0 controller-id:0 cc-http-port:9111 host:127.0.0.1]}] 4bec35391580dcd1385d52ee27c6ab27 topology-change-rebalance 8ba1ce2e183ff908d4723b87c7fdb9b3 8ba1ce2e183ff908d4723b87c7fdb9b3 0 1 1 balanced false}
+2019-07-21T21:58:22.593+00:00 DEBU CBAS.cbas Setting /cbas/topology to {"nodes":[{"nodeId":"8ba1ce2e183ff908d4723b87c7fdb9b3","priority":0,"opaque":{"cc-http-port":"9111","controller-id":"0","host":"127.0.0.1","num-iodevices":"1","starting-partition-id":"0"}}],"id":"4bec35391580dcd1385d52ee27c6ab27","type":"topology-change-rebalance","ccNodeId":"8ba1ce2e183ff908d4723b87c7fdb9b3","metadataNodeId":"8ba1ce2e183ff908d4723b87c7fdb9b3","metadataPartition":0,"rev":1,"configVersion":1,"balanceState":"balanced","keepNodesUpdated":false} for {[{8ba1ce2e183ff908d4723b87c7fdb9b3 0 map[host:127.0.0.1 num-iodevices:1 starting-partition-id:0 controller-id:0 cc-http-port:9111]}] 4bec35391580dcd1385d52ee27c6ab27 topology-change-rebalance 8ba1ce2e183ff908d4723b87c7fdb9b3 8ba1ce2e183ff908d4723b87c7fdb9b3 0 1 1 balanced false}
+2019-07-21T21:58:22.604+00:00 DEBU CBAS.cbas updateStateLOCKED: new rev: 3 (0xc4202e8300)
+2019-07-21T21:58:22.604+00:00 DEBU CBAS.cbas -StartTopologyChange change:{ID:4bec35391580dcd1385d52ee27c6ab27 CurrentTopologyRev:[] Type:topology-change-rebalance KeepNodes:[{NodeInfo:{NodeID:8ba1ce2e183ff908d4723b87c7fdb9b3 Priority:0 Opaque:map[cc-http-port:9111 host:127.0.0.1 num-iodevices:1 starting-partition-id:0 controller-id:0]} RecoveryType:recovery-full}] EjectNodes:[]}
+2019-07-21T21:58:22.604+00:00 DEBU CBAS.cbas task list: &{[50] [{[50] prepare/4bec35391580dcd1385d52ee27c6ab27 task-prepared task-running true 0 map[]   map[rebalanceId:4bec35391580dcd1385d52ee27c6ab27]}]}
+2019-07-21T21:58:22.604+00:00 DEBU CBAS.cbas -GetTaskList rev:1
+2019-07-21T21:58:22.604+00:00 DEBU CBAS.cbas current topology: &{[50] [8ba1ce2e183ff908d4723b87c7fdb9b3] true []}
+2019-07-21T21:58:22.604+00:00 DEBU CBAS.cbas -GetCurrentTopology rev:1
+2019-07-21T21:58:22.607+00:00 DEBU CBAS.cbas updateStateLOCKED: new rev: 4 (0xc4202e8300)
+2019-07-21T21:58:22.607+00:00 INFO CBAS.cbas our node is within topology refresh 4bec35391580dcd1385d52ee27c6ab27/1; ensuring driver is running...
+2019-07-21T21:58:22.607+00:00 DEBU CBAS.cbas Configuring iodevices: [/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0]
+2019-07-21T21:58:22.610+00:00 DEBU CBAS.cbas +GetTaskList rev:2
+2019-07-21T21:58:22.610+00:00 DEBU CBAS.cbas +wait rev:2
+2019-07-21T21:58:22.610+00:00 DEBU CBAS.cbas wait: obtained lock
+2019-07-21T21:58:22.610+00:00 DEBU CBAS.cbas haveRev(2) != m.Rev(4), returning {{[{8ba1ce2e183ff908d4723b87c7fdb9b3 0 map[cc-http-port:9111 starting-partition-id:0 controller-id:0 host:127.0.0.1 num-iodevices:1]}] 4bec35391580dcd1385d52ee27c6ab27 topology-change-rebalance 8ba1ce2e183ff908d4723b87c7fdb9b3 8ba1ce2e183ff908d4723b87c7fdb9b3 0 1 1 balanced false} 4 0xc420184770 <nil> 0}
+2019-07-21T21:58:22.610+00:00 DEBU CBAS.cbas -wait rev:2
+2019-07-21T21:58:22.610+00:00 DEBU CBAS.cbas task list: &{[52] [{[52] prepare/4bec35391580dcd1385d52ee27c6ab27 task-prepared task-running true 0 map[]   map[rebalanceId:4bec35391580dcd1385d52ee27c6ab27]}]}
+2019-07-21T21:58:22.610+00:00 DEBU CBAS.cbas -GetTaskList rev:2
+2019-07-21T21:58:22.611+00:00 DEBU CBAS.cbas first boot of node 8ba1ce2e183ff908d4723b87c7fdb9b3 ensuring empty data dir /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0
+2019-07-21T21:58:22.612+00:00 DEBU CBAS.cbas +GetTaskList rev:<nil>
+2019-07-21T21:58:22.612+00:00 DEBU CBAS.cbas +wait rev:<nil>
+2019-07-21T21:58:22.612+00:00 DEBU CBAS.cbas wait: obtained lock
+2019-07-21T21:58:22.612+00:00 DEBU CBAS.cbas -wait rev:<nil>
+2019-07-21T21:58:22.612+00:00 DEBU CBAS.cbas task list: &{[52] [{[52] prepare/4bec35391580dcd1385d52ee27c6ab27 task-prepared task-running true 0 map[]   map[rebalanceId:4bec35391580dcd1385d52ee27c6ab27]}]}
+2019-07-21T21:58:22.612+00:00 DEBU CBAS.cbas -GetTaskList rev:<nil>
+2019-07-21T21:58:22.613+00:00 DEBU CBAS.cbas delaying first boot of first node 8ba1ce2e183ff908d4723b87c7fdb9b3 by 2s, to avoid killing driver in the event a rename is imminent
+2019-07-21T21:58:22.614+00:00 DEBU CBAS.cbas +GetCurrentTopology rev:<nil>
+2019-07-21T21:58:22.614+00:00 DEBU CBAS.cbas +wait rev:<nil>
+2019-07-21T21:58:22.614+00:00 DEBU CBAS.cbas wait: obtained lock
+2019-07-21T21:58:22.614+00:00 DEBU CBAS.cbas -wait rev:<nil>
+2019-07-21T21:58:22.614+00:00 DEBU CBAS.cbas current topology: &{[52] [8ba1ce2e183ff908d4723b87c7fdb9b3] true []}
+2019-07-21T21:58:22.614+00:00 DEBU CBAS.cbas -GetCurrentTopology rev:<nil>
+2019-07-21T21:58:22.619+00:00 DEBU CBAS.cbas +GetTaskList rev:4
+2019-07-21T21:58:22.619+00:00 DEBU CBAS.cbas +wait rev:4
+2019-07-21T21:58:22.619+00:00 DEBU CBAS.cbas wait: obtained lock
+2019-07-21T21:58:22.619+00:00 DEBU CBAS.cbas wait: unlocked, starting select
+2019-07-21T21:58:22.620+00:00 DEBU CBAS.cbas +GetCurrentTopology rev:4
+2019-07-21T21:58:22.620+00:00 DEBU CBAS.cbas +wait rev:4
+2019-07-21T21:58:22.620+00:00 DEBU CBAS.cbas wait: obtained lock
+2019-07-21T21:58:22.620+00:00 DEBU CBAS.cbas wait: unlocked, starting select
+2019-07-21T21:58:22.620+00:00 DEBU CBAS.cbas +GetTaskList rev:<nil>
+2019-07-21T21:58:22.620+00:00 DEBU CBAS.cbas +wait rev:<nil>
+2019-07-21T21:58:22.620+00:00 DEBU CBAS.cbas wait: obtained lock
+2019-07-21T21:58:22.620+00:00 DEBU CBAS.cbas -wait rev:<nil>
+2019-07-21T21:58:22.620+00:00 DEBU CBAS.cbas task list: &{[52] [{[52] prepare/4bec35391580dcd1385d52ee27c6ab27 task-prepared task-running true 0 map[]   map[rebalanceId:4bec35391580dcd1385d52ee27c6ab27]}]}
+2019-07-21T21:58:22.620+00:00 DEBU CBAS.cbas -GetTaskList rev:<nil>
+2019-07-21T21:58:22.622+00:00 DEBU CBAS.cbas +GetCurrentTopology rev:<nil>
+2019-07-21T21:58:22.623+00:00 DEBU CBAS.cbas +wait rev:<nil>
+2019-07-21T21:58:22.623+00:00 DEBU CBAS.cbas wait: obtained lock
+2019-07-21T21:58:22.623+00:00 DEBU CBAS.cbas -wait rev:<nil>
+2019-07-21T21:58:22.623+00:00 DEBU CBAS.cbas current topology: &{[52] [8ba1ce2e183ff908d4723b87c7fdb9b3] true []}
+2019-07-21T21:58:22.623+00:00 DEBU CBAS.cbas -GetCurrentTopology rev:<nil>
+2019-07-21T21:58:22.624+00:00 DEBU CBAS.cbas +CancelTask id:prepare/4bec35391580dcd1385d52ee27c6ab27 rev:<nil> mgr:0xc4202e8300
+2019-07-21T21:58:22.624+00:00 DEBU CBAS.cbas updateStateLOCKED: new rev: 5 (0xc4202e8300)
+2019-07-21T21:58:22.624+00:00 DEBU CBAS.cbas notifyWaitersLOCKED: 5
+2019-07-21T21:58:22.624+00:00 DEBU CBAS.cbas notifyWaitersLOCKED: 5
+2019-07-21T21:58:22.624+00:00 WARN CBAS.cbas Updating log level to INFO
+2019-07-21T21:58:24.621+00:00 INFO CBAS.cbas nodeConfigMap: map[cbasAddress:127.0.0.1 replicationFactor:4096 replicationStrategy:metadata txnLogBufferPagesize:262144 defaultDir:/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0 cbasPort:9122 initialRun:false ccClientListenPort:9113 ccHeartbeatPeriod:30000 logDir:/opt/couchbase/var/lib/couchbase/logs dataListenPort:9116 resultListenPort:9117 metadataListenPort:9121 address:0.0.0.0 replicationListenPort:9120 metadataNode:8ba1ce2e183ff908d4723b87c7fdb9b3 replicationLogBufferPagesize:262144 ncservicePort:-1 ccClusterListenPort:9112 analyticsHttpAdminListenPort:9110 clusterListenPort:9115 messagingListenPort:9118 publicAddress:127.0.0.1 ccAddress:0.0.0.0 nsServerPort:8091 clusterAddress:127.0.0.1 clusterPort:9112 iodevices:[/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0] analyticsCbHome:/opt/couchbase ccAnalyticsHttpListenPort:9111 ccControllerId:0 analyticsNodeName:127.0.0.1:8091 metadataCallbackPort:9119 replicationEnabled:true analyticsHttpListenPort:8095 analyticsHttpsListenPort:18095 startingPartitionId:0 ccConsoleListenPort:9114 ccPublicAddress:127.0.0.1 ccHeartbeatMaxMisses:4 nsServerAddress:127.0.0.1 analyticsCcHttpPort:9111 ccAnalyticsMetadataPartitionId:0 analyticsSslEnabled:true additionalCcNodes:[]]
+2019-07-21T21:58:24.641+00:00 INFO CBAS.cbas running /opt/couchbase/lib/cbas/runtime/bin/java args:[-XX:+ExitOnOutOfMemoryError -XX:MaxGCPauseMillis=60000 -XX:+UseParallelGC -Xmx1024m -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED -DlogDir=/opt/couchbase/var/lib/couchbase/logs -cp /opt/couchbase/lib/cbas/repo/algebricks-common.jar:/opt/couchbase/lib/cbas/repo/algebricks-compiler.jar:/opt/couchbase/lib/cbas/repo/algebricks-core.jar:/opt/couchbase/lib/cbas/repo/algebricks-data.jar:/opt/couchbase/lib/cbas/repo/algebricks-rewriter.jar:/opt/couchbase/lib/cbas/repo/algebricks-runtime.jar:/opt/couchbase/lib/cbas/repo/args4j-2.33.jar:/opt/couchbase/lib/cbas/repo/asterix-active.jar:/opt/couchbase/lib/cbas/repo/asterix-algebra.jar:/opt/couchbase/lib/cbas/repo/asterix-app.jar:/opt/couchbase/lib/cbas/repo/asterix-common.jar:/opt/couchbase/lib/cbas/repo/asterix-external-data.jar:/opt/couchbase/lib/cbas/repo/asterix-lang-aql.jar:/opt/couchbase/lib/cbas/repo/asterix-lang-common.jar:/opt/couchbase/lib/cbas/repo/asterix-lang-sqlpp.jar:/opt/couchbase/lib/cbas/repo/asterix-metadata.jar:/opt/couchbase/lib/cbas/repo/asterix-om.jar:/opt/couchbase/lib/cbas/repo/asterix-replication.jar:/opt/couchbase/lib/cbas/repo/asterix-runtime.jar:/opt/couchbase/lib/cbas/repo/asterix-transactions.jar:/opt/couchbase/lib/cbas/repo/cbas-common.jar:/opt/couchbase/lib/cbas/repo/cbas-connector.jar:/opt/couchbase/lib/cbas/repo/cbas-dcp-client.jar:/opt/couchbase/lib/cbas/repo/cbas-server.jar:/opt/couchbase/lib/cbas/repo/commons-codec-1.11.jar:/opt/couchbase/lib/cbas/repo/commons-collections4-4.2.jar:/opt/couchbase/lib/cbas/repo/commons-compress-1.18.jar:/opt/couchbase/lib/cbas/repo/commons-io-2.6.jar:/opt/couchbase/lib/cbas/repo/commons-lang3-3.8.1.jar:/opt/couchbase/lib/cbas/repo/commons-logging-1.2.jar:/opt/couchbase/lib/cbas/repo/commons-text-1.6.jar:/opt/couchbase/lib/cbas/repo/core-io-1.7.2.jar:/opt/couchbase/lib/cbas/repo/disruptor-1.2.14-jdk8.jar:/opt/couchbase/lib/cbas/repo/esri-geometry-api-2.0.0.jar:/opt/couchbase/lib/cbas/repo/fastutil-8.2.2.jar:/opt/couchbase/lib/cbas/repo/guava-18.0.jar:/opt/couchbase/lib/cbas/repo/httpclient-4.5.6.jar:/opt/couchbase/lib/cbas/repo/httpcore-4.4.10.jar:/opt/couchbase/lib/cbas/repo/hyracks-api.jar:/opt/couchbase/lib/cbas/repo/hyracks-client.jar:/opt/couchbase/lib/cbas/repo/hyracks-comm.jar:/opt/couchbase/lib/cbas/repo/hyracks-control-cc.jar:/opt/couchbase/lib/cbas/repo/hyracks-control-common.jar:/opt/couchbase/lib/cbas/repo/hyracks-control-nc.jar:/opt/couchbase/lib/cbas/repo/hyracks-data-std.jar:/opt/couchbase/lib/cbas/repo/hyracks-dataflow-common.jar:/opt/couchbase/lib/cbas/repo/hyracks-dataflow-std.jar:/opt/couchbase/lib/cbas/repo/hyracks-http.jar:/opt/couchbase/lib/cbas/repo/hyracks-ipc.jar:/opt/couchbase/lib/cbas/repo/hyracks-net.jar:/opt/couchbase/lib/cbas/repo/hyracks-storage-am-bloomfilter.jar:/opt/couchbase/lib/cbas/repo/hyracks-storage-am-btree.jar:/opt/couchbase/lib/cbas/repo/hyracks-storage-am-common.jar:/opt/couchbase/lib/cbas/repo/hyracks-storage-am-lsm-btree.jar:/opt/couchbase/lib/cbas/repo/hyracks-storage-am-lsm-common.jar:/opt/couchbase/lib/cbas/repo/hyracks-storage-am-lsm-invertedindex.jar:/opt/couchbase/lib/cbas/repo/hyracks-storage-am-lsm-rtree.jar:/opt/couchbase/lib/cbas/repo/hyracks-storage-am-rtree.jar:/opt/couchbase/lib/cbas/repo/hyracks-storage-common.jar:/opt/couchbase/lib/cbas/repo/hyracks-util.jar:/opt/couchbase/lib/cbas/repo/ini4j-0.5.4.jar:/opt/couchbase/lib/cbas/repo/jackson-annotations-2.9.7.jar:/opt/couchbase/lib/cbas/repo/jackson-core-2.9.7.jar:/opt/couchbase/lib/cbas/repo/jackson-databind-2.9.7.jar:/opt/couchbase/lib/cbas/repo/log4j-api-2.11.1.jar:/opt/couchbase/lib/cbas/repo/log4j-core-2.11.1.jar:/opt/couchbase/lib/cbas/repo/log4j-jcl-2.11.1.jar:/opt/couchbase/lib/cbas/repo/log4j-jul-2.11.1.jar:/opt/couchbase/lib/cbas/repo/log4j-slf4j-impl-2.11.1.jar:/opt/couchbase/lib/cbas/repo/log4j-web-2.11.1.jar:/opt/couchbase/lib/cbas/repo/netty-all-4.1.32.Final.jar:/opt/couchbase/lib/cbas/repo/netty-tcnative-boringssl-static-2.0.20.Final.jar:/opt/couchbase/lib/cbas/repo/opentracing-api-0.31.0.jar:/opt/couchbase/lib/cbas/repo/rxjava-1.3.8.jar:/opt/couchbase/lib/cbas/repo/slf4j-api-1.7.25.jar com.couchbase.analytics.control.AnalyticsDriver --jsonconfig /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/config.json --nc -node-id 8ba1ce2e183ff908d4723b87c7fdb9b3 --cc]
+2019-07-21T21:58:24.642+00:00 INFO CBAS.cbas analytics driver is running; pid: 463
+2019-07-21 21:58:25,763 main ERROR DefaultRolloverStrategy contains an invalid element or attribute "ascending"
+2019-07-21 21:58:25,782 main ERROR DefaultRolloverStrategy contains an invalid element or attribute "ascending"
+2019-07-21 21:58:25,795 main ERROR DefaultRolloverStrategy contains an invalid element or attribute "ascending"
+2019-07-21 21:58:25,807 main ERROR DefaultRolloverStrategy contains an invalid element or attribute "ascending"
+2019-07-21 21:58:25,816 main ERROR DefaultRolloverStrategy contains an invalid element or attribute "ascending"
+2019-07-21T21:58:26.467Z INFO CBAS.util.LoggingConfigUtil [main] Setting org.apache.asterix log level to DEBUG
+2019-07-21T21:58:26.480Z INFO CBAS.bootstrap.CCApplication [main] Starting Asterix cluster controller
+2019-07-21T21:58:27.421Z INFO CBAS.util.SingleThreadEventProcessor [ActiveNotificationHandler] Started ActiveNotificationHandler
+2019-07-21T21:58:27.459Z INFO CBAS.bootstrap.AsterixStateProxy [main] Asterix Distributed State Proxy Bound
+2019-07-21T21:58:27.503Z INFO CBAS.bootstrap.ClusterLifecycleListener [main] Starting cluster event handler
+2019-07-21T21:58:27.586Z INFO CBAS.cc.ClusterControllerService [main] Started ClusterControllerService
+2019-07-21T21:58:27.613Z INFO CBAS.nc.NodeControllerService [main] Starting NodeControllerService
+2019-07-21T21:58:27.687Z INFO CBAS.trace.Tracer [main] Initialize Tracer org.apache.hyracks.util.trace.Tracer@8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:27.691Z INFO CBAS.trace.Tracer@8ba1ce2e183ff908d4723b87c7fdb9b3 [main] {"name":"Trace-Start","cat":"Tracer","ph":"i","pid":"463","tid":1,"ts":1563746307690032,"s":"p","args":{"datetime":"2019-07-21T21:58:27.690Z"}}
+2019-07-21T21:58:27.691Z INFO CBAS.trace.Tracer [main] Set categories for Tracer org.apache.hyracks.util.trace.Tracer@8ba1ce2e183ff908d4723b87c7fdb9b3 to []
+2019-07-21T21:58:27.692Z INFO CBAS.bootstrap.AnalyticsApplicationUtil [main] Found JRE version 11.0.1
+2019-07-21T21:58:27.730Z INFO CBAS.bootstrap.AnalyticsNCApplication [main] Starting Couchbase Analytics driver, version: {"build.date":"Mon Jan 21 08:20:43 PST 2019","build.number":"2037","build.version":"6.0.1-2037"}
+2019-07-21T21:58:27.731Z INFO CBAS.bootstrap.NCApplication [main] Starting Asterix node controller: 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:27.732Z INFO CBAS.util.LoggingConfigUtil [main] Setting org.apache.hyracks log level to DEBUG
+2019-07-21T21:58:27.732Z INFO CBAS.util.LoggingConfigUtil [main] Setting org.apache.asterix log level to DEBUG
+2019-07-21T21:58:27.733Z INFO CBAS.bootstrap.AnalyticsApplicationUtil [main] Setting analytics root log level to DEBUG
+2019-07-21T21:58:27.738Z INFO CBAS.config.PropertiesAccessor [main] Build properties not found on classpath. Version API will return empty object
+2019-07-21T21:58:27.782Z INFO CBAS.nc.TransactionSubsystem [main] Checkpoint Properties: {"class" : "CheckpointProperties", "checkpoint-dir-path" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log", "lsn-threshold" : 67108864, "poll-frequency" : 120, "history-to-keep" : 0 }
+2019-07-21T21:58:27.786Z INFO CBAS.recovery.AbstractCheckpointManager [main] Checkpoint directory = /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log
+2019-07-21T21:58:27.788Z INFO CBAS.recovery.AbstractCheckpointManager [main] Checkpoint directory /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log/ didn't exist. Creating one
+2019-07-21T21:58:27.789Z INFO CBAS.recovery.AbstractCheckpointManager [main] Getting latest checkpoint
+2019-07-21T21:58:27.790Z INFO CBAS.recovery.AbstractCheckpointManager [main] Listing of files in the checkpoint dir returned empty
+2019-07-21T21:58:27.796Z INFO CBAS.logging.LogManager [main] the log dir (/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log) is empty. returning empty list
+2019-07-21T21:58:27.803Z INFO CBAS.logging.LogManager [main] Created log file /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log/transaction_log_0
+2019-07-21T21:58:27.803Z INFO CBAS.logging.LogManager [main] initializing log anchor with log file Id: 0 at offset: 0
+2019-07-21T21:58:27.804Z INFO CBAS.logging.LogManager [main] LogManager starts logging in LSN: 0
+2019-07-21T21:58:27.807Z INFO CBAS.recovery.AbstractCheckpointManager [main] Getting latest checkpoint
+2019-07-21T21:58:27.810Z INFO CBAS.recovery.AbstractCheckpointManager [main] Listing of files in the checkpoint dir returned empty
+2019-07-21T21:58:27.811Z INFO CBAS.nc.RecoveryManager [main] The checkpoint file doesn't exist: systemState = PERMANENT_DATA_LOSS
+2019-07-21T21:58:27.811Z WARN CBAS.nc.NCAppRuntimeContext [main] Deleting the storage dir. initialRun = false, systemState = PERMANENT_DATA_LOSS
+2019-07-21T21:58:27.842Z INFO CBAS.recovery.AbstractCheckpointManager [main] Getting latest checkpoint
+2019-07-21T21:58:27.845Z INFO CBAS.recovery.AbstractCheckpointManager [main] Listing of files in the checkpoint dir returned empty
+2019-07-21T21:58:27.846Z INFO CBAS.recovery.AbstractCheckpointManager [main] Getting latest checkpoint
+2019-07-21T21:58:27.847Z INFO CBAS.recovery.AbstractCheckpointManager [main] Listing of files in the checkpoint dir returned empty
+2019-07-21T21:58:27.847Z INFO CBAS.nc.RecoveryManager [main] The checkpoint file doesn't exist: systemState = PERMANENT_DATA_LOSS
+2019-07-21T21:58:27.847Z INFO CBAS.bootstrap.NCApplication [main] System state: PERMANENT_DATA_LOSS
+2019-07-21T21:58:27.848Z INFO CBAS.bootstrap.NCApplication [main] Node ID: 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:27.848Z INFO CBAS.bootstrap.NCApplication [main] Stores: {8ba1ce2e183ff908d4723b87c7fdb9b3=[/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage]}
+2019-07-21T21:58:27.888Z INFO CBAS.nc.NodeControllerService [main] addCc: /127.0.0.1:9112
+2019-07-21T21:58:27.898Z INFO CBAS.nc.NodeControllerService [main] Registering with Cluster Controller ClusterControllerRemoteProxy [/127.0.0.1:9112]
+2019-07-21T21:58:27.938Z INFO CBAS.work.RegisterNodeWork [Worker:ClusterController] registering node: 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:27.945Z WARN CBAS.cluster.NodeManager [Worker:ClusterController] +addNode: 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:27.947Z INFO CBAS.cluster.NodeManager [Worker:ClusterController] adding node to registry
+2019-07-21T21:58:27.948Z INFO CBAS.cluster.NodeManager [Worker:ClusterController] updating cluster capacity
+2019-07-21T21:58:27.950Z INFO CBAS.work.RegisterNodeWork [Worker:ClusterController] registered node: 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:27.951Z INFO CBAS.bootstrap.ClusterLifecycleListener [Worker:ClusterController] NC: 8ba1ce2e183ff908d4723b87c7fdb9b3 joined
+2019-07-21T21:58:27.953Z INFO CBAS.utils.ClusterStateManager [Worker:ClusterController] Registering configuration parameters for node id 8ba1ce2e183ff908d4723b87c7fdb9b3
+2019-07-21T21:58:28.021Z INFO CBAS.nc.NodeControllerService [main] Registering with Cluster Controller ClusterControllerRemoteProxy [/127.0.0.1:9112] completed
+2019-07-21T21:58:28.022Z INFO CBAS.nc.NodeControllerService [main] Started NodeControllerService
+2019-07-21T21:58:28.022Z INFO CBAS.work.AbortAllJobsWork [Worker:8ba1ce2e183ff908d4723b87c7fdb9b3] Aborting all tasks for controller CC:0
+2019-07-21T21:58:28.030Z INFO CBAS.work.EnsureAllCcTasksCompleted [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Ensuring all tasks of CC CC:0 have completed
+2019-07-21T21:58:28.032Z INFO CBAS.work.EnsureAllCcTasksCompleted [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] All tasks of CC CC:0 have completed
+2019-07-21T21:58:28.426Z WARN CBAS.server.AnalyticsHttpsServerInitializer [main] Configured SSL Context using configuration {"certificatePath":"/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem","privateKeyPath":"/opt/couchbase/var/lib/couchbase/config/memcached-key.pem","clientCertAuthType":"NONE","supportedCiphers":["TLS_RSA_WITH_AES_128_CBC_SHA","TLS_RSA_WITH_AES_256_CBC_SHA","TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA","TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA","TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256","TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"],"minTlsVersion":1.0,"supportedProtocols":["TLSv1","TLSv1.1","TLSv1.2"],"clientAuth":"NONE"} and native openssl version: BoringSSL-269484159
+2019-07-21T21:58:28.445Z INFO CBAS.recovery.AbstractCheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Getting latest checkpoint
+2019-07-21T21:58:28.445Z INFO CBAS.bootstrap.NsServerHelper [main] starting coordinator service
+2019-07-21T21:58:28.447+00:00 INFO CBAS.cbas starting coordinator
+2019-07-21T21:58:28.447+00:00 INFO CBAS.cbas Starting replicas monitor
+2019-07-21T21:58:28.447Z INFO CBAS.bootstrap.NsServerHelper [main] Coordinator service started
+2019-07-21T21:58:28.448Z INFO CBAS.recovery.AbstractCheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Listing of files in the checkpoint dir returned empty
+2019-07-21T21:58:28.449Z INFO CBAS.nc.RecoveryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] The checkpoint file doesn't exist: systemState = PERMANENT_DATA_LOSS
+2019-07-21T21:58:28.451+00:00 INFO CBAS.cbas Notified path /cbas/bootstrap/ensureCc/8ba1ce2e183ff908d4723b87c7fdb9b3 changed to 2019-07-21T21:58:27.587198Z
+2019-07-21T21:58:28.451+00:00 INFO CBAS.cbas Notified path /cbas/config/node/8ba1ce2e183ff908d4723b87c7fdb9b3 changed to {"configVersion":1,"config":{"additionalCcNodes":[],"address":"0.0.0.0","analyticsCbHome":"/opt/couchbase","analyticsCcHttpPort":"9111","analyticsHttpAdminListenPort":"9110","analyticsHttpListenPort":"8095","analyticsHttpsListenPort":"18095","analyticsNodeName":"127.0.0.1:8091","analyticsSslEnabled":true,"cbasAddress":"127.0.0.1","cbasPort":"9122","ccAddress":"0.0.0.0","ccAnalyticsHttpListenPort":"9111","ccAnalyticsMetadataPartitionId":0,"ccClientListenPort":"9113","ccClusterListenPort":"9112","ccConsoleListenPort":"9114","ccControllerId":"0","ccHeartbeatMaxMisses":"4","ccHeartbeatPeriod":"30000","ccPublicAddress":"127.0.0.1","clusterAddress":"127.0.0.1","clusterListenPort":"9115","clusterPort":"9112","dataListenPort":"9116","defaultDir":"/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0","initialRun":false,"iodevices":["/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0"],"logDir":"/opt/couchbase/var/lib/couchbase/logs","messagingListenPort":"9118","metadataCallbackPort":"9119","metadataListenPort":"9121","metadataNode":"8ba1ce2e183ff908d4723b87c7fdb9b3","ncservicePort":"-1","nsServerAddress":"127.0.0.1","nsServerPort":8091,"publicAddress":"127.0.0.1","replicationEnabled":true,"replicationFactor":4096,"replicationListenPort":9120,"replicationLogBufferPagesize":262144,"replicationStrategy":"metadata","resultListenPort":"9117","startingPartitionId":"0","txnLogBufferPagesize":262144},"nodeId":"8ba1ce2e183ff908d4723b87c7fdb9b3"}
+2019-07-21T21:58:28.451+00:00 INFO CBAS.cbas Notified path /cbas/topology changed to {"nodes":[{"nodeId":"8ba1ce2e183ff908d4723b87c7fdb9b3","priority":0,"opaque":{"cc-http-port":"9111","controller-id":"0","host":"127.0.0.1","num-iodevices":"1","starting-partition-id":"0"}}],"id":"4bec35391580dcd1385d52ee27c6ab27","type":"topology-change-rebalance","ccNodeId":"8ba1ce2e183ff908d4723b87c7fdb9b3","metadataNodeId":"8ba1ce2e183ff908d4723b87c7fdb9b3","metadataPartition":0,"rev":1,"configVersion":1,"balanceState":"balanced","keepNodesUpdated":false}
+2019-07-21T21:58:28.451+00:00 INFO CBAS.cbas Notified path /cbas/nextControllerId changed to 1
+2019-07-21T21:58:28.451+00:00 INFO CBAS.cbas Notified path /cbas/nextPartitionId changed to 1
+2019-07-21T21:58:28.454Z INFO CBAS.bootstrap.DeadlockWatchdog [main] The deadlock watchdog started at 300s frequency
+2019-07-21T21:58:28.454Z INFO CBAS.bootstrap.PeriodicThreadDump [main] Periodic thread dumps will be logged at DEBUG level every 300 seconds
+2019-07-21T21:58:28.459Z INFO CBAS.messaging.CCMessageBroker [Executor-2:ClusterController] Received message: org.apache.asterix.app.replication.message.RegistrationTasksRequestMessage@377d2be9
+2019-07-21T21:58:28.460Z INFO CBAS.replication.NcLifecycleCoordinator [Executor-2:ClusterController] Building registration tasks for node 8ba1ce2e183ff908d4723b87c7fdb9b3 with status IDLE and system state: BOOTSTRAPPING
+2019-07-21T21:58:28.470Z INFO CBAS.messaging.NCMessageBroker [Worker:8ba1ce2e183ff908d4723b87c7fdb9b3] Received message: org.apache.asterix.app.replication.message.RegistrationTasksResponseMessage@307aa4b2
+2019-07-21T21:58:28.471Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting startup task: { "class" : "UpdateNodeStatusTask" }
+2019-07-21T21:58:28.471Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed startup task: { "class" : "UpdateNodeStatusTask" }
+2019-07-21T21:58:28.472Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting startup task: { "class" : "StartReplicationServiceTask" }
+2019-07-21T21:58:28.472Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed startup task: { "class" : "StartReplicationServiceTask" }
+2019-07-21T21:58:28.473Z INFO CBAS.management.ReplicationChannel [8ba1ce2e183ff908d4723b87c7fdb9b3 Replication Channel Thread] opened Replication Channel @ IP Address: 0.0.0.0:9120
+2019-07-21T21:58:28.476Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting startup task: { "class" : "MetadataBootstrapTask" }
+2019-07-21T21:58:28.477Z INFO CBAS.recovery.AbstractCheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Getting latest checkpoint
+2019-07-21T21:58:28.481Z INFO CBAS.recovery.AbstractCheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Listing of files in the checkpoint dir returned empty
+2019-07-21T21:58:28.481Z INFO CBAS.nc.RecoveryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] The checkpoint file doesn't exist: systemState = PERMANENT_DATA_LOSS
+2019-07-21T21:58:28.481Z INFO CBAS.nc.NCAppRuntimeContext [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Bootstrapping metadata
+2019-07-21T21:58:28.495Z INFO CBAS.metadata.CachingTxnIdFactory [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] block exhausted; obtaining new block from supplier
+2019-07-21T21:58:28.499Z INFO CBAS.messaging.CCMessageBroker [Executor-2:ClusterController] Received message: TxnIdBlockRequest
+2019-07-21T21:58:28.502Z INFO CBAS.messaging.NCMessageBroker [Worker:8ba1ce2e183ff908d4723b87c7fdb9b3] Received message: TxnIdBlockResponse
+2019-07-21T21:58:28.521Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(1)
+2019-07-21T21:58:28.696Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(2)
+2019-07-21T21:58:28.731Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(3)
+2019-07-21T21:58:28.783Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(4)
+2019-07-21T21:58:28.783Z INFO CBAS.server.AbstractServlet [HttpExecutor(port:8095)-0] sendError: status=405 Method Not Allowed, message=Method GET not allowed for the requested resource.
+2019-07-21T21:58:28.822Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(5)
+2019-07-21T21:58:28.854Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(6)
+2019-07-21T21:58:28.891Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(7)
+2019-07-21T21:58:28.927Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(8)
+2019-07-21T21:58:28.975Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(10)
+2019-07-21T21:58:29.051Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(12)
+2019-07-21T21:58:29.093Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(9)
+2019-07-21T21:58:29.139Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(13)
+2019-07-21T21:58:29.180Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(14)
+2019-07-21T21:58:29.231Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(11)
+2019-07-21T21:58:29.281Z INFO CBAS.bootstrap.MetadataBootstrap [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Finished enlistment of metadata B-trees in new universe
+2019-07-21T21:58:29.429Z INFO CBAS.bootstrap.MetadataBootstrap [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Finished inserting initial datasets.
+2019-07-21T21:58:29.556Z INFO CBAS.bootstrap.MetadataBootstrap [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Finished inserting initial datatypes.
+2019-07-21T21:58:29.604Z INFO CBAS.bootstrap.MetadataBootstrap [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Finished inserting built-in adapters.
+2019-07-21T21:58:29.617Z INFO CBAS.feeds.BuiltinFeedPolicies [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Finished adding built-in feed policies.
+2019-07-21T21:58:29.634Z INFO CBAS.bootstrap.MetadataBootstrap [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Finished creating metadata B-trees.
+2019-07-21T21:58:29.646Z INFO CBAS.bootstrap.MetadataBootstrap [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting DDL recovery ...
+2019-07-21T21:58:29.679Z INFO CBAS.bootstrap.MetadataBootstrap [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed DDL recovery.
+2019-07-21T21:58:29.682Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(53)
+2019-07-21T21:58:29.718Z INFO CBAS.context.DatasetMemoryManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reserved(1048576) for dataset(52)
+2019-07-21T21:58:29.756Z INFO CBAS.bootstrap.MetadataBootstrap [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Finished inserting initial datasets.
+2019-07-21T21:58:29.772Z INFO CBAS.nc.NCAppRuntimeContext [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Metadata node bound
+2019-07-21T21:58:29.773Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed startup task: { "class" : "MetadataBootstrapTask" }
+2019-07-21T21:58:29.774Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting startup task: { "class" : "ExternalLibrarySetupTask", "metadata-node" : true }
+2019-07-21T21:58:29.774Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed startup task: { "class" : "ExternalLibrarySetupTask", "metadata-node" : true }
+2019-07-21T21:58:29.776Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting startup task: { "class" : "CheckpointTask" }
+2019-07-21T21:58:29.776Z INFO CBAS.recovery.CheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting sharp checkpoint...
+2019-07-21T21:58:29.789Z INFO CBAS.impls.AbstractLSMIndex [Executor-11:8ba1ce2e183ff908d4723b87c7fdb9b3] Flushing component with id: [1,1] in the index {"class" : "LSMBTree", "dir" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage/partition_0/Metadata/Dataverse/0/Dataverse", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":1, "current-memory-component":1}
+2019-07-21T21:58:29.885Z INFO CBAS.impls.AbstractLSMIndex [Executor-11:8ba1ce2e183ff908d4723b87c7fdb9b3] Flushing component with id: [1,1] in the index {"class" : "LSMBTree", "dir" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage/partition_0/Metadata/Dataset/0/Dataset", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":1, "current-memory-component":1}
+2019-07-21T21:58:29.922Z INFO CBAS.impls.AbstractLSMIndex [Executor-11:8ba1ce2e183ff908d4723b87c7fdb9b3] Flushing component with id: [1,1] in the index {"class" : "LSMBTree", "dir" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage/partition_0/Metadata/Datatype/0/Datatype", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":1, "current-memory-component":1}
+2019-07-21T21:58:29.969Z INFO CBAS.impls.AbstractLSMIndex [Executor-11:8ba1ce2e183ff908d4723b87c7fdb9b3] Flushing component with id: [1,1] in the index {"class" : "LSMBTree", "dir" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage/partition_0/Metadata/Index/0/Index", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":1, "current-memory-component":1}
+2019-07-21T21:58:30.009Z INFO CBAS.impls.AbstractLSMIndex [Executor-11:8ba1ce2e183ff908d4723b87c7fdb9b3] Flushing component with id: [1,1] in the index {"class" : "LSMBTree", "dir" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage/partition_0/Metadata/Node/0/Node", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":1, "current-memory-component":1}
+2019-07-21T21:58:30.066Z INFO CBAS.impls.AbstractLSMIndex [Executor-11:8ba1ce2e183ff908d4723b87c7fdb9b3] Flushing component with id: [1,1] in the index {"class" : "LSMBTree", "dir" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage/partition_0/Metadata/Nodegroup/0/Nodegroup", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":1, "current-memory-component":1}
+2019-07-21T21:58:30.111Z INFO CBAS.impls.AbstractLSMIndex [Executor-11:8ba1ce2e183ff908d4723b87c7fdb9b3] Flushing component with id: [1,1] in the index {"class" : "LSMBTree", "dir" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage/partition_0/Metadata/DatasourceAdapter/0/DatasourceAdapter", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":1, "current-memory-component":1}
+2019-07-21T21:58:30.160Z INFO CBAS.impls.AbstractLSMIndex [Executor-11:8ba1ce2e183ff908d4723b87c7fdb9b3] Flushing component with id: [1,1] in the index {"class" : "LSMBTree", "dir" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage/partition_0/Metadata/FeedPolicy/0/FeedPolicy", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":1, "current-memory-component":1}
+2019-07-21T21:58:30.204Z INFO CBAS.impls.AbstractLSMIndex [Executor-11:8ba1ce2e183ff908d4723b87c7fdb9b3] Flushing component with id: [1,1] in the index {"class" : "LSMBTree", "dir" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage/partition_0/Metadata/CompactionPolicy/0/CompactionPolicy", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":1, "current-memory-component":1}
+2019-07-21T21:58:30.246Z INFO CBAS.impls.AbstractLSMIndex [Executor-11:8ba1ce2e183ff908d4723b87c7fdb9b3] Flushing component with id: [1,1] in the index {"class" : "LSMBTree", "dir" : "/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/storage/partition_0/Metadata/Link/0/Link", "memory" : [{"class":"LSMBTreeMemoryComponent", "state":"READABLE_UNWRITABLE_FLUSHING", "writers":0, "readers":1, "pendingFlushes":0, "id":"[1,1]"}, {"class":"LSMBTreeMemoryComponent", "state":"INACTIVE", "writers":0, "readers":0, "pendingFlushes":0, "id":"null"}], "disk" : 0, "num-scheduled-flushes":1, "current-memory-component":1}
+2019-07-21T21:58:30.281Z INFO CBAS.recovery.AbstractCheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Getting latest checkpoint
+2019-07-21T21:58:30.283Z INFO CBAS.recovery.AbstractCheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Listing of files in the checkpoint dir returned empty
+2019-07-21T21:58:30.284Z INFO CBAS.recovery.AbstractCheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Persisting checkpoint file to /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log/checkpoint_0 which doesn't exist yet
+2019-07-21T21:58:30.287Z INFO CBAS.recovery.AbstractCheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed persisting checkpoint file to /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log/checkpoint_0 which now exists
+2019-07-21T21:58:30.288Z INFO CBAS.recovery.AbstractCheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Listing of files in the checkpoint dir returned [/opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log/checkpoint_0]
+2019-07-21T21:58:30.288Z WARN CBAS.recovery.AbstractCheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Reading checkpoint file: /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log/checkpoint_0
+2019-07-21T21:58:30.291Z INFO CBAS.logging.LogManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Terminating LogFlusher thread ...
+2019-07-21T21:58:30.292Z INFO CBAS.logging.LogManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] LogFlusher thread is terminated.
+2019-07-21T21:58:30.292Z INFO CBAS.logging.LogManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] closing current log file with id(0)
+2019-07-21T21:58:30.298Z INFO CBAS.logging.LogManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Created log file /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log/transaction_log_1
+2019-07-21T21:58:30.301Z INFO CBAS.logging.LogManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Deleted log file /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/txn-log/transaction_log_0
+2019-07-21T21:58:30.302Z INFO CBAS.logging.LogManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] initializing log anchor with log file Id: 1 at offset: 0
+2019-07-21T21:58:30.302Z INFO CBAS.logging.LogManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] LogManager starts logging in LSN: 268435456
+2019-07-21T21:58:30.303Z INFO CBAS.recovery.CheckpointManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed sharp checkpoint.
+2019-07-21T21:58:30.303Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed startup task: { "class" : "CheckpointTask" }
+2019-07-21T21:58:30.303Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting startup task: { "class" : "StartLifecycleComponentsTask" }
+2019-07-21T21:58:30.303Z INFO CBAS.task.StartLifecycleComponentsTask [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting lifecycle components
+2019-07-21T21:58:30.304Z INFO CBAS.task.StartLifecycleComponentsTask [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Coredump directory for NC is: /opt/couchbase/var/lib/couchbase/data/@analytics/v_iodevice_0/coredump
+2019-07-21T21:58:30.304Z INFO CBAS.lifecycle.LifeCycleComponentManager [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] LifecycleComponentManager configured org.apache.hyracks.api.lifecycle.LifeCycleComponentManager@559fa000
+2019-07-21T21:58:30.304Z INFO CBAS.task.StartLifecycleComponentsTask [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Configured:org.apache.hyracks.api.lifecycle.LifeCycleComponentManager@559fa000
+2019-07-21T21:58:30.306Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed startup task: { "class" : "StartLifecycleComponentsTask" }
+2019-07-21T21:58:30.307Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting startup task: { "class" : "ExportMetadataNodeTask", "export-stub" : true }
+2019-07-21T21:58:30.319Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed startup task: { "class" : "ExportMetadataNodeTask", "export-stub" : true }
+2019-07-21T21:58:30.320Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting startup task: { "class" : "BindMetadataNodeTask" }
+2019-07-21T21:58:30.328Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed startup task: { "class" : "BindMetadataNodeTask" }
+2019-07-21T21:58:30.329Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Starting startup task: { "class" : "UpdateNodeStatusTask" }
+2019-07-21T21:58:30.329Z INFO CBAS.message.RegistrationTasksResponseMessage [Executor-9:8ba1ce2e183ff908d4723b87c7fdb9b3] Completed startup task: { "class" : "UpdateNodeStatusTask" }
+2019-07-21T21:58:30.657Z INFO CBAS.messaging.CCMessageBroker [Executor-2:ClusterController] Received message: org.apache.asterix.app.replication.message.NCLifecycleTaskReportMessage@7a648e73
+2019-07-21T21:58:30.659Z INFO CBAS.utils.ClusterStateManager [Executor-2:ClusterController] Metadata node 8ba1ce2e183ff908d4723b87c7fdb9b3 is now active
+2019-07-21T21:58:30.660Z INFO CBAS.utils.ClusterStateManager [Executor-2:ClusterController] updating cluster state from UNUSABLE to PENDING
+2019-07-21T21:58:30.661Z INFO CBAS.utils.ClusterStateManager [Executor-2:ClusterController] Cluster State is now PENDING
+2019-07-21T21:58:30.661Z INFO CBAS.utils.ClusterStateManager [Executor-2:ClusterController] updating cluster state from PENDING to RECOVERING
+2019-07-21T21:58:30.661Z INFO CBAS.utils.ClusterStateManager [Executor-2:ClusterController] Cluster State is now RECOVERING
+2019-07-21T21:58:30.664Z INFO CBAS.bootstrap.GlobalRecoveryManager [Executor-3:ClusterController] Starting Global Recovery
+2019-07-21T21:58:30.673Z INFO CBAS.rebalance.ReplicationUtil [Executor-3:ClusterController] Current replicas []
+2019-07-21T21:58:30.675Z WARN CBAS.rebalance.ReplicationUtil [Executor-3:ClusterController] Couldn't find additional candidate nodes for metadata replicas
+2019-07-21T21:58:30.676Z INFO CBAS.rebalance.ReplicationUtil [Executor-3:ClusterController] Refreshing state of replicas []
+2019-07-21T21:58:30.677Z INFO CBAS.rebalance.ReplicationUtil [Executor-3:ClusterController] Updating metadata replicas to: []
+2019-07-21T21:58:30.693+00:00 INFO CBAS.cbas Notified path /cbas/cluster/state/metadata/replica changed to {"revision":1,"nodes":[]}
+2019-07-21T21:58:30.723Z INFO CBAS.bootstrap.GlobalRecoveryManager [Executor-3:ClusterController] Global Recovery Completed. Refreshing cluster state...
+2019-07-21T21:58:30.723Z INFO CBAS.utils.ClusterStateManager [Executor-3:ClusterController] updating cluster state from RECOVERING to ACTIVE
+2019-07-21T21:58:30.725Z INFO CBAS.active.ActiveNotificationHandler [Executor-2:ClusterController] Starting active recovery
+2019-07-21T21:58:30.725Z INFO CBAS.utils.ClusterStateManager [Executor-3:ClusterController] Cluster State is now ACTIVE
+2019-07-21T21:58:31.861Z INFO CBAS.server.QueryServiceServlet [HttpExecutor(port:8095)-1] handleRequest: {"host":"127.0.0.1:8095","path":"/query/service","statement":"CREATE DATASET datatest ON `datadog-test` WHERE `type` = \\\"landmark\\\"","pretty":false,"mode":null,"clientContextID":null,"format":null,"timeout":null,"maxResultReads":null,"planFormat":null,"expressionTree":false,"rewrittenExpressionTree":false,"logicalPlan":false,"optimizedLogicalPlan":false,"job":false,"signature":true,"multiStatement":true}
+2019-07-21T21:58:31.908Z INFO CBAS.messaging.CCMessageBroker [Executor-2:ClusterController] Received message: ExecuteStatementRequestMessage(id=1, from=8ba1ce2e183ff908d4723b87c7fdb9b3): CREATE DATASET datatest ON `datadog-test` WHERE `type` = "landmark";
+2019-07-21T21:58:32.100Z INFO CBAS.utils.DatasetUtil [QueryTranslator] CREATING File Splits: Node: 8ba1ce2e183ff908d4723b87c7fdb9b3 IO Device: 0 managed path: storage/partition_0/Default/datatest/0/datatest 
+2019-07-21T21:58:32.110Z WARN CBAS.config.ConfigManager [QueryTranslator] NC option [nc] storage.lsm.bloomfilter.falsepositiverate being accessed outside of NC-scoped configuration.
+2019-07-21T21:58:32.281Z INFO CBAS.messaging.CCMessageBroker [Executor-4:ClusterController] Received message: ResourceIdRequestMessage
+2019-07-21T21:58:32.285Z INFO CBAS.messaging.NCMessageBroker [Worker:8ba1ce2e183ff908d4723b87c7fdb9b3] Received message: ResourceIdRequestResponseMessage
+2019-07-21T21:58:32.347Z INFO CBAS.work.JobCleanupWork [Worker:ClusterController] Cleanup for job: JID:0.1
+2019-07-21T21:58:32.388Z INFO CBAS.messaging.NCMessageBroker [Worker:8ba1ce2e183ff908d4723b87c7fdb9b3] Received message: ExecuteStatementResponseMessage(id=1): 0 characters

@@ -1,0 +1,3 @@
+{
+  "statement": "CREATE DATASET datatest ON `datadog-test` WHERE `type` = \"landmark\""
+}

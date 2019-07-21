@@ -1,0 +1,14 @@
+127.0.0.1 - - [21/Jul/2019:21:58:18 +0000] "GET /ui/index.html HTTP/1.1" 200 9452 - curl/7.60.0-DEV
+127.0.0.1 - - [21/Jul/2019:21:58:18 +0000] "POST /pools/default HTTP/1.1" 200 0 - curl/7.60.0-DEV
+127.0.0.1 - - [21/Jul/2019:21:58:18 +0000] "POST /node/controller/setupServices HTTP/1.1" 200 0 - curl/7.60.0-DEV
+127.0.0.1 - - [21/Jul/2019:21:58:18 +0000] "POST /settings/web HTTP/1.1" 200 39 - curl/7.60.0-DEV
+127.0.0.1 - Administrator [21/Jul/2019:21:58:18 +0000] "POST /settings/indexes HTTP/1.1" 200 152 - curl/7.60.0-DEV
+127.0.0.1 - Administrator [21/Jul/2019:21:58:18 +0000] "POST /pools/default/buckets HTTP/1.1" 202 0 - curl/7.60.0-DEV
+127.0.0.1 - Administrator [21/Jul/2019:21:58:22 +0000] "GET /pools HTTP/1.1" 200 783 - python-requests/2.9.1
+127.0.0.1 - Administrator [21/Jul/2019:21:58:22 +0000] "PUT /settings/rbac/users/local/admin HTTP/1.1" 200 2 - python-requests/2.9.1
+127.0.0.1 - Administrator [21/Jul/2019:21:58:22 +0000] "POST /_cbauth HTTP/1.1" 200 41 - Go-http-client/1.1
+127.0.0.1 - Administrator [21/Jul/2019:21:58:22 +0000] "POST /_cbauth HTTP/1.1" 200 41 - Go-http-client/1.1
+127.0.0.1 - Administrator [21/Jul/2019:21:58:28 +0000] "POST /_cbauth HTTP/1.1" 200 41 - Apache-HttpClient/4.5.6 (Java/11.0.1)
+127.0.0.1 - Administrator [21/Jul/2019:21:58:28 +0000] "POST /pools/default/checkPermissions HTTP/1.1" 200 92 - Apache-HttpClient/4.5.6 (Java/11.0.1)
+127.0.0.1 - Administrator [21/Jul/2019:21:58:31 +0000] "POST /_cbauth HTTP/1.1" 200 41 - Apache-HttpClient/4.5.6 (Java/11.0.1)
+127.0.0.1 - Administrator [21/Jul/2019:21:58:31 +0000] "POST /pools/default/checkPermissions HTTP/1.1" 200 92 - Apache-HttpClient/4.5.6 (Java/11.0.1)

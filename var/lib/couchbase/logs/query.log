@@ -1,0 +1,66 @@
+_time=2019-07-21T21:58:19.693+00:00 _level=INFO _msg= Initialization of cbauth succeeded  
+_time=2019-07-21T21:58:19.702+00:00 _level=INFO _msg=New store created with url http://127.0.0.1:8091 
+_time=2019-07-21T21:58:19.702+00:00 _level=INFO _msg=pollEOF: About to start stdin polling 
+_time=2019-07-21T21:58:19.709+00:00 _level=INFO _msg=New settings received: {"query.settings.curl_whitelist":{"all_access":false,"allowed_urls":[],"disallowed_urls":[]},"query.settings.tmp_space_dir":"/opt/couchbase/var/lib/couchbase/tmp","query.settings.tmp_space_size":5120}
+ 
+_time=2019-07-21T21:58:19.714+00:00 _level=INFO _msg=Settings notifier from metakv
+ 
+_time=2019-07-21T21:58:19.715+00:00 _level=INFO _msg=New Value for curl whitelist <ud>map[allowed_urls:[] disallowed_urls:[] all_access:false]</ud> 
+2019-07-21T21:58:19.737+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2019-07-21T21:58:19.738+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2019-07-21T21:58:19.739+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2019-07-21T21:58:19.740+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2019-07-21T21:58:19.741+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2019/07/21 21:58:19 audit: created new audit service
+2019-07-21T21:58:19.744+00:00 [Info] GSIC - Setting config map[query_tmpspace_limit:5120 query_tmpspace_dir:/opt/couchbase/var/lib/couchbase/tmp]
+_time=2019-07-21T21:58:19.744+00:00 _level=INFO _msg= Indexer settings have been updated map[query_tmpspace_limit:5120 query_tmpspace_dir:/opt/couchbase/var/lib/couchbase/tmp] 
+_time=2019-07-21T21:58:19.753+00:00 _level=INFO _msg=cbq-engine started version=2.0.0-N1QL pipeline-cap=512 max-index-api=3 timeout=0s max-concurrency=4 pipeline-batch=16 scan-cap=512 request-cap=256 n1ql_feat_cntrl=0 servicers=16 plus-servicers=64 request-size-cap=67108864 datastore=http://127.0.0.1:8091 loglevel=INFO 
+_time=2019-07-21T21:58:19.755+00:00 _level=INFO _msg=Starting audit settings worker 1. 
+_time=2019-07-21T21:58:19.755+00:00 _level=INFO _msg=Starting audit worker 4 
+_time=2019-07-21T21:58:19.756+00:00 _level=INFO _msg=Starting audit worker 1 
+_time=2019-07-21T21:58:19.756+00:00 _level=INFO _msg=Starting audit worker 2 
+_time=2019-07-21T21:58:19.756+00:00 _level=INFO _msg=Starting audit worker 3 
+_time=2019-07-21T21:58:19.756+00:00 _level=INFO _msg=HttpEndpoint: Listen Address=[::]:8093 
+_time=2019-07-21T21:58:19.757+00:00 _level=INFO _msg= Certificates have been refreshed by ns server  
+_time=2019-07-21T21:58:19.763+00:00 _level=INFO _msg=HttpEndpoint: ListenTLS Address=[::]:18093 
+_time=2019-07-21T21:58:20.756+00:00 _level=INFO _msg=Starting audit update stream 
+_time=2019-07-21T21:58:22.114+00:00 _level=INFO _msg=Created New Bucket datadog-test 
+_time=2019-07-21T21:58:22.114+00:00 _level=WARN _msg=Error loading indexes for keyspace datadog-test, Error Failed to load indexes Keyspace datadog-test - cause: All nodes failed to respond or no healthy nodes for bucket found 
+2019-07-21T21:58:22.123+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.log_level":"info","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":2,"indexer.settings.memory_quota":268435456,"indexer.settings.compaction.abort_exceed_interval":false}
+2019-07-21T21:58:22.169+00:00 [Info] MetadataProvider.SetClusterStatus(): healthy nodes 1 failed node 0 unhealthy node 0 add node 0
+2019-07-21T21:58:22.169+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2019-07-21T21:58:22.169+00:00 [Info] Refreshed Indexer List: []
+2019-07-21T21:58:22.172+00:00 [Info] initialized currmeta 0 force true 
+2019-07-21T21:58:22.172+00:00 [Info] GSIC[default/datadog-test-1563746302114857400] started ...
+2019-07-21T21:58:22.172+00:00 [INFO]  Trying with http://127.0.0.1:8091/pools/default/bucketsStreaming/datadog-test 
+2019-07-21T21:58:22.175+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40cbq-engine-cbauth@127.0.0.1:8091, default
+2019-07-21T21:58:22.179+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2019-07-21T21:58:22.180+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2019-07-21T21:58:22.183+00:00 [INFO] Got new configuration for bucket datadog-test 
+2019-07-21T21:58:22.183+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2019-07-21T21:58:22.203+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2019-07-21T21:58:22.203+00:00 [Info] Refreshed Indexer List: []
+2019-07-21T21:58:22.206+00:00 [Info] switched currmeta from 0 -> 0 force true 
+2019-07-21T21:58:22.216+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2019-07-21T21:58:22.216+00:00 [Info] Refreshed Indexer List: []
+2019-07-21T21:58:22.221+00:00 [Info] switched currmeta from 0 -> 0 force true 
+2019-07-21T21:58:22.254+00:00 [INFO] Got new configuration for bucket datadog-test 
+2019-07-21T21:58:22.256+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2019-07-21T21:58:22.281+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2019-07-21T21:58:22.281+00:00 [Info] Refreshed Indexer List: []
+2019-07-21T21:58:22.284+00:00 [Info] switched currmeta from 0 -> 0 force true 
+2019-07-21T21:58:22.683+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2019-07-21T21:58:22.736+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2019-07-21T21:58:22.736+00:00 [Info] Refreshed Indexer List: []
+2019-07-21T21:58:22.740+00:00 [Info] switched currmeta from 0 -> 0 force true 
+2019-07-21T21:58:22.898+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2019-07-21T21:58:22.917+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2019-07-21T21:58:22.917+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2019-07-21T21:58:22.917+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
+2019-07-21T21:58:22.939+00:00 [Info] WatchMetadata(): successfully reach indexer at 127.0.0.1:9100.
+2019-07-21T21:58:22.941+00:00 [Info] MetadataProvider: Updating indexer version to 3
+2019-07-21T21:58:22.941+00:00 [Info] switched currmeta from 0 -> 1 force true 
+2019-07-21T21:58:22.941+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] started poolsize 5000 overflow 30 low WM 1000 relConn batch size 100 ...
+2019-07-21T21:58:22.941+00:00 [Info] [GsiScanClient:"127.0.0.1:9101"] started ...
+2019-07-21T21:58:22.943+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] open new connection ...
