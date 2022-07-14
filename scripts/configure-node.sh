@@ -132,13 +132,6 @@ curl_check -u Administrator:password -X PUT http://127.0.0.1:8092/datadog-test/_
 rm /opt/couchbase/create-ddoc.json
 echo
 
-echo "Creating datatest analytics dataset"
-wait_for_uri_with_auth http://127.0.0.1:8095/query/service 405
-sleep 3
-curl_check -u Administrator:password -X POST http://127.0.0.1:8095/query/service -H Content-Type:application/json -d @/opt/couchbase/create-dataset.json
-rm /opt/couchbase/create-dataset.json
-echo
-
 echo "Configuration completed!" | tee /dev/fd/3
 
 config_done

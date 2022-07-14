@@ -1,7 +1,7 @@
 #!/bin/sh -ex
 
-TAG=6.0.1
-IMAGE=couchbase/server-sandbox
+TAG=7.1.1
+IMAGE=couchbase
 
 docker build -t ${IMAGE}:${TAG} .
 if [ "$1" = "--publish" ]
