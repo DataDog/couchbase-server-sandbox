@@ -1,6 +1,6 @@
-FROM couchbase:7.1.1
+FROM amd64/couchbase:7.1.1
 
-# COPY var /opt/couchbase/var
+COPY var /opt/couchbase/var
 COPY scripts/configure-node.sh /etc/service/config-couchbase/run
 COPY scripts/create-document.txt /opt/couchbase
 COPY scripts/create-index.json /opt/couchbase
