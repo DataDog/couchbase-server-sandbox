@@ -1,7 +1,10 @@
 Couchbase Sandbox
 =================
 
-# Running
+# Usage
+This repository creates and sets up a couchbase image for use for [dd-trace-js](https://github.com/DataDog/dd-trace-js).  Its a simple couchbase-sandbox image with some additional setup scripts (for things like username/password setup, etc)
+
+# Running Locally
 
 You should need nothing installed on your machine except Docker. Type:
 
@@ -23,3 +26,13 @@ This image is configured as follows:
     * Admin credentials: Administrator / password
     * RBAC user with admin access to travel-sample bucket, with
       credentials admin / password
+
+
+# Building and Pushing
+1. Setup an access token with permissions for repositories, and substitute the key and username in the below scripts.
+2. To build and push a new version to the repository, use the following commands:
+```
+docker login ghcr.io -u <USERNAME> -p <PASSWORD>
+docker build -t ghcr.io/datadog/couchbase-server-sandbox .
+docker push ghcr.io/datadog/couchbase-server-sandbox:latest
+```
