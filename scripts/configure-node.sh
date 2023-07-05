@@ -9,16 +9,16 @@ CONFIG_DONE_FILE=/opt/couchbase/var/lib/couchbase/container-configured
 config_done() {
   touch ${CONFIG_DONE_FILE}
   echo "Couchbase Admin UI: http://localhost:8091" \
-     "\nLogin credentials: Administrator / password" | tee /dev/fd/3
+     "\nLogin credentials: Administrator / password"
   echo "Stopping config-couchbase service"
   sv stop /etc/service/config-couchbase
 }
 
 if [ -e ${CONFIG_DONE_FILE} ]; then
-  echo "Container previously configured." | tee /dev/fd/3	
+  echo "Container previously configured."
   config_done	
 else	
-  echo "Configuring Couchbase Server.  Please wait (~60 sec)..." | tee /dev/fd/3	
+  echo "Configuring Couchbase Server.  Please wait (~60 sec)..."
 fi
 
 export PATH=/opt/couchbase/bin:${PATH}
@@ -139,6 +139,6 @@ curl_check -u Administrator:password -X POST http://127.0.0.1:8095/query/service
 rm /opt/couchbase/create-dataset.json
 echo
 
-echo "Configuration completed!" | tee /dev/fd/3
+echo "Configuration completed!"
 
 config_done
