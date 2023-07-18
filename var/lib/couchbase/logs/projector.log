@@ -1,105 +1,125 @@
-2019-07-21T21:58:19.338+00:00 [Info] Projector started with command line: [/opt/couchbase/bin/projector -kvaddrs=127.0.0.1:11210 -adminport=:9999 -diagDir=/opt/couchbase/var/lib/couchbase/crash -ipv6=false 127.0.0.1:8091]
-2019-07-21T21:58:19.339+00:00 [Info] Parsing the args
-2019-07-21T21:58:19.340+00:00 [Info] uid: 1000; gid: 1000; hostname: 7b8b7bb22d3c
-2019-07-21T21:58:19.340+00:00 [Info] amd64 linux; cpus: 4; GOMAXPROCS: 4; version: go1.7.6
-2019-07-21T21:58:19.344+00:00 [Info] Projector CPU set at 400
-2019-07-21T21:58:19.347+00:00 [Info]  changing GOGC percentage from 100 to 100
-2019-07-21T21:58:19.347+00:00 [Info] amd64 linux; cpus: 4; GOMAXPROCS: 4; version: go1.7.6
-2019-07-21T21:58:19.348+00:00 [Info] PROJ[:9999] changing GOGC percentage from 100 to 100
-2019-07-21T21:58:19.348+00:00 [Info] PROJ[:9999] started ...
-2019-07-21T21:58:19.349+00:00 [Info] MSAT starting with 60000 tick ...
-2019-07-21T21:58:19.349+00:00 [Info] pram[:9999] registered /adminport/vbmapRequest
-2019-07-21T21:58:19.353+00:00 [Info] New settings received: 
-{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.log_level":"info","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":2,"indexer.settings.memory_quota":268435456,"indexer.settings.compaction.abort_exceed_interval":false}
-2019-07-21T21:58:19.354+00:00 [Info] PROJ[:9999] settings notifier from metakv
-2019-07-21T21:58:19.354+00:00 [Info] PROJ[:9999] settings indexer.settings.wal_size will updated to `4096`
-2019-07-21T21:58:19.354+00:00 [Info] PROJ[:9999] settings indexer.settings.minVbQueueLength will updated to `250`
-2019-07-21T21:58:19.354+00:00 [Info] PROJ[:9999] settings indexer.settings.inmemory_snapshot.fdb.interval will updated to `200`
-2019-07-21T21:58:19.354+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot_init_build.interval will updated to `5000`
-2019-07-21T21:58:19.354+00:00 [Info] PROJ[:9999] settings indexer.settings.cpuProfile will updated to `false`
-2019-07-21T21:58:19.354+00:00 [Info] PROJ[:9999] settings indexer.settings.moi.debug will updated to `false`
-2019-07-21T21:58:19.354+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.compaction_mode will updated to `circular`
-2019-07-21T21:58:19.354+00:00 [Info] PROJ[:9999] settings indexer.settings.gc_percent will updated to `100`
-2019-07-21T21:58:19.355+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.plasma.optional.decrement will updated to `5`
-2019-07-21T21:58:19.355+00:00 [Info] PROJ[:9999] settings indexer.settings.recovery.max_rollbacks will updated to `2`
-2019-07-21T21:58:19.355+00:00 [Info] PROJ[:9999] settings indexer.settings.fast_flush_mode will updated to `true`
-2019-07-21T21:58:19.355+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.check_period will updated to `30`
-2019-07-21T21:58:19.355+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.plasma.manual will updated to `false`
-2019-07-21T21:58:19.356+00:00 [Warn] PROJ[:9999] immutable settings indexer.settings.send_buffer_size cannot be update to `1024`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.abort_exceed_interval will updated to `false`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.bufferPoolBlockSize will updated to `16384`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot_init_build.moi.interval will updated to `600000`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.memProfFname will updated to ``
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.inmemory_snapshot.interval will updated to `200`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings queryport.client.settings.backfillLimit will updated to `5120`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.interval will updated to `00:00,00:00`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.min_frag will updated to `30`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.maxVbQueueLength will updated to `0`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.enable_corrupt_index_backup will updated to `false`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.days_of_week will updated to `Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.sliceBufSize will updated to `50000`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.memProfile will updated to `false`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.max_writer_lock_prob will updated to `20`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.plasma.optional.quota will updated to `25`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings projector.settings.log_level will updated to `info`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.storage_mode.disable_upgrade will updated to `false`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.log_level will updated to `info`
-2019-07-21T21:58:19.356+00:00 [Warn] PROJ[:9999] immutable settings queryport.client.settings.poolOverflow cannot be update to `30`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.scan_getseqnos_retries will updated to `30`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.moi.recovery_threads will updated to `4`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.min_size will updated to `524288000`
-2019-07-21T21:58:19.356+00:00 [Warn] PROJ[:9999] immutable settings queryport.client.settings.minPoolSizeWM cannot be update to `1000`
-2019-07-21T21:58:19.356+00:00 [Warn] PROJ[:9999] immutable settings queryport.client.settings.poolSize cannot be update to `5000`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.storage_mode will updated to `memory_optimized`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot.fdb.interval will updated to `5000`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.plasma.optional.min_frag will updated to `20`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.cpuProfFname will updated to ``
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.max_cpu_percent will updated to `0`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.max_array_seckey_size will updated to `10240`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.max_seckey_size will updated to `4608`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.build.batch_size will updated to `5`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.moi.persistence_threads will updated to `2`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot.interval will updated to `5000`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot_init_build.fdb.interval will updated to `5000`
-2019-07-21T21:58:19.356+00:00 [Warn] PROJ[:9999] immutable settings queryport.client.settings.relConnBatchSize cannot be update to `100`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.allow_large_keys will updated to `true`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot.moi.interval will updated to `600000`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.inmemory_snapshot.moi.interval will updated to `20`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.plasma.recovery.max_rollbacks will updated to `2`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.moi.recovery.max_rollbacks will updated to `2`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.statsLogDumpInterval will updated to `60`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.corrupt_index_num_backups will updated to `1`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.largeSnapshotThreshold will updated to `200`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.memory_quota will updated to `268435456`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.num_replica will updated to `0`
-2019-07-21T21:58:19.356+00:00 [Warn] PROJ[:9999] immutable settings indexer.settings.scan_timeout cannot be update to `120000`
-2019-07-21T21:58:19.356+00:00 [Info] PROJ[:9999] settings indexer.settings.smallSnapshotThreshold will updated to `30`
-2019-07-21T21:58:19.357+00:00 [Info] amd64 linux; cpus: 4; GOMAXPROCS: 4; version: go1.7.6
-2019-07-21T21:58:19.349+00:00 [Info] pram[:9999] registered /adminport/failoverLogRequest
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered /adminport/mutationTopicRequest
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered /adminport/restartVbucketsRequest
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered /adminport/shutdownVbucketsRequest
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered /adminport/addBucketsRequest
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered /adminport/delBucketsRequest
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered /adminport/addInstancesRequest
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered /adminport/delInstancesRequest
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered /adminport/repairEndpointsRequest
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered /adminport/shutdownTopicRequest
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered /adminport/stats
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered handler-func /stats
-2019-07-21T21:58:19.357+00:00 [Info] pram[:9999] registered handler-func /settings
-2019-07-21T21:58:19.358+00:00 [Info] pram[:9999] registered handler-func /debug/pprof
-2019-07-21T21:58:19.358+00:00 [Info] pram[:9999] registered handler-func /debug/pprof/block
-2019-07-21T21:58:19.358+00:00 [Info] pram[:9999] registered handler-func /debug/pprof/goroutine
-2019-07-21T21:58:19.358+00:00 [Info] pram[:9999] registered handler-func /debug/pprof/heap
-2019-07-21T21:58:19.358+00:00 [Info] pram[:9999] registered handler-func /debug/pprof/threadcreate
-2019-07-21T21:58:19.358+00:00 [Info] pram[:9999] registered handler-func /debug/pprof/profile
-2019-07-21T21:58:19.358+00:00 [Info] pram[:9999] starting ...
-2019-07-21T21:58:19.517+00:00 [Info] pram[:9999] Request "/adminport/shutdownTopicRequest"
-2019-07-21T21:58:19.517+00:00 [Info] PROJ[:9999] ##1 doShutdownTopic() "MAINT_STREAM_TOPIC_8ba1ce2e183ff908d4723b87c7fdb9b3"
-2019-07-21T21:58:19.518+00:00 [Error] PROJ[:9999] ##1 acquireFeed(): projector.topicMissing
-2019-07-21T21:58:19.518+00:00 [Info] PROJ[:9999] ##1 doShutdownTopic() returns ...
-2019-07-21T21:58:19.540+00:00 [Info] pram[:9999] Request "/adminport/shutdownTopicRequest"
-2019-07-21T21:58:19.540+00:00 [Info] PROJ[:9999] ##2 doShutdownTopic() "INIT_STREAM_TOPIC_8ba1ce2e183ff908d4723b87c7fdb9b3"
-2019-07-21T21:58:19.541+00:00 [Error] PROJ[:9999] ##2 acquireFeed(): projector.topicMissing
-2019-07-21T21:58:19.541+00:00 [Info] PROJ[:9999] ##2 doShutdownTopic() returns ...
+2023-07-18T19:57:21.984+00:00 [Info] Projector started with command line: [/opt/couchbase/bin/projector --httpsPort=9999 --certFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem --keyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem -kvaddrs=127.0.0.1:11210 -adminport=:9999 -diagDir=/opt/couchbase/var/lib/couchbase/crash -ipv6=false 127.0.0.1:8091]
+2023-07-18T19:57:21.987+00:00 [Info] Parsing the args
+2023-07-18T19:57:21.989+00:00 [Info] uid: 1000; gid: 1000; hostname: a32eab8dd27a
+2023-07-18T19:57:21.989+00:00 [Info] amd64 linux; cpus: 5; GOMAXPROCS: 5; version: go1.13.7
+2023-07-18T19:57:22.039+00:00 [Info] StatsManager: Stats logging interval set to: 60 seconds
+2023-07-18T19:57:22.039+00:00 [Info] StatsManager: vbseqnos logging interval set to: 300 seconds
+2023-07-18T19:57:22.039+00:00 [Info] StatsManager: eval stats logging interval set to: 300 seconds
+2023-07-18T19:57:22.040+00:00 [Info] Projector CPU set at 400
+2023-07-18T19:57:22.041+00:00 [Info]  changing GOGC percentage from 100 to 100
+2023-07-18T19:57:22.042+00:00 [Info]  memcachedTimeout set to 120
+2023-07-18T19:57:22.042+00:00 [Info] amd64 linux; cpus: 5; GOMAXPROCS: 4; version: go1.13.7
+2023-07-18T19:57:22.057+00:00 [Info] Recieve security change notification. code 3
+2023-07-18T19:57:22.058+00:00 [Info] TLS config refreshed successfully
+2023-07-18T19:57:22.066+00:00 [Info] Certificate refreshed successfully
+2023-07-18T19:57:22.066+00:00 [Info] Encryption config refresh successfully.   Encryption enabled=false
+2023-07-18T19:57:22.066+00:00 [Info] security context:  encryptLocalHost true Local IP's: map[127.0.0.1:true 172.17.0.2:true]
+2023-07-18T19:57:22.076+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40projector-cbauth@127.0.0.1:8091, default
+2023-07-18T19:57:22.080+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2023-07-18T19:57:22.080+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2023-07-18T19:57:22.105+00:00 [Info] security context initialized
+2023-07-18T19:57:22.105+00:00 [Info] security port mapping updated : map[11210:11207 8091:18091 8093:18093 9100:9100 9101:9101 9102:19102 9103:9103 9104:9104 9105:9105 9999:9999]
+2023-07-18T19:57:22.105+00:00 [Info] PROJ[:9999] changing GOGC percentage from 100 to 100
+2023-07-18T19:57:22.105+00:00 [Info] PROJ[:9999] started ...
+2023-07-18T19:57:22.109+00:00 [Info] MSAT starting with 60000 tick ...
+2023-07-18T19:57:22.109+00:00 [Info] pram[:9999] registered /adminport/vbmapRequest
+2023-07-18T19:57:22.109+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.log_level":"info","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":2,"indexer.settings.memory_quota":268435456,"indexer.settings.compaction.abort_exceed_interval":false}
+2023-07-18T19:57:22.110+00:00 [Info] pram[:9999] registered /adminport/failoverLogRequest
+2023-07-18T19:57:22.110+00:00 [Info] PROJ[:9999] settings notifier from metakv
+2023-07-18T19:57:22.111+00:00 [Info] pram[:9999] registered /adminport/mutationTopicRequest
+2023-07-18T19:57:22.111+00:00 [Warn] PROJ[:9999] immutable settings queryport.client.settings.relConnBatchSize cannot be update to `100`
+2023-07-18T19:57:22.111+00:00 [Info] pram[:9999] registered /adminport/restartVbucketsRequest
+2023-07-18T19:57:22.111+00:00 [Warn] PROJ[:9999] immutable settings queryport.client.settings.poolOverflow cannot be update to `30`
+2023-07-18T19:57:22.111+00:00 [Info] PROJ[:9999] settings indexer.settings.smallSnapshotThreshold will updated to `30`
+2023-07-18T19:57:22.111+00:00 [Info] pram[:9999] registered /adminport/shutdownVbucketsRequest
+2023-07-18T19:57:22.111+00:00 [Info] PROJ[:9999] settings indexer.settings.inmemory_snapshot.moi.interval will updated to `10`
+2023-07-18T19:57:22.111+00:00 [Info] pram[:9999] registered /adminport/addBucketsRequest
+2023-07-18T19:57:22.111+00:00 [Info] PROJ[:9999] settings indexer.settings.minVbQueueLength will updated to `250`
+2023-07-18T19:57:22.111+00:00 [Info] pram[:9999] registered /adminport/delBucketsRequest
+2023-07-18T19:57:22.111+00:00 [Info] PROJ[:9999] settings indexer.settings.memProfile will updated to `false`
+2023-07-18T19:57:22.111+00:00 [Info] pram[:9999] registered /adminport/addInstancesRequest
+2023-07-18T19:57:22.111+00:00 [Info] PROJ[:9999] settings indexer.settings.corrupt_index_num_backups will updated to `1`
+2023-07-18T19:57:22.112+00:00 [Info] PROJ[:9999] settings indexer.settings.inmemory_snapshot.interval will updated to `200`
+2023-07-18T19:57:22.112+00:00 [Info] pram[:9999] registered /adminport/delInstancesRequest
+2023-07-18T19:57:22.112+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.days_of_week will updated to `Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday`
+2023-07-18T19:57:22.112+00:00 [Info] pram[:9999] registered /adminport/repairEndpointsRequest
+2023-07-18T19:57:22.112+00:00 [Info] PROJ[:9999] settings queryport.client.settings.backfillLimit will updated to `5120`
+2023-07-18T19:57:22.112+00:00 [Info] pram[:9999] registered /adminport/shutdownTopicRequest
+2023-07-18T19:57:22.112+00:00 [Warn] PROJ[:9999] immutable settings indexer.settings.scan_timeout cannot be update to `120000`
+2023-07-18T19:57:22.112+00:00 [Info] pram[:9999] registered /adminport/stats
+2023-07-18T19:57:22.112+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.plasma.optional.min_frag will updated to `20`
+2023-07-18T19:57:22.113+00:00 [Warn] PROJ[:9999] immutable settings indexer.settings.send_buffer_size cannot be update to `1024`
+2023-07-18T19:57:22.113+00:00 [Info] pram[:9999] registered handler-func /stats
+2023-07-18T19:57:22.114+00:00 [Info] PROJ[:9999] settings indexer.settings.memory_quota will updated to `268435456`
+2023-07-18T19:57:22.114+00:00 [Info] pram[:9999] registered handler-func /settings
+2023-07-18T19:57:22.114+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot_init_build.moi.interval will updated to `600000`
+2023-07-18T19:57:22.114+00:00 [Info] pram[:9999] registered handler-func /debug/pprof
+2023-07-18T19:57:22.114+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot.moi.interval will updated to `600000`
+2023-07-18T19:57:22.114+00:00 [Info] pram[:9999] registered handler-func /debug/pprof/block
+2023-07-18T19:57:22.114+00:00 [Info] PROJ[:9999] settings indexer.settings.sliceBufSize will updated to `50000`
+2023-07-18T19:57:22.114+00:00 [Info] pram[:9999] registered handler-func /debug/pprof/goroutine
+2023-07-18T19:57:22.114+00:00 [Info] PROJ[:9999] settings indexer.settings.storage_mode will updated to `memory_optimized`
+2023-07-18T19:57:22.114+00:00 [Info] pram[:9999] registered handler-func /debug/pprof/heap
+2023-07-18T19:57:22.115+00:00 [Info] PROJ[:9999] settings indexer.settings.wal_size will updated to `4096`
+2023-07-18T19:57:22.115+00:00 [Info] pram[:9999] registered handler-func /debug/pprof/threadcreate
+2023-07-18T19:57:22.115+00:00 [Info] PROJ[:9999] settings indexer.settings.moi.recovery.max_rollbacks will updated to `2`
+2023-07-18T19:57:22.115+00:00 [Info] pram[:9999] registered handler-func /debug/pprof/profile
+2023-07-18T19:57:22.115+00:00 [Info] PROJ[:9999] settings indexer.settings.statsLogDumpInterval will updated to `60`
+2023-07-18T19:57:22.115+00:00 [Warn] PROJ[:9999] immutable settings queryport.client.settings.minPoolSizeWM cannot be update to `1000`
+2023-07-18T19:57:22.115+00:00 [Info] PROJ[:9999] settings indexer.settings.allow_large_keys will updated to `true`
+2023-07-18T19:57:22.115+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot.interval will updated to `5000`
+2023-07-18T19:57:22.115+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.interval will updated to `00:00,00:00`
+2023-07-18T19:57:22.115+00:00 [Info] PROJ[:9999] settings indexer.settings.cpuProfile will updated to `false`
+2023-07-18T19:57:22.116+00:00 [Info] PROJ[:9999] settings indexer.settings.max_array_seckey_size will updated to `10240`
+2023-07-18T19:57:22.116+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.min_size will updated to `524288000`
+2023-07-18T19:57:22.116+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.compaction_mode will updated to `circular`
+2023-07-18T19:57:22.117+00:00 [Info] pram[:9999] starting ...
+2023-07-18T19:57:22.117+00:00 [Info] PROJ[:9999] settings indexer.settings.inmemory_snapshot.fdb.interval will updated to `200`
+2023-07-18T19:57:22.117+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.plasma.optional.decrement will updated to `5`
+2023-07-18T19:57:22.117+00:00 [Info] PROJ[:9999] settings indexer.settings.moi.recovery_threads will updated to `5`
+2023-07-18T19:57:22.118+00:00 [Info] PROJ[:9999] settings indexer.settings.bufferPoolBlockSize will updated to `16384`
+2023-07-18T19:57:22.118+00:00 [Info] PROJ[:9999] settings indexer.settings.num_replica will updated to `0`
+2023-07-18T19:57:22.118+00:00 [Info] PROJ[:9999] settings indexer.settings.largeSnapshotThreshold will updated to `200`
+2023-07-18T19:57:22.118+00:00 [Info] PROJ[:9999] settings indexer.settings.max_writer_lock_prob will updated to `20`
+2023-07-18T19:57:22.119+00:00 [Warn] PROJ[:9999] immutable settings queryport.client.settings.poolSize cannot be update to `5000`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings projector.settings.log_level will updated to `info`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.max_cpu_percent will updated to `0`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.check_period will updated to `30`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.fast_flush_mode will updated to `true`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.plasma.recovery.max_rollbacks will updated to `2`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.build.batch_size will updated to `5`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.abort_exceed_interval will updated to `false`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.moi.persistence_threads will updated to `3`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot_init_build.fdb.interval will updated to `5000`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.min_frag will updated to `30`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot_init_build.interval will updated to `5000`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.memProfDir will updated to ``
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.cpuProfDir will updated to ``
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.enable_corrupt_index_backup will updated to `false`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.recovery.max_rollbacks will updated to `2`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.plasma.manual will updated to `false`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.compaction.plasma.optional.quota will updated to `25`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.gc_percent will updated to `100`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.persisted_snapshot.fdb.interval will updated to `5000`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.maxVbQueueLength will updated to `0`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.moi.debug will updated to `false`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.storage_mode.disable_upgrade will updated to `false`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.scan_getseqnos_retries will updated to `30`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.max_seckey_size will updated to `4608`
+2023-07-18T19:57:22.119+00:00 [Info] PROJ[:9999] settings indexer.settings.log_level will updated to `info`
+2023-07-18T19:57:22.119+00:00 [Info] amd64 linux; cpus: 5; GOMAXPROCS: 4; version: go1.13.7
+2023-07-18T19:57:22.158+00:00 [Info] pram[:9999] Request "/adminport/shutdownTopicRequest"
+2023-07-18T19:57:22.160+00:00 [Info] PROJ[:9999] ##1 doShutdownTopic() "MAINT_STREAM_TOPIC_fc6bd4a2dd76337f941781c7d450e484"
+2023-07-18T19:57:22.160+00:00 [Error] PROJ[:9999] ##1 acquireFeed(): projector.topicMissing
+2023-07-18T19:57:22.160+00:00 [Info] PROJ[:9999] ##1 doShutdownTopic() returns ...
+2023-07-18T19:57:22.165+00:00 [Info] pram[:9999] Request "/adminport/shutdownTopicRequest"
+2023-07-18T19:57:22.165+00:00 [Info] PROJ[:9999] ##2 doShutdownTopic() "INIT_STREAM_TOPIC_fc6bd4a2dd76337f941781c7d450e484"
+2023-07-18T19:57:22.165+00:00 [Error] PROJ[:9999] ##2 acquireFeed(): projector.topicMissing
+2023-07-18T19:57:22.165+00:00 [Info] PROJ[:9999] ##2 doShutdownTopic() returns ...
+2023-07-18T19:57:22.220+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2023-07-18T19:57:23.180+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2023-07-18T19:57:23.283+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2023-07-18T19:57:23.355+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2023-07-18T19:58:22.110+00:00 [Info] memstats {"Alloc":2768896, "TotalAlloc":7329320, "Sys":72548600, "Lookups":0, "Mallocs":56735,"Frees":47401, "HeapAlloc":2768896, "HeapSys":66224128, "HeapIdle":61661184, "HeapInuse":4562944,"HeapReleased":60604416, "HeapObjects":9334,"GCSys":2377728, "LastGC":1689710243363061000,"PauseTotalNs":8344000, "PauseNs":[7505000, 97000, 689000, 53000], "NumGC":4}
+2023-07-18T19:59:22.110+00:00 [Info] memstats {"Alloc":2771200, "TotalAlloc":7331624, "Sys":72548600, "Lookups":0, "Mallocs":56764,"Frees":47410, "HeapAlloc":2771200, "HeapSys":66224128, "HeapIdle":61644800, "HeapInuse":4579328,"HeapReleased":60604416, "HeapObjects":9354,"GCSys":2377728, "LastGC":1689710243363061000,"PauseTotalNs":8344000, "PauseNs":[], "NumGC":4}

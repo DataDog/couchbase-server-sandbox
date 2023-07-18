@@ -111,7 +111,8 @@
       "IdleConnection",
       "NodeManagement",
       "SessionManagement",
-      "Stats"
+      "Stats",
+      "SystemSettings"
     ],
     "domain": "local"
   },
@@ -133,7 +134,9 @@
         "XattrWrite"
       ]
     },
-    "privileges": [],
+    "privileges": [
+      "SystemSettings"
+    ],
     "domain": "local"
   },
   "admin": {
@@ -154,7 +157,9 @@
         "XattrWrite"
       ]
     },
-    "privileges": [],
+    "privileges": [
+      "SystemSettings"
+    ],
     "domain": "local"
   }
 }

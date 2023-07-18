@@ -30,7 +30,13 @@ This image is configured as follows:
 
 # Building and Pushing
 1. Setup an access token with permissions for repositories, and substitute the key and username in the below scripts.
-2. To build and push a new version to the repository, use the following commands:
+2. To reconfigure, run:
+```
+rm -rf var
+mkdir var
+docker build -q --no-cache .
+```
+3. To build and push a new version to the repository, use the following commands:
 ```
 docker login ghcr.io -u <USERNAME> -p <PASSWORD>
 docker build -t ghcr.io/datadog/couchbase-server-sandbox .

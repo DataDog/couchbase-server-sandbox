@@ -1,31 +1,115 @@
-2019-07-21T21:58:17.776Z INFO GOXDCR.ReplMgr: GOMAXPROCS=4
-2019-07-21T21:58:17.794Z INFO GOXDCR.AuditSvc: Created audit service.
-2019-07-21T21:58:17.794Z INFO GOXDCR.UILogSvc: Created ui log service.
-2019-07-21T21:58:17.797Z INFO GOXDCR.ReplSpecSvc: Cache has been initialized for ReplicationSpecService
-2019-07-21T21:58:17.804Z INFO GOXDCR.IntSettSvc: Internal settings not found. Using default values
-2019-07-21T21:58:17.804Z INFO GOXDCR.ReplMgr: pollEOF: About to start stdin polling
-2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: XDCR internal settings: map[RetryIntervalTargetStats:1000 MemStatsLogInterval:120 RefreshRemoteClusterRefInterval:15 XmemMaxRetryInterval:300 ThresholdForThroughSeqnoComputation:100 MaxCheckpointRecordsToRead:5 CapiDataChanSizeMultiplier:1 PercentageOfBytesToSendAsMin:30 MaxRetryCapiService:5 StatsLogInterval:30 MaxCheckpointRecordsToKeep:5 CapiRetryInterval:500 XmemMaxIdleCount:60 CapiBatchTimeout:180 MaxRetryForLiveUpdatePipeline:5 CapiWriteTimeout:10 XmemBackoffWaitTime:10 ReplicationSpecGCCnt:4 MaxTopologyStableCountBeforeRestart:30 XmemBackoffTimeNewConn:1000 TimeoutRuntimeContextStop:5 CapiMaxRetryBatchUpdateDocs:6 TimeoutCheckpointBeforeStop:180 XmemDefaultRespTimeout:1000 UprFeedDataChanLength:20000 UprFeedBufferSize:1048576 NumberOfSlotsForBandwidthThrottling:10 TimeoutPartsStart:30 BypassSanInCertificateCheck:0 TimeoutDcpCloseUprStreams:3 DefaultHttpTimeout:180 HELOTimeout:120 ReplSpecCheckInterval:15 CapiReadTimeout:60 AuditReadTimeout:1 XmemMaxDataChanSize:10485760 WaitTimeBetweenMetadataChangeListeners:1000 ThresholdPercentageForEventChanSizeLogging:90 XmemMaxRetry:5 XmemWriteTimeout:120 MaxLengthSnapshotHistory:200 TimeoutDcpCloseUprFeed:3 MaxRetryTargetStats:6 XmemMaxBatchSize:50 TimeoutPartsStop:10 MaxTopologyChangeCountBeforeRestart:30 XmemSelfMonitorInterval:6 MaxNumOfMetakvRetries:4 KeepAlivePeriod:30 XmemMaxReadDownTime:60 MaxNumberOfAsyncListeners:4 ShortHttpTimeout:20 WaitTimeForLiveUpdatePipeline:2000 TopologyChangeCheckInterval:10 AuditWriteTimeout:1 XmemReadTimeout:120 TimeoutRuntimeContextStart:30 XmemMaxRetryNewConn:10 RetryIntervalMetakv:500 MaxWorkersForCheckpointing:5]
-2019-07-21T21:58:17.810Z INFO GOXDCR.GenericSupervisor: Adding child PipelineMasterSupervisor to supervisor ReplicationManagerSupervisor
-2019-07-21T21:58:17.810Z INFO GOXDCR.PipelineMgr: Pipeline Manager is constucted
-2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: Replication manager is initialized
-2019-07-21T21:58:17.810Z INFO GOXDCR.GenericSupervisor: Starting supervisor PipelineMasterSupervisor.
-2019-07-21T21:58:17.810Z INFO GOXDCR.GenericSupervisor: Started supervisor PipelineMasterSupervisor.
-2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: Master supervisor has started
-2019-07-21T21:58:17.810Z INFO GOXDCR.GenericSupervisor: Starting supervisor ReplicationManagerSupervisor.
-2019-07-21T21:58:17.810Z INFO GOXDCR.GenericSupervisor: Started supervisor ReplicationManagerSupervisor.
-2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: initReplications succeeded
-2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: upgradeRemoteClusterRefs started.
-2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: upgradeRemoteClusterRefs exited
-2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: checkReplicationStatus started.
-2019-07-21T21:58:17.810Z INFO GOXDCR.GlobalSettingChangeListener: Started MetakvChangeListener GlobalSettingChangeListener
-2019-07-21T21:58:17.810Z INFO GOXDCR.ReplMgr: logMemStats started.
-2019-07-21T21:58:18.811Z INFO GOXDCR.InternalSettingChangeListener: Started MetakvChangeListener InternalSettingsChangeListener
-2019-07-21T21:58:19.811Z INFO GOXDCR.RemoteClusterChangeListener: Started MetakvChangeListener RemoteClusterChangeListener
-2019-07-21T21:58:20.812Z INFO GOXDCR.ReplicationSpecChangeListener: Started MetakvChangeListener ReplicationSpecChangeListener
-2019-07-21T21:58:21.812Z INFO GOXDCR.AdminPort: Constructed adminport
-2019-07-21T21:58:21.812Z INFO GOXDCR.ReplMgr: Admin port has been launched
-2019-07-21T21:58:21.812Z INFO GOXDCR.GenericSupervisor: Adding child AdminportSupervisor to supervisor ReplicationManagerSupervisor
-2019-07-21T21:58:21.812Z INFO GOXDCR.ReplMgr: ReplicationManager is running
-2019-07-21T21:58:21.813Z INFO GOXDCR.HttpServer: [xdcr:127.0.0.1:9998] new http server xdcr 127.0.0.1:9998 /
-2019-07-21T21:58:21.813Z INFO GOXDCR.AdminPort: http server started 127.0.0.1:9998 !
-2019-07-21T21:58:21.813Z INFO GOXDCR.HttpServer: [xdcr:127.0.0.1:9998] starting ...
+2023-07-18T19:57:18.119Z INFO GOXDCR.ReplMgr: GOMAXPROCS=4
+2023-07-18T19:57:18.165Z INFO GOXDCR.AuditSvc: Created audit service.
+2023-07-18T19:57:18.165Z INFO GOXDCR.UILogSvc: Created ui log service.
+2023-07-18T19:57:18.166Z INFO GOXDCR.ReplSpecSvc: Cache has been initialized for ReplicationSpecService
+2023-07-18T19:57:18.170Z INFO GOXDCR.IntSettSvc: Internal settings not found in metakv
+2023-07-18T19:57:18.171Z INFO GOXDCR.ReplMgr: pollEOF: About to start stdin polling
+2023-07-18T19:57:18.176Z INFO GOXDCR.ReplMgr: XDCR internal settings: map[ReplSpecCheckInterval:15 ShortHttpTimeout:20 MaxCountNoBacklogForResetDcpPriority:300 CpuCollectionInterval:2000 TopologySvcErrCooldownPeriodSec:120 MaxCountThroughputDrop:3 MaxRetryForLiveUpdatePipeline:5 MaxLengthSnapshotHistory:200 TimeoutCheckpointBeforeStop:180 ReplicationSpecGCCnt:4 MemStatsLogInterval:120 RemoteClusterAlternateAddrChangeKey:5 XmemMaxBatchSize:50 MaxRetryTargetStats:6 HELOTimeout:120 TopologyChangeCheckInterval:10 ThresholdPercentageForEventChanSizeLogging:90 NumberOfSlotsForThroughputThrottling:10 MaxCountDCPStreamsInactive:10 HealthCheckTimeoutSec:10 WaitTimeBetweenMetadataChangeListeners:1000 MaxCheckpointRecordsToRead:5 BypassSanInCertificateCheck:0 CapiReadTimeout:60 XmemReadTimeout:120 ThresholdForThroughSeqnoComputation:100 MaxNumOfMetakvRetries:4 XmemMaxIdleCountLowerBound:10 XmemMaxRetryInterval:300 StatsLogInterval:30 ThroughputSampleAlpha:15 ResourceMgrKVDetectionRetryInterval:60 CapiMaxRetryBatchUpdateDocs:6 XmemMaxRetryIntervalMutationLocked:30 ThroughputSampleSize:1028 ResourceManagementStatsInterval:10000 CapiBatchTimeout:180 TimeoutPartsStop:10 MaxTopologyChangeCountBeforeRestart:30 XmemMaxRetryNewConn:10 XmemBackoffTimeNewConn:1000 CapiRetryInterval:500 ResourceManagementRatioBase:100 UprFeedDataChanLength:20000 TimeoutDcpCloseUprFeed:3 PercentageOfBytesToSendAsMin:30 TimeoutRuntimeContextStop:5 TimeoutDcpCloseUprStreams:3 XmemMaxIdleCountUpperBound:120 KeepAlivePeriod:30 NumberOfSlotsForBandwidthThrottling:10 TimeoutPartsStart:30 XmemMaxDataChanSize:10485760 RetryIntervalTargetStats:1000 XmemMaxRetry:5 XmemMaxIdleCount:60 MaxWorkersForCheckpointing:5 ResourceManagementInterval:1000 ThresholdRatioForTotalCpu:95 RetryIntervalMetakv:500 MaxCountCpuNotMaxed:3 XmemMaxRetryMutationLocked:20 MaxNumberOfAsyncListeners:4 XmemDefaultRespTimeout:1000 HealthCheckIntervalSec:120 MaxTopologyStableCountBeforeRestart:30 TimeoutRuntimeContextStart:30 MaxRetryCapiService:5 FilteringInternalXattrKey:[$%XDCRInternalMeta*%$] CapiWriteTimeout:10 ThresholdRatioForProcessCpu:95 TopologySvcCooldownPeriodSec:60 AuditReadTimeout:1 ChangesLeftThresholdForOngoingReplication:200000 WaitTimeForLiveUpdatePipeline:2000 XmemWriteTimeout:120 ThroughputThrottlerLogInterval:10000 XmemSelfMonitorInterval:6 MaxCountBacklogForSetDcpPriority:5 XmemBackoffWaitTime:10 IntervalForThrottlerCalibration:4 AuditWriteTimeout:1 RefreshRemoteClusterRefInterval:15 UprFeedBufferSize:1048576 MaxCheckpointRecordsToKeep:5 ThroughputThrottlerClearTokensInterval:3000 ResourceManagementRatioUpperBound:90 DefaultHttpTimeout:180 XmemMaxReadDownTime:60 XmemMaxBackoffFactor:10 ExtraQuotaForUnderutilizedCPU:10 FilteringInternalKeyKey:[$%XDCRInternalKey*%$] CapiDataChanSizeMultiplier:1]
+2023-07-18T19:57:18.177Z INFO GOXDCR.PipelineMgr: Pipeline Manager is constructed
+2023-07-18T19:57:18.177Z INFO GOXDCR.ResourceMgr: Resource Manager is initialized
+2023-07-18T19:57:18.177Z INFO GOXDCR.ResourceMgr: ResourceMgr starting ....
+2023-07-18T19:57:18.180Z INFO GOXDCR.TpThrottler:  starting...
+2023-07-18T19:57:18.180Z INFO GOXDCR.ResourceMgr: ResourceMgr started
+2023-07-18T19:57:18.180Z INFO GOXDCR.TpThrottler:  logStats started
+2023-07-18T19:57:18.182Z INFO GOXDCR.TpThrottler:  update routine starting
+2023-07-18T19:57:18.180Z ERRO GOXDCR.TopoSvc: Failed to unmarshal the response as json, err=json: cannot unmarshal string into Go value of type map[string]interface {}, bod="unknown pool"
+ res=&{404 Object Not Found 404 HTTP/1.1 1 1 map[Pragma:[no-cache] Cache-Control:[no-cache,no-store,must-revalidate] Date:[Tue, 18 Jul 2023 19:57:18 GMT] Content-Type:[application/json] X-Xss-Protection:[1; mode=block] X-Permitted-Cross-Domain-Policies:[none] X-Frame-Options:[DENY] X-Content-Type-Options:[nosniff] Server:[Couchbase Server] Expires:[Thu, 01 Jan 1970 00:00:00 GMT] Content-Length:[14]] 0xc0001f4680 14 [] false false map[] 0xc0001c0300 <nil>}
+2023-07-18T19:57:18.183Z INFO GOXDCR.SecuritySvc: Security service started.
+2023-07-18T19:57:18.184Z INFO GOXDCR.ReplMgr: Replication manager is initialized
+2023-07-18T19:57:18.184Z INFO GOXDCR.ResourceMgr: manageResources starting ....
+
+2023-07-18T19:57:18.185Z INFO GOXDCR.ResourceMgr: collectCpuUsage starting ....
+
+2023-07-18T19:57:18.185Z INFO GOXDCR.GenericSupervisor: Starting supervisor ReplicationManagerSupervisor.
+2023-07-18T19:57:18.185Z INFO GOXDCR.ResourceMgr: logStats starting ....
+
+2023-07-18T19:57:18.183Z INFO GOXDCR.TpThrottler:  clearReassignedTokens starting... clearing every 3s
+2023-07-18T19:57:18.186Z INFO GOXDCR.SecuritySvc: Received security change notification. code 3
+2023-07-18T19:57:18.187Z INFO GOXDCR.GenericSupervisor: Started supervisor ReplicationManagerSupervisor.
+2023-07-18T19:57:18.187Z INFO GOXDCR.SecuritySvc: Cluster Encryption is changed to enabled=false, strict=false
+2023-07-18T19:57:18.187Z INFO GOXDCR.ReplMgr: initReplications succeeded
+2023-07-18T19:57:18.187Z INFO GOXDCR.ReplMgr: upgradeRemoteClusterRefs started.
+2023-07-18T19:57:18.188Z INFO GOXDCR.ReplMgr: logMemStats started.
+2023-07-18T19:57:18.188Z INFO GOXDCR.ReplMgr: checkReplicationStatus started.
+2023-07-18T19:57:18.188Z INFO GOXDCR.ReplMgr: upgradeRemoteClusterRefs exited
+2023-07-18T19:57:18.189Z INFO GOXDCR.GlobalSettingChangeListener: Started MetakvChangeListener GlobalSettingChangeListener
+2023-07-18T19:57:19.194Z INFO GOXDCR.InternalSettingChangeListener: Started MetakvChangeListener InternalSettingsChangeListener
+2023-07-18T19:57:20.195Z INFO GOXDCR.RemoteClusterChangeListener: Started MetakvChangeListener RemoteClusterChangeListener
+2023-07-18T19:57:21.196Z INFO GOXDCR.ReplicationSpecChangeListener: Started MetakvChangeListener ReplicationSpecChangeListener
+2023-07-18T19:57:22.197Z INFO GOXDCR.AdminPort: Constructed adminport
+2023-07-18T19:57:22.197Z INFO GOXDCR.ReplMgr: Admin port has been launched
+2023-07-18T19:57:22.197Z INFO GOXDCR.GenericSupervisor: Adding child AdminportSupervisor to supervisor ReplicationManagerSupervisor
+2023-07-18T19:57:22.197Z INFO GOXDCR.ReplMgr: ReplicationManager is running
+2023-07-18T19:57:22.198Z INFO GOXDCR.HttpServer: [xdcr:127.0.0.1:9998] new http server xdcr 127.0.0.1:9998 /
+2023-07-18T19:57:22.198Z INFO GOXDCR.AdminPort: http server started 127.0.0.1:9998 !
+2023-07-18T19:57:22.198Z INFO GOXDCR.HttpServer: [xdcr:127.0.0.1:9998] starting ...
+2023-07-18T19:57:28.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 62
+2023-07-18T19:57:28.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=10 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:57:28.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:57:33.189Z INFO GOXDCR.PipelineMgr: Replication Status = map[]
+2023-07-18T19:57:38.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 91
+2023-07-18T19:57:38.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=20 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:57:38.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:57:48.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 5 idleCpu: 92
+2023-07-18T19:57:48.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=30 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:57:48.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:57:48.216Z INFO GOXDCR.PipelineMgr: Replication Status = map[]
+2023-07-18T19:57:58.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 93
+2023-07-18T19:57:58.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=40 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:57:58.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:58:03.189Z INFO GOXDCR.PipelineMgr: Replication Status = map[]
+2023-07-18T19:58:08.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 0 idleCpu: 89
+2023-07-18T19:58:08.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=50 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:58:08.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:58:18.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 92
+2023-07-18T19:58:18.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=60 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:58:18.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:58:18.188Z INFO GOXDCR.ResourceMgr: Finished retrieving node's information - isKVNode: true
+2023-07-18T19:58:18.188Z INFO GOXDCR.PipelineMgr: Replication Status = map[]
+2023-07-18T19:58:28.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 92
+2023-07-18T19:58:28.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=70 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:58:28.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:58:33.189Z INFO GOXDCR.PipelineMgr: Replication Status = map[]
+2023-07-18T19:58:38.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 92
+2023-07-18T19:58:38.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=80 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:58:38.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:58:48.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 93
+2023-07-18T19:58:48.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=90 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:58:48.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:58:48.287Z INFO GOXDCR.PipelineMgr: Replication Status = map[]
+2023-07-18T19:58:58.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 2 idleCpu: 92
+2023-07-18T19:58:58.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=100 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:58:58.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:59:03.188Z INFO GOXDCR.PipelineMgr: Replication Status = map[]
+2023-07-18T19:59:08.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 92
+2023-07-18T19:59:08.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=110 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:59:08.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:59:18.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 0 idleCpu: 92
+2023-07-18T19:59:18.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=120 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:59:18.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:59:18.188Z INFO GOXDCR.PipelineMgr: Replication Status = map[]
+2023-07-18T19:59:18.190Z INFO GOXDCR.ReplMgr: Mem stats = {"Alloc":2250152,"TotalAlloc":2250152,"Sys":72415480,"Lookups":0,"Mallocs":23145,"Frees":1057,"HeapAlloc":2250152,"HeapSys":66289664,"HeapIdle":62259200,"HeapInuse":4030464,"HeapReleased":0,"HeapObjects":22088,"StackInuse":819200,"StackSys":819200,"MSpanInuse":63992,"MSpanSys":65536,"MCacheInuse":6912,"MCacheSys":16384,"BuckHashSys":1444409,"GCSys":2234368,"OtherSys":1545919,"NextGC":4473924,"LastGC":0,"PauseTotalNs":0,"PauseNs":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"PauseEnd":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"NumGC":0,"NumForcedGC":0,"GCCPUFraction":0,"EnableGC":true,"DebugGC":false,"BySize":[{"Size":0,"Mallocs":0,"Frees":0},{"Size":8,"Mallocs":361,"Frees":0},{"Size":16,"Mallocs":6797,"Frees":0},{"Size":32,"Mallocs":2609,"Frees":0},{"Size":48,"Mallocs":5336,"Frees":0},{"Size":64,"Mallocs":1085,"Frees":0},{"Size":80,"Mallocs":995,"Frees":0},{"Size":96,"Mallocs":1318,"Frees":0},{"Size":112,"Mallocs":1115,"Frees":0},{"Size":128,"Mallocs":306,"Frees":0},{"Size":144,"Mallocs":102,"Frees":0},{"Size":160,"Mallocs":127,"Frees":0},{"Size":176,"Mallocs":40,"Frees":0},{"Size":192,"Mallocs":11,"Frees":0},{"Size":208,"Mallocs":188,"Frees":0},{"Size":224,"Mallocs":198,"Frees":0},{"Size":240,"Mallocs":3,"Frees":0},{"Size":256,"Mallocs":247,"Frees":0},{"Size":288,"Mallocs":131,"Frees":0},{"Size":320,"Mallocs":52,"Frees":0},{"Size":352,"Mallocs":630,"Frees":0},{"Size":384,"Mallocs":98,"Frees":0},{"Size":416,"Mallocs":26,"Frees":0},{"Size":448,"Mallocs":2,"Frees":0},{"Size":480,"Mallocs":2,"Frees":0},{"Size":512,"Mallocs":27,"Frees":0},{"Size":576,"Mallocs":23,"Frees":0},{"Size":640,"Mallocs":25,"Frees":0},{"Size":704,"Mallocs":32,"Frees":0},{"Size":768,"Mallocs":5,"Frees":0},{"Size":896,"Mallocs":30,"Frees":0},{"Size":1024,"Mallocs":12,"Frees":0},{"Size":1152,"Mallocs":21,"Frees":0},{"Size":1280,"Mallocs":12,"Frees":0},{"Size":1408,"Mallocs":4,"Frees":0},{"Size":1536,"Mallocs":4,"Frees":0},{"Size":1792,"Mallocs":9,"Frees":0},{"Size":2048,"Mallocs":8,"Frees":0},{"Size":2304,"Mallocs":9,"Frees":0},{"Size":2688,"Mallocs":9,"Frees":0},{"Size":3072,"Mallocs":2,"Frees":0},{"Size":3200,"Mallocs":1,"Frees":0},{"Size":3456,"Mallocs":2,"Frees":0},{"Size":4096,"Mallocs":34,"Frees":0},{"Size":4864,"Mallocs":3,"Frees":0},{"Size":5376,"Mallocs":4,"Frees":0},{"Size":6144,"Mallocs":4,"Frees":0},{"Size":6528,"Mallocs":4,"Frees":0},{"Size":6784,"Mallocs":1,"Frees":0},{"Size":6912,"Mallocs":0,"Frees":0},{"Size":8192,"Mallocs":7,"Frees":0},{"Size":9472,"Mallocs":6,"Frees":0},{"Size":9728,"Mallocs":0,"Frees":0},{"Size":10240,"Mallocs":0,"Frees":0},{"Size":10880,"Mallocs":2,"Frees":0},{"Size":12288,"Mallocs":0,"Frees":0},{"Size":13568,"Mallocs":0,"Frees":0},{"Size":14336,"Mallocs":0,"Frees":0},{"Size":16384,"Mallocs":2,"Frees":0},{"Size":18432,"Mallocs":3,"Frees":0},{"Size":19072,"Mallocs":0,"Frees":0}]}
+2023-07-18T19:59:28.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 91
+2023-07-18T19:59:28.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=130 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:59:28.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:59:33.188Z INFO GOXDCR.PipelineMgr: Replication Status = map[]
+2023-07-18T19:59:38.186Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 90
+2023-07-18T19:59:38.186Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=140 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0
+2023-07-18T19:59:38.186Z INFO GOXDCR.ResourceMgr: DcpPriorityMap=map[]
+ongoingReplMap=map[]
+2023-07-18T19:59:48.228Z INFO GOXDCR.PipelineMgr: Replication Status = map[]
+2023-07-18T19:59:48.255Z INFO GOXDCR.ResourceMgr: Resource Manager State = overallTP: 0 highTP: 0 highExist: false lowExist: false backlogExist: false maxTP: 0 highTPNeeded: 0 highTokens: 0 maxTokens: 0 lowTPLimit: 0 calibration: None dcpAction: Reset processCpu: 1 idleCpu: 92
+2023-07-18T19:59:48.264Z INFO GOXDCR.ResourceMgr: backlogCount=0, noBacklogCount=150 extraQuota=false cpuNotMaxedCount=0 throughputDropCount=0

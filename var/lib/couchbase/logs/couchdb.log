@@ -1,20 +1,23 @@
-[couchdb:info,2019-07-21T21:58:16.752Z,couchdb_ns_1@127.0.0.1:cb_couch_sup<0.96.0>:couch_log:info:41]Apache CouchDB has started on http://0.0.0.0:8092/
-[couchdb:info,2019-07-21T21:58:18.950Z,couchdb_ns_1@127.0.0.1:<0.288.0>:couch_log:info:41]Deleting couch file "/opt/couchbase/var/lib/couchbase/data/datadog-test/master.couch.1.compact" with renaming it to "/opt/couchbase/var/lib/couchbase/data/.delete/7249e084c0fe6f4b9f934244a5b31696"
-[couchdb:info,2019-07-21T21:58:18.957Z,couchdb_ns_1@127.0.0.1:<0.288.0>:couch_log:info:41]Deleting couch file "/opt/couchbase/var/lib/couchbase/data/datadog-test/master.couch.1.compact" with renaming it to "/opt/couchbase/var/lib/couchbase/data/.delete/9a21d89be9e3d5d4ca659b3154e4bc05"
-[couchdb:info,2019-07-21T21:58:19.011Z,couchdb_ns_1@127.0.0.1:couch_view<0.172.0>:couch_log:info:41]Deleting couch file "/opt/couchbase/var/lib/couchbase/data/.datadog-test/master_temp" with renaming it to "/opt/couchbase/var/lib/couchbase/data/.delete/1db00648b301067f9e1e73b6fa2192d7"
-[couchdb:info,2019-07-21T21:58:19.014Z,couchdb_ns_1@127.0.0.1:couch_view<0.172.0>:couch_log:info:41]Deleting couch file "/opt/couchbase/var/lib/couchbase/data/.datadog-test/master_temp" with renaming it to "/opt/couchbase/var/lib/couchbase/data/.delete/33ae8f9b0f54f96f2bb36a1a1627e1ca"
-[couchdb:info,2019-07-21T21:58:22.433Z,couchdb_ns_1@127.0.0.1:<0.288.0>:couch_log:info:41]Database `<ud>datadog-test/master</ud>`, design document `<ud>_design/datadoc</ud>` updated (new revision: 1-5285ba09, deleted: false)
-[couchdb:info,2019-07-21T21:58:22.446Z,couchdb_ns_1@127.0.0.1:<0.193.0>:couch_log:info:41]<ud>"127.0.0.1"</ud> -- PUT <ud>"/datadog-test/_design/datadoc"</ud> 201
-[couchdb:info,2019-07-21T21:58:22.475Z,couchdb_ns_1@127.0.0.1:<0.317.0>:couch_log:info:41]Started undefined main (prod) set view group `<ud>datadog-test</ud>`, group `<ud>_design/datadoc</ud>`,  signature `f4beb6cea88b6648533d328634d840f5', view count: 1
-[couchdb:info,2019-07-21T21:58:22.504Z,couchdb_ns_1@127.0.0.1:<0.317.0>:couch_log:info:41]main set view group `<ud>_design/datadoc</ud>`, set `<ud>datadog-test</ud>` (prod), doc_fields_used
-[couchdb:info,2019-07-21T21:58:22.505Z,couchdb_ns_1@127.0.0.1:<0.317.0>:couch_log:info:41]Flow control buffer size is 20971520 bytes
-[couchdb:info,2019-07-21T21:58:22.522Z,couchdb_ns_1@127.0.0.1:<0.317.0>:couch_log:info:41]Set view `<ud>datadog-test</ud>`, main (prod) group `<ud>_design/datadoc</ud>`, linked PID <0.318.0> stopped normally
-[couchdb:info,2019-07-21T21:58:22.525Z,couchdb_ns_1@127.0.0.1:<0.317.0>:couch_log:info:41]Set view `<ud>datadog-test</ud>`, main (prod) group `<ud>_design/datadoc</ud>`, signature `f4beb6cea88b6648533d328634d840f5', configured with:
+[couchdb:info,2023-07-18T19:57:17.780Z,couchdb_ns_1@cb.local:cb_couch_sup<0.132.0>:couch_log:info:41]Apache CouchDB has started on http://0.0.0.0:8092/
+[couchdb:info,2023-07-18T19:57:17.801Z,couchdb_ns_1@cb.local:couch_audit<0.240.0>:couch_log:info:41]Couch audit settings changed [{audit_enabled,false},
+                              {disabled_users,[]},
+                              {enabled_events,[]}]
+[couchdb:info,2023-07-18T19:57:21.891Z,couchdb_ns_1@cb.local:<0.377.0>:couch_log:info:41]Deleting couch file "/opt/couchbase/var/lib/couchbase/data/datadog-test/master.couch.1.compact" with renaming it to "/opt/couchbase/var/lib/couchbase/data/.delete/912a280c0804c9e723b0e46afe3d8acb"
+[couchdb:info,2023-07-18T19:57:21.891Z,couchdb_ns_1@cb.local:<0.377.0>:couch_log:info:41]Deleting couch file "/opt/couchbase/var/lib/couchbase/data/datadog-test/master.couch.1.compact" with renaming it to "/opt/couchbase/var/lib/couchbase/data/.delete/5aaf5a85a563676f07fcdeee6ddca971"
+[couchdb:info,2023-07-18T19:57:21.919Z,couchdb_ns_1@cb.local:couch_view<0.231.0>:couch_log:info:41]Deleting couch file "/opt/couchbase/var/lib/couchbase/data/.datadog-test/master_temp" with renaming it to "/opt/couchbase/var/lib/couchbase/data/.delete/f2ec969e6f8f92f5fa717123324cae6c"
+[couchdb:info,2023-07-18T19:57:21.919Z,couchdb_ns_1@cb.local:couch_view<0.231.0>:couch_log:info:41]Deleting couch file "/opt/couchbase/var/lib/couchbase/data/.datadog-test/master_temp" with renaming it to "/opt/couchbase/var/lib/couchbase/data/.delete/c1f26558abc15e289550bda4f7aa25f5"
+[couchdb:info,2023-07-18T19:57:25.952Z,couchdb_ns_1@cb.local:<0.377.0>:couch_log:info:41]Database `datadog-test/master`, design document `_design/datadoc` updated (new revision: 1-c59b0001, deleted: false)
+[couchdb:info,2023-07-18T19:57:25.960Z,couchdb_ns_1@cb.local:<0.277.0>:couch_log:info:41]<ud>"127.0.0.1"</ud> -- PUT <ud>"/datadog-test/_design/datadoc"</ud> 201
+[couchdb:info,2023-07-18T19:57:25.970Z,couchdb_ns_1@cb.local:<0.421.0>:couch_log:info:41]Started undefined main (prod) set view group `datadog-test`, group `_design/datadoc`,  signature `f4beb6cea88b6648533d328634d840f5', view count: 1
+[couchdb:info,2023-07-18T19:57:25.983Z,couchdb_ns_1@cb.local:<0.421.0>:couch_log:info:41]main set view group `_design/datadoc`, set `datadog-test` (prod), doc_fields_used
+[couchdb:info,2023-07-18T19:57:25.984Z,couchdb_ns_1@cb.local:<0.421.0>:couch_log:info:41]Flow control buffer size is 20971520 bytes
+[couchdb:info,2023-07-18T19:57:25.992Z,couchdb_ns_1@cb.local:<0.421.0>:couch_log:info:41]Set view `datadog-test`, main (prod) group `_design/datadoc`, linked PID <0.422.0> stopped normally
+[couchdb:info,2023-07-18T19:57:25.995Z,couchdb_ns_1@cb.local:<0.421.0>:couch_log:info:41]Set view `datadog-test`, main (prod) group `_design/datadoc`, signature `f4beb6cea88b6648533d328634d840f5', configured with:
 1024 partitions
 no replica support
 initial active partitions []
 initial passive partitions []
-[couchdb:info,2019-07-21T21:58:22.561Z,couchdb_ns_1@127.0.0.1:<0.317.0>:couch_log:info:41]Set view `<ud>datadog-test</ud>`, main (prod) group `<ud>_design/datadoc</ud>`, partition states updated
+[couchdb:info,2023-07-18T19:57:26.019Z,couchdb_ns_1@cb.local:<0.421.0>:couch_log:info:41]Set view `datadog-test`, main (prod) group `_design/datadoc`, partition states updated
 active partitions before:    []
 active partitions after:     [0-1023]
 passive partitions before:   []
@@ -35,3 +38,7 @@ pending transition after:
   passive:     []
   unindexable: []
 
+[couchdb:info,2023-07-18T19:58:17.672Z,couchdb_ns_1@cb.local:couch_query_logger<0.183.0>:couch_log:info:41]Query-Volume
+---
+[couchdb:info,2023-07-18T19:59:17.675Z,couchdb_ns_1@cb.local:couch_query_logger<0.183.0>:couch_log:info:41]Query-Volume
+---

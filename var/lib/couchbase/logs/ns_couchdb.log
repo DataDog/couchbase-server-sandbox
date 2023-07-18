@@ -1,56 +1,53 @@
-[ns_server:info,2019-07-21T21:58:16.305Z,couchdb_ns_1@127.0.0.1:<0.40.0>:ns_couchdb:init_logging:125]Brought up ns_couchdb logging
-[ns_server:debug,2019-07-21T21:58:16.311Z,couchdb_ns_1@127.0.0.1:<0.40.0>:dist_manager:configure_net_kernel:339]Set net_kernel vebosity to 10 -> 0
-[ns_server:info,2019-07-21T21:58:16.312Z,couchdb_ns_1@127.0.0.1:<0.40.0>:ns_couchdb:start:51]CouchDB node 'couchdb_ns_1@127.0.0.1' was initialized for 'ns_1@127.0.0.1'. Cookie: '6b4af00be5a983b779abc64734190c63dab533da560dd0e0c940db62b70aef80'
-[ns_server:debug,2019-07-21T21:58:16.321Z,couchdb_ns_1@127.0.0.1:menelaus_users_cache<0.95.0>:versioned_cache:init:44]Starting versioned cache menelaus_users_cache
-[error_logger:info,2019-07-21T21:58:16.323Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:info,2023-07-18T19:57:17.544Z,couchdb_ns_1@cb.local:<0.73.0>:ns_couchdb:init_logging:130]Brought up ns_couchdb logging
+[ns_server:debug,2023-07-18T19:57:17.547Z,couchdb_ns_1@cb.local:<0.73.0>:dist_manager:configure_net_kernel:293]Set net_kernel vebosity to 10 -> 0
+[ns_server:info,2023-07-18T19:57:17.556Z,couchdb_ns_1@cb.local:<0.73.0>:ns_couchdb:start:55]CouchDB node 'couchdb_ns_1@cb.local' was initialized for 'ns_1@cb.local'. Cookie: {sanitized,
+                                                                                   <<"GPlIBo9T+3NwuBMK9ZCbHcpH8ScASjYtnmuAC/5v//o=">>}
+[ns_server:debug,2023-07-18T19:57:17.560Z,couchdb_ns_1@cb.local:menelaus_users_cache<0.131.0>:versioned_cache:init:47]Starting versioned cache menelaus_users_cache
+[error_logger:info,2023-07-18T19:57:17.561Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================INFO REPORT=========================
-{net_kernel,{connect,normal,'ns_1@127.0.0.1'}}
-[ns_server:debug,2019-07-21T21:58:16.323Z,couchdb_ns_1@127.0.0.1:menelaus_users_cache<0.95.0>:dist_manager:wait_for_node:328]Observed node 'ns_1@127.0.0.1' to come up
-[error_logger:info,2019-07-21T21:58:16.323Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+{net_kernel,{connect,normal,'ns_1@cb.local'}}
+[error_logger:info,2023-07-18T19:57:17.561Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.95.0>},
+             started: [{pid,<0.131.0>},
                        {name,menelaus_users_auth_cache},
                        {mfargs,{menelaus_users,start_auth_cache,[]}},
                        {restart_type,{permanent,5}},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.357Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:debug,2023-07-18T19:57:17.563Z,couchdb_ns_1@cb.local:net_kernel<0.57.0>:cb_dist:info_msg:811]cb_dist: Setting up new connection to 'ns_1@cb.local' using inet_tcp_dist
+[ns_server:debug,2023-07-18T19:57:17.563Z,couchdb_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:811]cb_dist: Added connection {con,#Ref<0.3219294171.4056416261.158058>,
+                               inet_tcp_dist,undefined,undefined}
+[ns_server:debug,2023-07-18T19:57:17.563Z,couchdb_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:811]cb_dist: Updated connection: {con,#Ref<0.3219294171.4056416261.158058>,
+                                  inet_tcp_dist,<0.133.0>,
+                                  #Ref<0.3219294171.4056416261.158062>}
+[ns_server:debug,2023-07-18T19:57:17.567Z,couchdb_ns_1@cb.local:menelaus_users_cache<0.131.0>:dist_manager:wait_for_node:282]Observed node 'ns_1@cb.local' to come up
+[error_logger:info,2023-07-18T19:57:17.584Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,cb_couch_sup}
-             started: [{pid,<0.98.0>},
-                       {name,cb_auth_info},
+             started: [{pid,<0.137.0>},
+                       {id,cb_auth_info},
                        {mfargs,{cb_auth_info,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.365Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.589Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,sasl_safe_sup}
-             started: [{pid,<0.104.0>},
-                       {name,alarm_handler},
+             started: [{pid,<0.143.0>},
+                       {id,alarm_handler},
                        {mfargs,{alarm_handler,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,2000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.368Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================PROGRESS REPORT=========================
-          supervisor: {local,sasl_safe_sup}
-             started: [{pid,<0.105.0>},
-                       {name,overload},
-                       {mfargs,{overload,start_link,[]}},
-                       {restart_type,permanent},
-                       {shutdown,2000},
-                       {child_type,worker}]
-
-[error_logger:info,2019-07-21T21:58:16.369Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.589Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,sasl_sup}
-             started: [{pid,<0.103.0>},
-                       {name,sasl_safe_sup},
+             started: [{pid,<0.142.0>},
+                       {id,sasl_safe_sup},
                        {mfargs,
                            {supervisor,start_link,
                                [{local,sasl_safe_sup},sasl,safe]}},
@@ -58,36 +55,36 @@
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.376Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.595Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,sasl_sup}
-             started: [{pid,<0.106.0>},
-                       {name,release_handler},
+             started: [{pid,<0.144.0>},
+                       {id,release_handler},
                        {mfargs,{release_handler,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,2000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.376Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.595Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: sasl
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.386Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.601Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,inets_sup}
-             started: [{pid,<0.112.0>},
-                       {name,ftp_sup},
+             started: [{pid,<0.150.0>},
+                       {id,ftp_sup},
                        {mfargs,{ftp_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.412Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.615Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,httpc_profile_sup}
-             started: [{pid,<0.116.0>},
-                       {name,httpc_manager},
+             started: [{pid,<0.153.0>},
+                       {id,httpc_manager},
                        {mfargs,
                            {httpc_manager,start_link,
                                [default,only_session_cookies,inets]}},
@@ -95,11 +92,11 @@
                        {shutdown,4000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.412Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.616Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,httpc_sup}
-             started: [{pid,<0.115.0>},
-                       {name,httpc_profile_sup},
+             started: [{pid,<0.152.0>},
+                       {id,httpc_profile_sup},
                        {mfargs,
                            {httpc_profile_sup,start_link,
                                [[{httpc,{default,only_session_cookies}}]]}},
@@ -107,21 +104,21 @@
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.416Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.618Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,httpc_sup}
-             started: [{pid,<0.117.0>},
-                       {name,httpc_handler_sup},
+             started: [{pid,<0.154.0>},
+                       {id,httpc_handler_sup},
                        {mfargs,{httpc_handler_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.416Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.618Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,inets_sup}
-             started: [{pid,<0.113.0>},
-                       {name,httpc_sup},
+             started: [{pid,<0.151.0>},
+                       {id,httpc_sup},
                        {mfargs,
                            {httpc_sup,start_link,
                                [[{httpc,{default,only_session_cookies}}]]}},
@@ -129,41 +126,41 @@
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.420Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.621Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,inets_sup}
-             started: [{pid,<0.118.0>},
-                       {name,httpd_sup},
+             started: [{pid,<0.155.0>},
+                       {id,httpd_sup},
                        {mfargs,{httpd_sup,start_link,[[]]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.425Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.624Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,inets_sup}
-             started: [{pid,<0.119.0>},
-                       {name,tftp_sup},
+             started: [{pid,<0.156.0>},
+                       {id,tftp_sup},
                        {mfargs,{tftp_sup,start_link,[[]]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.425Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.624Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: inets
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.426Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.625Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: oauth
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.436Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.631Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,lhttpc_sup}
-             started: [{pid,<0.125.0>},
-                       {name,lhttpc_manager},
+             started: [{pid,<0.162.0>},
+                       {id,lhttpc_manager},
                        {mfargs,
                            {lhttpc_manager,start_link,
                                [[{name,lhttpc_manager}]]}},
@@ -171,200 +168,210 @@
                        {shutdown,10000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.436Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.632Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: lhttpc
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.440Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.634Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: xmerl
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.449Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.640Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: compiler
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.454Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.642Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: syntax_tools
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.454Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.642Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: mochiweb
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.462Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.647Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,os_mon_sup}
-             started: [{pid,<0.134.0>},
-                       {name,disksup},
+             started: [{pid,<0.171.0>},
+                       {id,disksup},
                        {mfargs,{disksup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,2000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.467Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.652Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,os_mon_sup}
-             started: [{pid,<0.135.0>},
-                       {name,memsup},
+             started: [{pid,<0.172.0>},
+                       {id,memsup},
                        {mfargs,{memsup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,2000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.480Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.657Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,os_mon_sup}
-             started: [{pid,<0.137.0>},
-                       {name,cpu_sup},
+             started: [{pid,<0.174.0>},
+                       {id,cpu_sup},
                        {mfargs,{cpu_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,2000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.480Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.657Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: os_mon
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.499Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.660Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: couch_view_parser
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.503Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.664Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: couch_set_view
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.512Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.671Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_index_sup}
-             started: [{pid,<0.146.0>},
-                       {name,couch_query_logger},
+             started: [{pid,<0.183.0>},
+                       {id,couch_query_logger},
                        {mfargs,{couch_query_logger,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.512Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.672Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: couch_index_merger
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.528Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.675Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: mapreduce
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:16.570Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.691Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_server_sup}
-             started: [{pid,<0.148.0>},
-                       {name,couch_config},
+             started: [{pid,<0.185.0>},
+                       {id,couch_config},
                        {mfargs,
                            {couch_server_sup,couch_config_start_link_wrapper,
                                [["/opt/couchbase/etc/couchdb/default.ini",
                                  "/opt/couchbase/etc/couchdb/default.d/capi.ini",
                                  "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
                                  "/opt/couchbase/etc/couchdb/local.ini"],
-                                <0.148.0>]}},
+                                <0.185.0>]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.574Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.693Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.151.0>},
-                       {name,couch_task_events},
+             started: [{pid,<0.188.0>},
+                       {id,couch_task_events},
                        {mfargs,
                            {gen_event,start_link,[{local,couch_task_events}]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.576Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.695Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.152.0>},
-                       {name,couch_task_status},
+             started: [{pid,<0.189.0>},
+                       {id,couch_task_status},
                        {mfargs,{couch_task_status,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.578Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.697Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.153.0>},
-                       {name,couch_file_write_guard},
+             started: [{pid,<0.190.0>},
+                       {id,couch_file_write_guard},
                        {mfargs,{couch_file_write_guard,sup_start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,10000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.617Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.704Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.154.0>},
-                       {name,couch_server},
+             started: [{pid,<0.191.0>},
+                       {id,couch_server},
                        {mfargs,{couch_server,sup_start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.617Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.704Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.155.0>},
-                       {name,couch_db_update_event},
+             started: [{pid,<0.192.0>},
+                       {id,couch_db_update_event},
                        {mfargs,
                            {gen_event,start_link,[{local,couch_db_update}]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.617Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.704Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.156.0>},
-                       {name,couch_replication_event},
+             started: [{pid,<0.193.0>},
+                       {id,couch_replication_event},
                        {mfargs,
                            {gen_event,start_link,[{local,couch_replication}]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.621Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.706Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.157.0>},
-                       {name,couch_replication_supervisor},
+             started: [{pid,<0.194.0>},
+                       {id,couch_replication_supervisor},
                        {mfargs,{couch_rep_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.625Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.708Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.195.0>},
+                       {id,timer_server},
+                       {mfargs,{timer,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2023-07-18T19:57:17.711Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.158.0>},
-                       {name,couch_log},
+             started: [{pid,<0.196.0>},
+                       {id,couch_log},
                        {mfargs,{couch_log,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.630Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.713Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.159.0>},
-                       {name,couch_main_index_barrier},
+             started: [{pid,<0.197.0>},
+                       {id,couch_main_index_barrier},
                        {mfargs,
                            {couch_index_barrier,start_link,
                                [couch_main_index_barrier,
@@ -373,11 +380,11 @@
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.630Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.714Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.160.0>},
-                       {name,couch_replica_index_barrier},
+             started: [{pid,<0.198.0>},
+                       {id,couch_replica_index_barrier},
                        {mfargs,
                            {couch_index_barrier,start_link,
                                [couch_replica_index_barrier,
@@ -386,11 +393,11 @@
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.630Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.714Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_primary_services}
-             started: [{pid,<0.161.0>},
-                       {name,couch_spatial_index_barrier},
+             started: [{pid,<0.199.0>},
+                       {id,couch_spatial_index_barrier},
                        {mfargs,
                            {couch_index_barrier,start_link,
                                [couch_spatial_index_barrier,
@@ -399,41 +406,83 @@
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.631Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.714Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_server_sup}
-             started: [{pid,<0.150.0>},
-                       {name,couch_primary_services},
+             started: [{pid,<0.187.0>},
+                       {id,couch_primary_services},
                        {mfargs,{couch_primary_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.636Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.719Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.163.0>},
-                       {name,couch_db_update_notifier_sup},
+             started: [{pid,<0.201.0>},
+                       {id,couch_db_update_notifier_sup},
                        {mfargs,{couch_db_update_notifier_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.675Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.721Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.164.0>},
-                       {name,spatial_view_manager_dev},
-                       {mfargs,{couch_set_view,start_link,[dev,spatial_view]}},
+             started: [{pid,<0.202.0>},
+                       {id,query_servers},
+                       {mfargs,{couch_query_servers,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.676Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.755Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.167.0>},
-                       {name,index_merger_pool},
+             started: [{pid,<0.204.0>},
+                       {id,spatial_view_manager},
+                       {mfargs,
+                           {couch_set_view,start_link,[prod,spatial_view]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2023-07-18T19:57:17.757Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.207.0>},
+                       {id,set_view_manager},
+                       {mfargs,
+                           {couch_set_view,start_link,[prod,mapreduce_view]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2023-07-18T19:57:17.759Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.209.0>},
+                       {id,couch_set_view_ddoc_cache},
+                       {mfargs,{couch_set_view_ddoc_cache,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2023-07-18T19:57:17.766Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.211.0>},
+                       {id,httpd},
+                       {mfargs,{couch_httpd,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2023-07-18T19:57:17.766Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.228.0>},
+                       {id,index_merger_pool},
                        {mfargs,
                            {lhttpc_manager,start_link,
                                [[{connection_timeout,90000},
@@ -443,114 +492,77 @@
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.681Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.766Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.168.0>},
-                       {name,query_servers},
-                       {mfargs,{couch_query_servers,start_link,[]}},
+             started: [{pid,<0.229.0>},
+                       {id,spatial_view_manager_dev},
+                       {mfargs,{couch_set_view,start_link,[dev,spatial_view]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.684Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.768Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.170.0>},
-                       {name,couch_set_view_ddoc_cache},
-                       {mfargs,{couch_set_view_ddoc_cache,start_link,[]}},
-                       {restart_type,permanent},
-                       {shutdown,brutal_kill},
-                       {child_type,worker}]
-
-[error_logger:info,2019-07-21T21:58:16.693Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================PROGRESS REPORT=========================
-          supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.172.0>},
-                       {name,view_manager},
+             started: [{pid,<0.231.0>},
+                       {id,view_manager},
                        {mfargs,{couch_view,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.706Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.768Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.174.0>},
-                       {name,uuids},
-                       {mfargs,{couch_uuids,start,[]}},
-                       {restart_type,permanent},
-                       {shutdown,brutal_kill},
-                       {child_type,worker}]
-
-[error_logger:info,2019-07-21T21:58:16.710Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================PROGRESS REPORT=========================
-          supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.176.0>},
-                       {name,spatial_view_manager},
-                       {mfargs,
-                           {couch_set_view,start_link,[prod,spatial_view]}},
-                       {restart_type,permanent},
-                       {shutdown,brutal_kill},
-                       {child_type,worker}]
-
-[error_logger:info,2019-07-21T21:58:16.738Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================PROGRESS REPORT=========================
-          supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.178.0>},
-                       {name,httpd},
-                       {mfargs,{couch_httpd,start_link,[]}},
-                       {restart_type,permanent},
-                       {shutdown,brutal_kill},
-                       {child_type,worker}]
-
-[error_logger:info,2019-07-21T21:58:16.747Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================PROGRESS REPORT=========================
-          supervisor: {local,kernel_safe_sup}
-             started: [{pid,<0.197.0>},
-                       {name,timer_server},
-                       {mfargs,{timer,start_link,[]}},
-                       {restart_type,permanent},
-                       {shutdown,1000},
-                       {child_type,worker}]
-
-[error_logger:info,2019-07-21T21:58:16.748Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================PROGRESS REPORT=========================
-          supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.195.0>},
-                       {name,set_view_manager_dev},
+             started: [{pid,<0.233.0>},
+                       {id,set_view_manager_dev},
                        {mfargs,
                            {couch_set_view,start_link,[dev,mapreduce_view]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.752Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.772Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_secondary_services}
-             started: [{pid,<0.198.0>},
-                       {name,set_view_manager},
-                       {mfargs,
-                           {couch_set_view,start_link,[prod,mapreduce_view]}},
+             started: [{pid,<0.235.0>},
+                       {id,uuids},
+                       {mfargs,{couch_uuids,start,[]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.752Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.773Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,couch_server_sup}
-             started: [{pid,<0.162.0>},
-                       {name,couch_secondary_services},
+             started: [{pid,<0.200.0>},
+                       {id,couch_secondary_services},
                        {mfargs,{couch_secondary_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.753Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.780Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_audit_sup}
+             started: [{pid,<0.240.0>},
+                       {id,couch_audit},
+                       {mfargs,{couch_audit,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2023-07-18T19:57:17.780Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+         application: couch_audit
+          started_at: 'couchdb_ns_1@cb.local'
+
+[error_logger:info,2023-07-18T19:57:17.780Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,cb_couch_sup}
-             started: [{pid,<0.149.0>},
-                       {name,couch_app},
+             started: [{pid,<0.186.0>},
+                       {id,couch_app},
                        {mfargs,
                            {couch_app,start,
                                [fake,
@@ -560,62 +572,62 @@
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.753Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.780Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.96.0>},
+             started: [{pid,<0.132.0>},
                        {name,cb_couch_sup},
                        {mfargs,{cb_couch_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,5000},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:16.810Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.785Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.201.0>},
+             started: [{pid,<0.242.0>},
                        {name,timeout_diag_logger},
                        {mfargs,{timeout_diag_logger,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.817Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.786Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.203.0>},
+             started: [{pid,<0.243.0>},
                        {name,ns_memcached_sockets_pool},
                        {mfargs,{ns_memcached_sockets_pool,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.818Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.787Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.204.0>},
+             started: [{pid,<0.244.0>},
                        {name,ns_couchdb_stats_collector},
                        {mfargs,{ns_couchdb_stats_collector,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.821Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.788Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_config_sup}
-             started: [{pid,<0.206.0>},
-                       {name,ns_config_events},
+             started: [{pid,<0.246.0>},
+                       {id,ns_config_events},
                        {mfargs,
                            {gen_event,start_link,[{local,ns_config_events}]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.821Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.789Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_config_sup}
-             started: [{pid,<0.207.0>},
-                       {name,ns_config_events_local},
+             started: [{pid,<0.247.0>},
+                       {id,ns_config_events_local},
                        {mfargs,
                            {gen_event,start_link,
                                [{local,ns_config_events_local}]}},
@@ -623,125 +635,173 @@
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.832Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.795Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_config_sup}
-             started: [{pid,<0.208.0>},
-                       {name,ns_config},
+             started: [{pid,<0.248.0>},
+                       {id,ns_config},
                        {mfargs,
                            {ns_config,start_link,
-                               [{pull_from_node,'ns_1@127.0.0.1'}]}},
+                               [{pull_from_node,'ns_1@cb.local'}]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.833Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.796Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_config_sup}
-             started: [{pid,<0.209.0>},
-                       {name,ns_couchdb_config_rep},
+             started: [{pid,<0.249.0>},
+                       {id,ns_couchdb_config_rep},
                        {mfargs,{ns_couchdb_config_rep,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.835Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.797Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_config_sup}
-             started: [{pid,<0.210.0>},
-                       {name,cb_config_couch_sync},
+             started: [{pid,<0.250.0>},
+                       {id,cb_config_couch_sync},
                        {mfargs,{cb_config_couch_sync,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.837Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.800Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_config_sup}
-             started: [{pid,<0.212.0>},
-                       {name,ns_config_log},
+             started: [{pid,<0.252.0>},
+                       {id,ns_config_log},
                        {mfargs,{ns_config_log,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.837Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.800Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.205.0>},
+             started: [{pid,<0.245.0>},
                        {name,ns_couchdb_config_sup},
                        {mfargs,{ns_couchdb_config_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[ns_server:debug,2019-07-21T21:58:16.842Z,couchdb_ns_1@127.0.0.1:compiled_roles_cache<0.214.0>:versioned_cache:init:44]Starting versioned cache compiled_roles_cache
-[error_logger:info,2019-07-21T21:58:16.842Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================INFO REPORT=========================
-{net_kernel,{connect,normal,'ns_1@127.0.0.1'}}
-[ns_server:debug,2019-07-21T21:58:16.842Z,couchdb_ns_1@127.0.0.1:compiled_roles_cache<0.214.0>:dist_manager:wait_for_node:328]Observed node 'ns_1@127.0.0.1' to come up
-[error_logger:info,2019-07-21T21:58:16.842Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:debug,2023-07-18T19:57:17.802Z,couchdb_ns_1@cb.local:compiled_roles_cache<0.255.0>:versioned_cache:init:47]Starting versioned cache compiled_roles_cache
+[error_logger:info,2023-07-18T19:57:17.803Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.214.0>},
+             started: [{pid,<0.255.0>},
                        {name,compiled_roles_cache},
                        {mfargs,{menelaus_roles,start_compiled_roles_cache,[]}},
                        {restart_type,{permanent,5}},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.844Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:debug,2023-07-18T19:57:17.803Z,couchdb_ns_1@cb.local:compiled_roles_cache<0.255.0>:dist_manager:wait_for_node:282]Observed node 'ns_1@cb.local' to come up
+[error_logger:info,2023-07-18T19:57:17.803Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================INFO REPORT=========================
+{net_kernel,{connect,normal,'ns_1@cb.local'}}
+[error_logger:info,2023-07-18T19:57:17.804Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,inet_gethost_native_sup}
+             started: [{pid,<0.259.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+[error_logger:info,2023-07-18T19:57:17.805Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.258.0>},
+                       {id,inet_gethost_native_sup},
+                       {mfargs,{inet_gethost_native,start_link,[]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:error,2023-07-18T19:57:17.806Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================SUPERVISOR REPORT=========================
+     Supervisor: {local,couch_secondary_services}
+     Context:    child_terminated
+     Reason:     normal
+     Offender:   [{pid,<0.211.0>},
+                  {id,httpd},
+                  {mfargs,{couch_httpd,start_link,[]}},
+                  {restart_type,permanent},
+                  {shutdown,brutal_kill},
+                  {child_type,worker}]
+
+
+[error_logger:info,2023-07-18T19:57:17.808Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,couch_secondary_services}
+             started: [{pid,<0.261.0>},
+                       {id,httpd},
+                       {mfargs,{couch_httpd,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+[error_logger:info,2023-07-18T19:57:17.813Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.217.0>},
+             started: [{pid,<0.278.0>},
+                       {name,roles_cache},
+                       {mfargs,{roles_cache,start_link,[]}},
+                       {restart_type,{permanent,5}},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+[error_logger:info,2023-07-18T19:57:17.814Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_couchdb_sup}
+             started: [{pid,<0.281.0>},
                        {name,request_throttler},
                        {mfargs,{request_throttler,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.849Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.815Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.218.0>},
+             started: [{pid,<0.282.0>},
                        {name,vbucket_map_mirror},
                        {mfargs,{vbucket_map_mirror,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,brutal_kill},
                        {child_type,worker}]
 
-[ns_server:info,2019-07-21T21:58:16.857Z,couchdb_ns_1@127.0.0.1:set_view_update_daemon<0.220.0>:set_view_update_daemon:init:50]Set view update daemon, starting with the following settings:
+[ns_server:info,2023-07-18T19:57:17.817Z,couchdb_ns_1@cb.local:set_view_update_daemon<0.284.0>:set_view_update_daemon:init:50]Set view update daemon, starting with the following settings:
   update interval:           5000ms
   minimum number of changes: 5000
 
-[error_logger:info,2019-07-21T21:58:16.859Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.818Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,kernel_safe_sup}
-             started: [{pid,<0.222.0>},
-                       {name,timer2_server},
+             started: [{pid,<0.286.0>},
+                       {id,timer2_server},
                        {mfargs,{timer2,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:16.859Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.818Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.220.0>},
+             started: [{pid,<0.284.0>},
                        {name,set_view_update_daemon},
                        {mfargs,{set_view_update_daemon,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[ns_server:info,2019-07-21T21:58:16.862Z,couchdb_ns_1@127.0.0.1:ns_config_rep<0.209.0>:ns_couchdb_config_rep:do_pull:65]Pulling config from: 'ns_1@127.0.0.1'
+[ns_server:info,2023-07-18T19:57:17.819Z,couchdb_ns_1@cb.local:ns_config_rep<0.249.0>:ns_couchdb_config_rep:do_pull:65]Pulling config from: 'ns_1@cb.local'
 
-[ns_server:debug,2019-07-21T21:58:16.881Z,couchdb_ns_1@127.0.0.1:<0.223.0>:restartable:start_child:98]Started child process <0.225.0>
+[ns_server:debug,2023-07-18T19:57:17.849Z,couchdb_ns_1@cb.local:<0.287.0>:restartable:start_child:98]Started child process <0.289.0>
   MFA: {ns_ssl_services_setup,start_link_capi_service,[]}
-[error_logger:info,2019-07-21T21:58:16.881Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.850Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.223.0>},
+             started: [{pid,<0.287.0>},
                        {name,ns_capi_ssl_service},
                        {mfargs,
                            {restartable,start_link,
@@ -752,33 +812,60 @@
                        {shutdown,infinity},
                        {child_type,worker}]
 
-[ns_server:info,2019-07-21T21:58:16.882Z,couchdb_ns_1@127.0.0.1:ns_couchdb_sup<0.94.0>:dir_size:start_link:39]Starting quick version of dir_size with program name: godu
-[error_logger:info,2019-07-21T21:58:16.882Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:info,2023-07-18T19:57:17.850Z,couchdb_ns_1@cb.local:ns_couchdb_sup<0.130.0>:dir_size:start_link:39]Starting quick version of dir_size with program name: godu
+[error_logger:info,2023-07-18T19:57:17.851Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_couchdb_sup}
-             started: [{pid,<0.242.0>},
+             started: [{pid,<0.307.0>},
                        {name,dir_size},
                        {mfargs,{dir_size,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:16.883Z,couchdb_ns_1@127.0.0.1:<0.2.0>:child_erlang:child_loop:130]203: Entered child_loop
-[error_logger:info,2019-07-21T21:58:16.883Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:17.851Z,couchdb_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: ns_couchdb
-          started_at: 'couchdb_ns_1@127.0.0.1'
+          started_at: 'couchdb_ns_1@cb.local'
 
-[ns_server:debug,2019-07-21T21:58:17.104Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:17.851Z,couchdb_ns_1@cb.local:<0.5.0>:child_erlang:child_loop:129]237: Entered child_loop
+[ns_server:debug,2023-07-18T19:57:17.913Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 otp ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]},
- {cookie,{sanitized,<<"K3D0RCOjXgHn1CWrtwam/K/D18H1+XljWaGaoAz5Ob8=">>}}]
-[ns_server:debug,2019-07-21T21:58:17.104Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{2,63730965497}}]}]
-[ns_server:debug,2019-07-21T21:58:17.537Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929437}}]},
+ {cookie,{sanitized,<<"9Gd29H3c9CISkY9JXx3/o3wEga+XYTuXBaqJKrs8cbQ=">>}}]
+[ns_server:debug,2023-07-18T19:57:17.913Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{5,63856929437}}]}]
+[ns_server:debug,2023-07-18T19:57:17.913Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{node,'couchdb_ns_1@cb.local',cbas_dirs} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929437}}]},
+ "/opt/couchbase/var/lib/couchbase/data"]
+[ns_server:debug,2023-07-18T19:57:17.913Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{node,'couchdb_ns_1@cb.local',eventing_dir} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929437}}]},
+ 47,111,112,116,47,99,111,117,99,104,98,97,115,101,47,118,97,114,47,108,105,
+ 98,47,99,111,117,99,104,98,97,115,101,47,100,97,116,97]
+[ns_server:debug,2023-07-18T19:57:17.913Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{node,'ns_1@cb.local',cbas_dirs} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929437}}]},
+ "/opt/couchbase/var/lib/couchbase/data"]
+[ns_server:debug,2023-07-18T19:57:17.913Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{node,'ns_1@cb.local',eventing_dir} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929437}}]},
+ 47,111,112,116,47,99,111,117,99,104,98,97,115,101,47,118,97,114,47,108,105,
+ 98,47,99,111,117,99,104,98,97,115,101,47,100,97,116,97]
+[ns_server:debug,2023-07-18T19:57:17.914Z,couchdb_ns_1@cb.local:<0.287.0>:restartable:loop:71]Restarting child <0.289.0>
+  MFA: {ns_ssl_services_setup,start_link_capi_service,[]}
+  Shutdown policy: 1000
+  Caller: {<0.311.0>,#Ref<0.3219294171.4056416257.158160>}
+[ns_server:debug,2023-07-18T19:57:17.914Z,couchdb_ns_1@cb.local:<0.287.0>:restartable:shutdown_child:120]Successfully terminated process <0.289.0>
+[ns_server:info,2023-07-18T19:57:17.914Z,couchdb_ns_1@cb.local:ns_config_rep<0.249.0>:ns_couchdb_config_rep:do_pull:65]Pulling config from: 'ns_1@cb.local'
+
+[ns_server:debug,2023-07-18T19:57:17.916Z,couchdb_ns_1@cb.local:<0.287.0>:restartable:start_child:98]Started child process <0.313.0>
+  MFA: {ns_ssl_services_setup,start_link_capi_service,[]}
+[ns_server:debug,2023-07-18T19:57:18.072Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 audit ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]},
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929438}}]},
  {enabled,[]},
  {disabled_users,[]},
  {auditd_enabled,false},
@@ -787,15 +874,31 @@ audit ->
  {disabled,[]},
  {sync,[]},
  {log_path,"/opt/couchbase/var/lib/couchbase/logs"}]
-[ns_server:debug,2019-07-21T21:58:17.545Z,couchdb_ns_1@127.0.0.1:compiled_roles_cache<0.214.0>:versioned_cache:handle_info:89]Flushing cache compiled_roles_cache due to version change from undefined to {[6,
-                                                                              0],
-                                                                             {0,
-                                                                              1423366914},
-                                                                             false,
-                                                                             []}
-[ns_server:debug,2019-07-21T21:58:17.546Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:<0.287.0>:restartable:loop:71]Restarting child <0.313.0>
+  MFA: {ns_ssl_services_setup,start_link_capi_service,[]}
+  Shutdown policy: 1000
+  Caller: {<0.335.0>,#Ref<0.3219294171.4056416259.158563>}
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:<0.287.0>:restartable:shutdown_child:120]Successfully terminated process <0.313.0>
+[ns_server:info,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_rep<0.249.0>:ns_couchdb_config_rep:do_pull:65]Pulling config from: 'ns_1@cb.local'
+
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 audit_decriptors ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]},
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929438}}]},
+ {8243,
+  [{name,<<"mutate document">>},
+   {description,<<"Document was mutated via the REST API">>},
+   {enabled,true},
+   {module,ns_server}]},
+ {8255,
+  [{name,<<"read document">>},
+   {description,<<"Document was read via the REST API">>},
+   {enabled,false},
+   {module,ns_server}]},
+ {8257,
+  [{name,<<"alert email sent">>},
+   {description,<<"An alert email was successfully sent">>},
+   {enabled,true},
+   {module,ns_server}]},
  {20480,
   [{name,<<"opened DCP connection">>},
    {description,<<"opened DCP connection">>},
@@ -840,6 +943,11 @@ audit_decriptors ->
   [{name,<<"select bucket">>},
    {description,<<"The specified bucket was selected">>},
    {enabled,true},
+   {module,memcached}]},
+ {20493,
+  [{name,<<"session terminated">>},
+   {description,<<"Session to the cluster has terminated">>},
+   {enabled,false},
    {module,memcached}]},
  {28672,
   [{name,<<"SELECT statement">>},
@@ -991,6 +1099,16 @@ audit_decriptors ->
    {description,<<"An HTTP request was made to the API at /admin/completed_requests.">>},
    {enabled,false},
    {module,n1ql}]},
+ {28704,
+  [{name,<<"/admin/functions API request">>},
+   {description,<<"An HTTP request was made to the API at /admin/functions.">>},
+   {enabled,false},
+   {module,n1ql}]},
+ {28705,
+  [{name,<<"/admin/indexes/functions API request">>},
+   {description,<<"An HTTP request was made to the API at /admin/indexes/functions.">>},
+   {enabled,false},
+   {module,n1ql}]},
  {32768,
   [{name,<<"Create Function">>},
    {description,<<"Eventing function definition was created or updated">>},
@@ -1095,170 +1213,230 @@ audit_decriptors ->
   [{name,<<"Node configuration change">>},
    {description,<<"A successful node configuration change was made.">>},
    {enabled,true},
-   {module,analytics}]}]
-[ns_server:debug,2019-07-21T21:58:17.547Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+   {module,analytics}]},
+ {36867,
+  [{name,<<"SELECT statement">>},
+   {description,<<"A N1QL SELECT statement was executed">>},
+   {enabled,false},
+   {module,analytics}]},
+ {36868,
+  [{name,<<"CREATE DATAVERSE statement">>},
+   {description,<<"A N1QL CREATE DATAVERSE statement was executed">>},
+   {enabled,false},
+   {module,analytics}]},
+ {36869,
+  [{name,<<"DROP DATAVERSE statement">>},
+   {description,<<"A N1QL DROP DATAVERSE statement was executed">>},
+   {enabled,false},
+   {module,analytics}]},
+ {36870,
+  [{name,<<"CREATE DATASET statement">>},
+   {description,<<"A N1QL CREATE DATASET statement was executed">>},
+   {enabled,false},
+   {module,analytics}]},
+ {36871,
+  [{name,<<"DROP DATASET statement">>},
+   {description,<<"A N1QL DROP DATASET statement was executed">>},
+   {enabled,false},
+   {module,analytics}]},
+ {36872,
+  [{name,<<"CREATE INDEX statement">>},
+   {description,<<"A N1QL CREATE INDEX statement was executed">>},
+   {enabled,false},
+   {module,analytics}]},
+ {36873,
+  [{name,<<"DROP INDEX statement">>},
+   {description,<<"A N1QL DROP INDEX statement was executed">>},
+   {enabled,false},
+   {module,analytics}]},
+ {36877,
+  [{name,<<"CONNECT LINK statement">>},
+   {description,<<"A N1QL CONNECT LINK statement was executed">>},
+   {enabled,false},
+   {module,analytics}]},
+ {36878,
+  [{name,<<"DISCONNECT LINK statement">>},
+   {description,<<"A N1QL DISCONNECT LINK statement was executed">>},
+   {enabled,false},
+   {module,analytics}]},
+ {36879,
+  [{name,<<"UNRECOGNIZED statement">>},
+   {description,<<"An UNRECOGNIZED N1QL statement was encountered">>},
+   {enabled,false},
+   {module,analytics}]},
+ {40960,
+  [{name,<<"Create Design Doc">>},
+   {description,<<"Design Doc is Created">>},
+   {enabled,true},
+   {module,view_engine}]},
+ {40961,
+  [{name,<<"Delete Design Doc">>},
+   {description,<<"Design Doc is Deleted">>},
+   {enabled,true},
+   {module,view_engine}]},
+ {40962,
+  [{name,<<"Query DDoc Meta Data">>},
+   {description,<<"Design Doc Meta Data Query Request">>},
+   {enabled,true},
+   {module,view_engine}]},
+ {40963,
+  [{name,<<"View Query">>},
+   {description,<<"View Query Request">>},
+   {enabled,false},
+   {module,view_engine}]},
+ {40964,
+  [{name,<<"Update Design Doc">>},
+   {description,<<"Design Doc is Updated">>},
+   {enabled,true},
+   {module,view_engine}]}]
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 auto_failover_cfg ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]},
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{2,63856929438}}]},
  {enabled,true},
  {timeout,120},
  {count,0},
  {failover_on_data_disk_issues,[{enabled,false},{timePeriod,120}]},
  {failover_server_group,false},
  {max_count,1},
- {failed_over_server_groups,[]}]
-[ns_server:debug,2019-07-21T21:58:17.547Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+ {failed_over_server_groups,[]},
+ {can_abort_rebalance,true}]
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 buckets ->
-[[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{3,63730965497}}],{configs,[]}]
-[ns_server:debug,2019-07-21T21:58:17.547Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{3,63856929438}}],{configs,[]}]
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 client_cert_auth ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]},
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929438}}]},
  {state,"disable"},
  {prefixes,[]}]
-[ns_server:debug,2019-07-21T21:58:17.547Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 cluster_compat_version ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{8,63730965497}}]},6,0]
-[ns_server:debug,2019-07-21T21:58:17.547Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{6,63856929438}}]},6,6]
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+max_bucket_count ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929438}}]}|30]
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 quorum_nodes ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]},
- 'ns_1@127.0.0.1']
-[ns_server:debug,2019-07-21T21:58:17.548Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-read_only_user_creds ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}|
- '_deleted']
-[ns_server:debug,2019-07-21T21:58:17.548Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-roles_definitions ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}|
- '_deleted']
-[ns_server:debug,2019-07-21T21:58:17.548Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929438}}]},
+ 'ns_1@cb.local']
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+retry_rebalance ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929438}}]},
+ {enabled,false},
+ {after_time_period,300},
+ {max_attempts,1}]
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 scramsha_fallback_salt ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}|
- <<221,186,69,147,190,49,102,166,93,6,20,1>>]
-[ns_server:debug,2019-07-21T21:58:17.548Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-users_upgrade ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}|
- '_deleted']
-[ns_server:debug,2019-07-21T21:58:17.548Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{3,63730965497}}]}]
-[ns_server:debug,2019-07-21T21:58:17.549Z,couchdb_ns_1@127.0.0.1:<0.223.0>:restartable:loop:71]Restarting child <0.225.0>
-  MFA: {ns_ssl_services_setup,start_link_capi_service,[]}
-  Shutdown policy: 1000
-  Caller: {<0.250.0>,#Ref<0.0.0.500>}
-[ns_server:debug,2019-07-21T21:58:17.549Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929438}}]}|
+ <<52,212,151,196,143,11,151,130,108,61,244,153>>]
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{6,63856929438}}]}]
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 {metakv,<<"/eventing/settings/config">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}|
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929438}}]}|
  <<"{\"ram_quota\":256}">>]
-[ns_server:debug,2019-07-21T21:58:17.549Z,couchdb_ns_1@127.0.0.1:<0.223.0>:restartable:shutdown_child:120]Successfully terminated process <0.225.0>
-[ns_server:info,2019-07-21T21:58:17.549Z,couchdb_ns_1@127.0.0.1:ns_config_rep<0.209.0>:ns_couchdb_config_rep:do_pull:65]Pulling config from: 'ns_1@127.0.0.1'
-
-[ns_server:debug,2019-07-21T21:58:17.549Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/indexing/settings/config">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}|
- <<"{\"indexer.settings.compaction.days_of_week\":\"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday\",\"indexer.settings.compaction.interval\":\"00:00,00:00\",\"indexer.settings.compaction.compaction_mode\":\"circular\",\"indexer.settings.persisted_snapshot.interval\":5000,\"indexer.settings.log_level\":\"info\",\"indexer.settings.compaction.min_frag\":30,\"indexer.settings.inmemory_snapshot.interval\""...>>]
-[ns_server:debug,2019-07-21T21:58:17.549Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:18.075Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 {metakv,<<"/query/settings/config">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}|
- <<"{\"query.settings.curl_whitelist\":{\"all_access\":false,\"allowed_urls\":[],\"disallowed_urls\":[]},\"query.settings.tmp_space_dir\":\"/opt/couchbase/var/lib/couchbase/tmp\",\"query.settings.tmp_space_size\":5120}">>]
-[ns_server:debug,2019-07-21T21:58:17.549Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{rbac_upgrade,[5,5]} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}|
- '_deleted']
-[ns_server:debug,2019-07-21T21:58:17.549Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{service_map,fts} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}]
-[ns_server:debug,2019-07-21T21:58:17.550Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{service_map,index} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}]
-[ns_server:debug,2019-07-21T21:58:17.550Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{service_map,n1ql} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965497}}]}]
-[ns_server:debug,2019-07-21T21:58:17.556Z,couchdb_ns_1@127.0.0.1:<0.223.0>:restartable:start_child:98]Started child process <0.252.0>
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{2,63856929438}}]}|
+ <<"{\"timeout\":0,\"n1ql-feat-ctrl\":12,\"max-parallelism\":1,\"query.settings.curl_whitelist\":{\"all_access\":false,\"allowed_urls\":[],\"disallowed_urls\":[]},\"query.settings.tmp_space_dir\":\"/opt/couchbase/var/lib/couchbase/tmp\",\"completed-limit\":4000,\"prepared-limit\":16384,\"pipeline-batch\":16,\"pipeline-cap\":512,\"scan-cap\":512,\"loglevel\":\"info\",\"completed-threshold\":1000,\"query.settings.tmp_space_si"...>>]
+[ns_server:debug,2023-07-18T19:57:18.078Z,couchdb_ns_1@cb.local:compiled_roles_cache<0.255.0>:versioned_cache:handle_info:92]Flushing cache compiled_roles_cache due to version change from undefined to {[6,
+                                                                              6],
+                                                                             {0,
+                                                                              3480592195},
+                                                                             {0,
+                                                                              3480592195},
+                                                                             false,
+                                                                             []}
+[ns_server:debug,2023-07-18T19:57:18.080Z,couchdb_ns_1@cb.local:<0.287.0>:restartable:start_child:98]Started child process <0.337.0>
   MFA: {ns_ssl_services_setup,start_link_capi_service,[]}
-[ns_server:debug,2019-07-21T21:58:17.586Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{4,63730965497}}]}]
-[ns_server:debug,2019-07-21T21:58:18.756Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:18.105Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{7,63856929438}}]}]
+[ns_server:debug,2023-07-18T19:57:21.525Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 cbas_memory_quota ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965498}}]}|1024]
-[ns_server:debug,2019-07-21T21:58:18.756Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929441}}]}|1024]
+[ns_server:debug,2023-07-18T19:57:21.525Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+fts_memory_quota ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929441}}]}|256]
+[ns_server:debug,2023-07-18T19:57:21.525Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 memory_quota ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965498}}]}|256]
-[ns_server:debug,2019-07-21T21:58:18.756Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{5,63730965498}}]}]
-[ns_server:debug,2019-07-21T21:58:18.756Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929441}}]}|256]
+[ns_server:debug,2023-07-18T19:57:21.525Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{8,63856929441}}]}]
+[ns_server:debug,2023-07-18T19:57:21.525Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 {metakv,<<"/indexing/settings/config">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{2,63730965498}}]}|
- <<"{\"indexer.settings.compaction.days_of_week\":\"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday\",\"indexer.settings.compaction.interval\":\"00:00,00:00\",\"indexer.settings.log_level\":\"info\",\"indexer.settings.persisted_snapshot.interval\":5000,\"indexer.settings.compaction.compaction_mode\":\"circular\",\"indexer.settings.compaction.min_frag\":30,\"indexer.settings.inmemory_snapshot.interval\""...>>]
-[ns_server:debug,2019-07-21T21:58:18.769Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{6,63730965498}}]}]
-[ns_server:debug,2019-07-21T21:58:18.769Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{node,'couchdb_ns_1@127.0.0.1',services} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965498}}]},
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929441}}]}|
+ <<"{\"indexer.settings.compaction.days_of_week\":\"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday\",\"indexer.settings.compaction.interval\":\"00:00,00:00\",\"indexer.settings.persisted_snapshot.interval\":5000,\"indexer.settings.log_level\":\"info\",\"indexer.settings.compaction.compaction_mode\":\"circular\",\"indexer.settings.compaction.min_frag\":30,\"indexer.settings.inmemory_snapshot.interval\""...>>]
+[ns_server:debug,2023-07-18T19:57:21.588Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{9,63856929441}}]}]
+[ns_server:debug,2023-07-18T19:57:21.588Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{node,'couchdb_ns_1@cb.local',services} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929441}}]},
  cbas,fts,index,kv,n1ql]
-[ns_server:debug,2019-07-21T21:58:18.769Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{node,'ns_1@127.0.0.1',services} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965498}}]},
+[ns_server:debug,2023-07-18T19:57:21.588Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{node,'ns_1@cb.local',services} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929441}}]},
  cbas,fts,index,kv,n1ql]
-[ns_server:debug,2019-07-21T21:58:18.797Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{7,63730965498}}]}]
-[ns_server:debug,2019-07-21T21:58:18.821Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:21.652Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{10,63856929441}}]}]
+[ns_server:debug,2023-07-18T19:57:21.674Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 rest_creds ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965498}}]}|
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929441}}]}|
  {"<ud>Administrator</ud>",
   {auth,
    [{<<"plain">>,"*****"},
     {<<"sha512">>,
      {[{<<"h">>,"*****"},
        {<<"s">>,
-        <<"l7Y6Url9blx2O0USIK7a9FJ3koTljnRZlW2lzXdTC8MGPD5cTim5n5PEPnQV6NDBQvL/vVBbyF05mYea/Tuoww==">>},
+        <<"jQm3KgYzn9iI9+J2ClK3cy3RdsVjVj+e9lEjsoAFOMOOD6//ZY+tDCSjN9Zuz5FLqZsxZ/mNy3XHDWYsShwI1g==">>},
        {<<"i">>,4000}]}},
     {<<"sha256">>,
      {[{<<"h">>,"*****"},
-       {<<"s">>,<<"u6YfHVr+RtX2F9RciRf302WpXwdl4jtYZXNgLXH+xnY=">>},
+       {<<"s">>,<<"tAqUv1sb7k8+JldYnluAgRtEOWYbkc17S3zY2evGKfg=">>},
        {<<"i">>,4000}]}},
     {<<"sha1">>,
      {[{<<"h">>,"*****"},
-       {<<"s">>,<<"1yG63OcJbkUPeu5BdarHHpeJGz4=">>},
+       {<<"s">>,<<"/NXj5ShvJMEqL8bJkAqjmb1TgQc=">>},
        {<<"i">>,4000}]}}]}}]
-[ns_server:debug,2019-07-21T21:58:18.821Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{8,63730965498}}]}]
-[ns_server:debug,2019-07-21T21:58:18.821Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:21.674Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 uuid ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965498}}]}|
- <<"6b98b87643b1f2c767c8c17d236afda4">>]
-[ns_server:debug,2019-07-21T21:58:18.821Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{9,63730965498}}]}]
-[ns_server:debug,2019-07-21T21:58:18.822Z,couchdb_ns_1@127.0.0.1:compiled_roles_cache<0.214.0>:versioned_cache:handle_info:89]Flushing cache compiled_roles_cache due to version change from {[6,0],
-                                                                {0,1423366914},
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929441}}]}|
+ <<"4758ab30fbe8296c36f4128dd8103097">>]
+[ns_server:debug,2023-07-18T19:57:21.674Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{12,63856929441}}]}]
+[ns_server:debug,2023-07-18T19:57:21.675Z,couchdb_ns_1@cb.local:compiled_roles_cache<0.255.0>:versioned_cache:handle_info:92]Flushing cache compiled_roles_cache due to version change from {[6,6],
+                                                                {0,3480592195},
+                                                                {0,3480592195},
                                                                 false,[]} to {[6,
-                                                                               0],
+                                                                               6],
                                                                               {0,
-                                                                               1423366914},
+                                                                               3480592195},
+                                                                              {0,
+                                                                               3480592195},
                                                                               true,
                                                                               []}
-[ns_server:debug,2019-07-21T21:58:18.844Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{10,63730965498}}]}]
-[ns_server:debug,2019-07-21T21:58:18.844Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:21.739Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{13,63856929441}}]}]
+[ns_server:debug,2023-07-18T19:57:21.739Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 {metakv,<<"/indexing/settings/config">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{3,63730965498}}]}|
- <<"{\"indexer.settings.compaction.days_of_week\":\"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday\",\"indexer.settings.compaction.interval\":\"00:00,00:00\",\"indexer.settings.compaction.compaction_mode\":\"circular\",\"indexer.settings.persisted_snapshot.interval\":5000,\"indexer.settings.log_level\":\"info\",\"indexer.settings.compaction.min_frag\":30,\"indexer.settings.inmemory_snapshot.interval\""...>>]
-[ns_server:debug,2019-07-21T21:58:18.865Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{2,63856929441}}]}|
+ <<"{\"indexer.settings.compaction.days_of_week\":\"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday\",\"indexer.settings.compaction.interval\":\"00:00,00:00\",\"indexer.settings.compaction.compaction_mode\":\"circular\",\"indexer.settings.log_level\":\"info\",\"indexer.settings.persisted_snapshot.interval\":5000,\"indexer.settings.compaction.min_frag\":30,\"indexer.settings.inmemory_snapshot.interval\""...>>]
+[ns_server:debug,2023-07-18T19:57:21.817Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 buckets ->
-[[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{4,63730965498}}],
+[[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{4,63856929441}}],
  {configs,[[{map,[]},
             {fastForwardMap,[]},
-            {repl_type,dcp},
-            {uuid,<<"8c8ee4b9406f357fe7e000a0e02bd8fe">>},
+            {uuid,<<"fbbd3de581d647301f410f35705d9ed5">>},
             {auth_type,sasl},
             {num_replicas,0},
             {replica_index,false},
             {ram_quota,104857600},
+            {durability_min_level,none},
             {flush_enabled,false},
             {num_threads,3},
             {eviction_policy,value_only},
@@ -1269,32 +1447,36 @@ buckets ->
             {type,membase},
             {num_vbuckets,1024},
             {replication_topology,star},
+            {repl_type,dcp},
             {servers,[]},
             {sasl_password,"*****"}]]}]
-[ns_server:debug,2019-07-21T21:58:18.865Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{11,63730965498}}]}]
-[ns_server:debug,2019-07-21T21:58:18.866Z,couchdb_ns_1@127.0.0.1:compiled_roles_cache<0.214.0>:versioned_cache:handle_info:89]Flushing cache compiled_roles_cache due to version change from {[6,0],
-                                                                {0,1423366914},
+[ns_server:debug,2023-07-18T19:57:21.817Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{14,63856929441}}]}]
+[ns_server:debug,2023-07-18T19:57:21.817Z,couchdb_ns_1@cb.local:compiled_roles_cache<0.255.0>:versioned_cache:handle_info:92]Flushing cache compiled_roles_cache due to version change from {[6,6],
+                                                                {0,3480592195},
+                                                                {0,3480592195},
                                                                 true,[]} to {[6,
-                                                                              0],
+                                                                              6],
                                                                              {0,
-                                                                              1423366914},
+                                                                              3480592195},
+                                                                             {0,
+                                                                              3480592195},
                                                                              true,
                                                                              [{"datadog-test",
-                                                                               <<"8c8ee4b9406f357fe7e000a0e02bd8fe">>}]}
-[ns_server:debug,2019-07-21T21:58:18.872Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+                                                                               <<"fbbd3de581d647301f410f35705d9ed5">>}]}
+[ns_server:debug,2023-07-18T19:57:21.828Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 buckets ->
-[[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{5,63730965498}}],
+[[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{5,63856929441}}],
  {configs,[{"datadog-test",
             [{map,[]},
              {fastForwardMap,[]},
-             {repl_type,dcp},
-             {uuid,<<"8c8ee4b9406f357fe7e000a0e02bd8fe">>},
+             {uuid,<<"fbbd3de581d647301f410f35705d9ed5">>},
              {auth_type,sasl},
              {num_replicas,0},
              {replica_index,false},
              {ram_quota,104857600},
+             {durability_min_level,none},
              {flush_enabled,false},
              {num_threads,3},
              {eviction_policy,value_only},
@@ -1305,257 +1487,216 @@ buckets ->
              {type,membase},
              {num_vbuckets,1024},
              {replication_topology,star},
-             {servers,['ns_1@127.0.0.1']},
+             {repl_type,dcp},
+             {servers,['ns_1@cb.local']},
              {sasl_password,"*****"}]}]}]
-[ns_server:debug,2019-07-21T21:58:18.872Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{12,63730965498}}]}]
-[ns_server:debug,2019-07-21T21:58:18.879Z,couchdb_ns_1@127.0.0.1:ns_config_rep<0.209.0>:ns_couchdb_config_rep:handle_call:77]Got full synchronization request from 'ns_1@127.0.0.1'
-[ns_server:debug,2019-07-21T21:58:18.917Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-datadog-test<0.280.0>:replicated_storage:anounce_startup:69]Announce my startup to <5329.823.0>
-[ns_server:debug,2019-07-21T21:58:18.917Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-datadog-test<0.280.0>:replicated_storage:anounce_startup:69]Announce my startup to <5329.824.0>
-[error_logger:info,2019-07-21T21:58:18.970Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================PROGRESS REPORT=========================
-          supervisor: {local,inet_gethost_native_sup}
-             started: [{pid,<0.293.0>},{mfa,{inet_gethost_native,init,[[]]}}]
-
-[error_logger:info,2019-07-21T21:58:18.970Z,couchdb_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================PROGRESS REPORT=========================
-          supervisor: {local,kernel_safe_sup}
-             started: [{pid,<0.292.0>},
-                       {name,inet_gethost_native_sup},
-                       {mfargs,{inet_gethost_native,start_link,[]}},
-                       {restart_type,temporary},
-                       {shutdown,1000},
-                       {child_type,worker}]
-
-[ns_server:debug,2019-07-21T21:58:19.313Z,couchdb_ns_1@127.0.0.1:<0.291.0>:capi_set_view_manager:wait_for_bucket_to_start:190]Engine for bucket "datadog-test" is created in memcached
-[ns_server:debug,2019-07-21T21:58:19.717Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{13,63730965499}}]}]
-[ns_server:debug,2019-07-21T21:58:19.777Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{14,63730965499}}]}]
-[ns_server:debug,2019-07-21T21:58:19.777Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/fts/cbgt/cfg/nodeDefs-known/8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965499}}]}|
- <<"{\"uuid\":\"ed6054d92772d701\",\"nodeDefs\":{\"8ba1ce2e183ff908d4723b87c7fdb9b3\":{\"hostPort\":\"127.0.0.1:8094\",\"uuid\":\"8ba1ce2e183ff908d4723b87c7fdb9b3\",\"implVersion\":\"5.5.0\",\"tags\":[\"feed\",\"janitor\",\"pindex\",\"queryer\",\"cbauth_service\"],\"container\":\"\",\"weight\":1,\"extras\":\"{\\\"bindHTTPS\\\":\\\":18094\\\",\\\"features\\\":\\\"leanPlan,indexType:scorch,indexType:upside_down\\\",\\\"nsHostPort\\\":\\\"127.0.0.1:8091\\"...>>]
-[ns_server:debug,2019-07-21T21:58:19.791Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{15,63730965499}}]}]
-[ns_server:debug,2019-07-21T21:58:19.791Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/fts/cbgt/cfg/nodeDefs-wanted/8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965499}}]}|
- <<"{\"uuid\":\"32bfd12c0a18ccde\",\"nodeDefs\":{\"8ba1ce2e183ff908d4723b87c7fdb9b3\":{\"hostPort\":\"127.0.0.1:8094\",\"uuid\":\"8ba1ce2e183ff908d4723b87c7fdb9b3\",\"implVersion\":\"5.5.0\",\"tags\":[\"feed\",\"janitor\",\"pindex\",\"queryer\",\"cbauth_service\"],\"container\":\"\",\"weight\":1,\"extras\":\"{\\\"bindHTTPS\\\":\\\":18094\\\",\\\"features\\\":\\\"leanPlan,indexType:scorch,indexType:upside_down\\\",\\\"nsHostPort\\\":\\\"127.0.0.1:8091\\"...>>]
-[ns_server:debug,2019-07-21T21:58:19.848Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{16,63730965499}}]}]
-[ns_server:debug,2019-07-21T21:58:19.848Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/fts/cbgt/cfg/version">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965499}}]}|
- <<"5.5.0">>]
-[ns_server:debug,2019-07-21T21:58:19.939Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:21.828Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{15,63856929441}}]}]
+[ns_server:debug,2023-07-18T19:57:21.844Z,couchdb_ns_1@cb.local:ns_config_rep<0.249.0>:ns_couchdb_config_rep:handle_call:77]Got full synchronization request from 'ns_1@cb.local'
+[ns_server:debug,2023-07-18T19:57:21.872Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 vbucket_map_history ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965499}}]},
- {[['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
-   ['ns_1@127.0.0.1'],
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929441}}]},
+ {[['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
+   ['ns_1@cb.local'],
    [...]|...],
   [{replication_topology,star},{tags,undefined},{max_slaves,10}]}]
-[ns_server:debug,2019-07-21T21:58:19.939Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{17,63730965499}}]}]
-[ns_server:debug,2019-07-21T21:58:19.946Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:21.872Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{16,63856929441}}]}]
+[ns_server:debug,2023-07-18T19:57:21.877Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 buckets ->
-[[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{7,63730965499}}],
+[[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{6,63856929441}}],
  {configs,[{"datadog-test",
-            [{map,[{0,[],['ns_1@127.0.0.1']},
-                   {1,[],['ns_1@127.0.0.1']},
-                   {2,[],['ns_1@127.0.0.1']},
-                   {3,[],['ns_1@127.0.0.1']},
-                   {4,[],['ns_1@127.0.0.1']},
-                   {5,[],['ns_1@127.0.0.1']},
-                   {6,[],['ns_1@127.0.0.1']},
-                   {7,[],['ns_1@127.0.0.1']},
-                   {8,[],['ns_1@127.0.0.1']},
-                   {9,[],['ns_1@127.0.0.1']},
-                   {10,[],['ns_1@127.0.0.1']},
-                   {11,[],['ns_1@127.0.0.1']},
-                   {12,[],['ns_1@127.0.0.1']},
-                   {13,[],['ns_1@127.0.0.1']},
-                   {14,[],['ns_1@127.0.0.1']},
-                   {15,[],['ns_1@127.0.0.1']},
-                   {16,[],['ns_1@127.0.0.1']},
-                   {17,[],['ns_1@127.0.0.1']},
-                   {18,[],['ns_1@127.0.0.1']},
-                   {19,[],['ns_1@127.0.0.1']},
-                   {20,[],['ns_1@127.0.0.1']},
-                   {21,[],['ns_1@127.0.0.1']},
-                   {22,[],['ns_1@127.0.0.1']},
-                   {23,[],['ns_1@127.0.0.1']},
-                   {24,[],['ns_1@127.0.0.1']},
-                   {25,[],['ns_1@127.0.0.1']},
-                   {26,[],['ns_1@127.0.0.1']},
-                   {27,[],['ns_1@127.0.0.1']},
-                   {28,[],['ns_1@127.0.0.1']},
-                   {29,[],['ns_1@127.0.0.1']},
-                   {30,[],['ns_1@127.0.0.1']},
-                   {31,[],['ns_1@127.0.0.1']},
-                   {32,[],['ns_1@127.0.0.1']},
-                   {33,[],['ns_1@127.0.0.1']},
-                   {34,[],['ns_1@127.0.0.1']},
-                   {35,[],['ns_1@127.0.0.1']},
-                   {36,[],['ns_1@127.0.0.1']},
-                   {37,[],['ns_1@127.0.0.1']},
-                   {38,[],['ns_1@127.0.0.1']},
-                   {39,[],['ns_1@127.0.0.1']},
-                   {40,[],['ns_1@127.0.0.1']},
-                   {41,[],['ns_1@127.0.0.1']},
-                   {42,[],['ns_1@127.0.0.1']},
-                   {43,[],['ns_1@127.0.0.1']},
-                   {44,[],['ns_1@127.0.0.1']},
-                   {45,[],['ns_1@127.0.0.1']},
-                   {46,[],['ns_1@127.0.0.1']},
-                   {47,[],['ns_1@127.0.0.1']},
-                   {48,[],['ns_1@127.0.0.1']},
-                   {49,[],['ns_1@127.0.0.1']},
-                   {50,[],['ns_1@127.0.0.1']},
-                   {51,[],['ns_1@127.0.0.1']},
-                   {52,[],['ns_1@127.0.0.1']},
-                   {53,[],['ns_1@127.0.0.1']},
-                   {54,[],['ns_1@127.0.0.1']},
-                   {55,[],['ns_1@127.0.0.1']},
-                   {56,[],['ns_1@127.0.0.1']},
-                   {57,[],['ns_1@127.0.0.1']},
-                   {58,[],['ns_1@127.0.0.1']},
-                   {59,[],['ns_1@127.0.0.1']},
-                   {60,[],['ns_1@127.0.0.1']},
-                   {61,[],['ns_1@127.0.0.1']},
-                   {62,[],['ns_1@127.0.0.1']},
-                   {63,[],['ns_1@127.0.0.1']},
-                   {64,[],['ns_1@127.0.0.1']},
-                   {65,[],['ns_1@127.0.0.1']},
-                   {66,[],['ns_1@127.0.0.1']},
-                   {67,[],['ns_1@127.0.0.1']},
-                   {68,[],['ns_1@127.0.0.1']},
-                   {69,[],['ns_1@127.0.0.1']},
-                   {70,[],['ns_1@127.0.0.1']},
-                   {71,[],['ns_1@127.0.0.1']},
-                   {72,[],['ns_1@127.0.0.1']},
-                   {73,[],['ns_1@127.0.0.1']},
-                   {74,[],['ns_1@127.0.0.1']},
-                   {75,[],['ns_1@127.0.0.1']},
-                   {76,[],['ns_1@127.0.0.1']},
-                   {77,[],['ns_1@127.0.0.1']},
-                   {78,[],['ns_1@127.0.0.1']},
-                   {79,[],['ns_1@127.0.0.1']},
-                   {80,[],['ns_1@127.0.0.1']},
-                   {81,[],['ns_1@127.0.0.1']},
-                   {82,[],['ns_1@127.0.0.1']},
-                   {83,[],['ns_1@127.0.0.1']},
-                   {84,[],['ns_1@127.0.0.1']},
+            [{map,[{0,[],['ns_1@cb.local']},
+                   {1,[],['ns_1@cb.local']},
+                   {2,[],['ns_1@cb.local']},
+                   {3,[],['ns_1@cb.local']},
+                   {4,[],['ns_1@cb.local']},
+                   {5,[],['ns_1@cb.local']},
+                   {6,[],['ns_1@cb.local']},
+                   {7,[],['ns_1@cb.local']},
+                   {8,[],['ns_1@cb.local']},
+                   {9,[],['ns_1@cb.local']},
+                   {10,[],['ns_1@cb.local']},
+                   {11,[],['ns_1@cb.local']},
+                   {12,[],['ns_1@cb.local']},
+                   {13,[],['ns_1@cb.local']},
+                   {14,[],['ns_1@cb.local']},
+                   {15,[],['ns_1@cb.local']},
+                   {16,[],['ns_1@cb.local']},
+                   {17,[],['ns_1@cb.local']},
+                   {18,[],['ns_1@cb.local']},
+                   {19,[],['ns_1@cb.local']},
+                   {20,[],['ns_1@cb.local']},
+                   {21,[],['ns_1@cb.local']},
+                   {22,[],['ns_1@cb.local']},
+                   {23,[],['ns_1@cb.local']},
+                   {24,[],['ns_1@cb.local']},
+                   {25,[],['ns_1@cb.local']},
+                   {26,[],['ns_1@cb.local']},
+                   {27,[],['ns_1@cb.local']},
+                   {28,[],['ns_1@cb.local']},
+                   {29,[],['ns_1@cb.local']},
+                   {30,[],['ns_1@cb.local']},
+                   {31,[],['ns_1@cb.local']},
+                   {32,[],['ns_1@cb.local']},
+                   {33,[],['ns_1@cb.local']},
+                   {34,[],['ns_1@cb.local']},
+                   {35,[],['ns_1@cb.local']},
+                   {36,[],['ns_1@cb.local']},
+                   {37,[],['ns_1@cb.local']},
+                   {38,[],['ns_1@cb.local']},
+                   {39,[],['ns_1@cb.local']},
+                   {40,[],['ns_1@cb.local']},
+                   {41,[],['ns_1@cb.local']},
+                   {42,[],['ns_1@cb.local']},
+                   {43,[],['ns_1@cb.local']},
+                   {44,[],['ns_1@cb.local']},
+                   {45,[],['ns_1@cb.local']},
+                   {46,[],['ns_1@cb.local']},
+                   {47,[],['ns_1@cb.local']},
+                   {48,[],['ns_1@cb.local']},
+                   {49,[],['ns_1@cb.local']},
+                   {50,[],['ns_1@cb.local']},
+                   {51,[],['ns_1@cb.local']},
+                   {52,[],['ns_1@cb.local']},
+                   {53,[],['ns_1@cb.local']},
+                   {54,[],['ns_1@cb.local']},
+                   {55,[],['ns_1@cb.local']},
+                   {56,[],['ns_1@cb.local']},
+                   {57,[],['ns_1@cb.local']},
+                   {58,[],['ns_1@cb.local']},
+                   {59,[],['ns_1@cb.local']},
+                   {60,[],['ns_1@cb.local']},
+                   {61,[],['ns_1@cb.local']},
+                   {62,[],['ns_1@cb.local']},
+                   {63,[],['ns_1@cb.local']},
+                   {64,[],['ns_1@cb.local']},
+                   {65,[],['ns_1@cb.local']},
+                   {66,[],['ns_1@cb.local']},
+                   {67,[],['ns_1@cb.local']},
+                   {68,[],['ns_1@cb.local']},
+                   {69,[],['ns_1@cb.local']},
+                   {70,[],['ns_1@cb.local']},
+                   {71,[],['ns_1@cb.local']},
+                   {72,[],['ns_1@cb.local']},
+                   {73,[],['ns_1@cb.local']},
+                   {74,[],['ns_1@cb.local']},
+                   {75,[],['ns_1@cb.local']},
+                   {76,[],['ns_1@cb.local']},
+                   {77,[],['ns_1@cb.local']},
+                   {78,[],['ns_1@cb.local']},
+                   {79,[],['ns_1@cb.local']},
+                   {80,[],['ns_1@cb.local']},
+                   {81,[],['ns_1@cb.local']},
+                   {82,[],['ns_1@cb.local']},
+                   {83,[],['ns_1@cb.local']},
+                   {84,[],['ns_1@cb.local']},
                    {85,[],[...]},
                    {86,[],...},
                    {87,...},
                    {...}|...]},
              {fastForwardMap,[]},
-             {repl_type,dcp},
-             {uuid,<<"8c8ee4b9406f357fe7e000a0e02bd8fe">>},
+             {uuid,<<"fbbd3de581d647301f410f35705d9ed5">>},
              {auth_type,sasl},
              {num_replicas,0},
              {replica_index,false},
              {ram_quota,104857600},
+             {durability_min_level,none},
              {flush_enabled,false},
              {num_threads,3},
              {eviction_policy,value_only},
@@ -1566,170 +1707,261 @@ buckets ->
              {type,membase},
              {num_vbuckets,1024},
              {replication_topology,star},
-             {servers,['ns_1@127.0.0.1']},
+             {repl_type,dcp},
+             {servers,['ns_1@cb.local']},
+             {sasl_password,"*****"}]}]}]
+[ns_server:debug,2023-07-18T19:57:21.877Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{17,63856929441}}]}]
+[ns_server:debug,2023-07-18T19:57:21.877Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+buckets ->
+[[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{7,63856929441}}],
+ {configs,[{"datadog-test",
+            [{map,[]},
+             {fastForwardMap,[]},
+             {uuid,<<"fbbd3de581d647301f410f35705d9ed5">>},
+             {auth_type,sasl},
+             {num_replicas,0},
+             {replica_index,false},
+             {ram_quota,104857600},
+             {durability_min_level,none},
+             {flush_enabled,false},
+             {num_threads,3},
+             {eviction_policy,value_only},
+             {conflict_resolution_type,seqno},
+             {storage_mode,couchstore},
+             {max_ttl,0},
+             {compression_mode,passive},
+             {type,membase},
+             {num_vbuckets,1024},
+             {replication_topology,star},
+             {repl_type,dcp},
+             {servers,['ns_1@cb.local']},
              {sasl_password,"*****"},
              {map_opts_hash,133465355}]}]}]
-[ns_server:debug,2019-07-21T21:58:19.946Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{19,63730965499}}]}]
-[ns_server:debug,2019-07-21T21:58:22.084Z,couchdb_ns_1@127.0.0.1:compiled_roles_cache<0.214.0>:versioned_cache:handle_info:89]Flushing cache compiled_roles_cache due to version change from {[6,0],
-                                                                {0,1423366914},
+[ns_server:debug,2023-07-18T19:57:21.877Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{18,63856929441}}]}]
+[ns_server:debug,2023-07-18T19:57:21.881Z,couchdb_ns_1@cb.local:capi_ddoc_manager-datadog-test<0.370.0>:replicated_storage:anounce_startup:71]Announce my startup to <10546.882.0>
+[ns_server:debug,2023-07-18T19:57:21.881Z,couchdb_ns_1@cb.local:capi_ddoc_manager-datadog-test<0.370.0>:replicated_storage:anounce_startup:71]Announce my startup to <10546.883.0>
+[ns_server:debug,2023-07-18T19:57:22.137Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{19,63856929442}}]}]
+[ns_server:debug,2023-07-18T19:57:22.137Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/fts/cbgt/cfg/nodeDefs-known/fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929442}}]}|
+ <<"{\"uuid\":\"cfcdd9df7c5a9492\",\"nodeDefs\":{\"fc6bd4a2dd76337f941781c7d450e484\":{\"hostPort\":\"127.0.0.1:8094\",\"uuid\":\"fc6bd4a2dd76337f941781c7d450e484\",\"implVersion\":\"5.5.0\",\"tags\":[\"feed\",\"janitor\",\"pindex\",\"queryer\",\"cbauth_service\"],\"container\":\"\",\"weight\":1,\"extras\":\"{\\\"bindGRPC\\\":\\\"127.0.0.1:9130\\\",\\\"bindGRPCSSL\\\":\\\"127.0.0.1:19130\\\",\\\"bindHTTPS\\\":\\\":18094\\\",\\\"features\\\":\\\"leanPlan,index"...>>]
+[ns_server:debug,2023-07-18T19:57:22.156Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{20,63856929442}}]}]
+[ns_server:debug,2023-07-18T19:57:22.156Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/fts/cbgt/cfg/nodeDefs-wanted/fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929442}}]}|
+ <<"{\"uuid\":\"6379f926b726c962\",\"nodeDefs\":{\"fc6bd4a2dd76337f941781c7d450e484\":{\"hostPort\":\"127.0.0.1:8094\",\"uuid\":\"fc6bd4a2dd76337f941781c7d450e484\",\"implVersion\":\"5.5.0\",\"tags\":[\"feed\",\"janitor\",\"pindex\",\"queryer\",\"cbauth_service\"],\"container\":\"\",\"weight\":1,\"extras\":\"{\\\"bindGRPC\\\":\\\"127.0.0.1:9130\\\",\\\"bindGRPCSSL\\\":\\\"127.0.0.1:19130\\\",\\\"bindHTTPS\\\":\\\":18094\\\",\\\"features\\\":\\\"leanPlan,index"...>>]
+[ns_server:debug,2023-07-18T19:57:22.195Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{21,63856929442}}]}]
+[ns_server:debug,2023-07-18T19:57:22.195Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/query/dictionary_cache/counter">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929442}}]}|
+ <<":0">>]
+[ns_server:debug,2023-07-18T19:57:22.249Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{22,63856929442}}]}]
+[ns_server:debug,2023-07-18T19:57:22.249Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/fts/cbgt/cfg/version">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929442}}]}|
+ <<"5.5.0">>]
+[ns_server:debug,2023-07-18T19:57:22.261Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{23,63856929442}}]}]
+[ns_server:debug,2023-07-18T19:57:22.261Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/query/functions_cache/counter">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929442}}]}|
+ <<"0">>]
+[ns_server:debug,2023-07-18T19:57:22.464Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:wait_for_bucket_to_start:205]Waiting for engine to start. Bucket: "datadog-test", Wait time: 500 ms.
+[ns_server:debug,2023-07-18T19:57:22.466Z,couchdb_ns_1@cb.local:<0.391.0>:capi_set_view_manager:wait_for_bucket_to_start:190]Engine for bucket "datadog-test" is created in memcached
+[ns_server:debug,2023-07-18T19:57:23.093Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{24,63856929443}}]}]
+[ns_server:debug,2023-07-18T19:57:23.093Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{node,'couchdb_ns_1@cb.local',buckets_with_data} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]},
+ {"datadog-test",<<"fbbd3de581d647301f410f35705d9ed5">>}]
+[ns_server:debug,2023-07-18T19:57:23.093Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{node,'ns_1@cb.local',buckets_with_data} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]},
+ {"datadog-test",<<"fbbd3de581d647301f410f35705d9ed5">>}]
+[ns_server:debug,2023-07-18T19:57:23.119Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{25,63856929443}}]}]
+[ns_server:debug,2023-07-18T19:57:23.119Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/cbas/nextPartitionId">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]}|
+ <<"1">>]
+[ns_server:debug,2023-07-18T19:57:23.121Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{26,63856929443}}]}]
+[ns_server:debug,2023-07-18T19:57:23.121Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/cbas/nextControllerId">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]}|
+ <<"1">>]
+[ns_server:debug,2023-07-18T19:57:23.124Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{27,63856929443}}]}]
+[ns_server:debug,2023-07-18T19:57:23.124Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/cbas/topology">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]}|
+ <<"{\"nodes\":[{\"nodeId\":\"fc6bd4a2dd76337f941781c7d450e484\",\"priority\":1688875630395392,\"opaque\":{\"cbas-version\":\"6.6.5-10080\",\"cc-http-port\":\"9111\",\"controller-id\":\"0\",\"host\":\"127.0.0.1\",\"ns-server-port\":\"8091\",\"num-iodevices\":\"1\",\"starting-partition-id\":\"0\",\"svc-http-port\":\"8095\"}}],\"id\":\"6bef10c33432f1cce5cc384e2222114a\",\"type\":\"topology-change-rebalance\",\"ccNodeId\":\"fc6bd4a2dd76337f9417"...>>]
+[ns_server:debug,2023-07-18T19:57:23.129Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{28,63856929443}}]}]
+[ns_server:debug,2023-07-18T19:57:23.129Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{service_map,cbas} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]},
+ 'ns_1@cb.local']
+[ns_server:debug,2023-07-18T19:57:23.172Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{29,63856929443}}]}]
+[ns_server:debug,2023-07-18T19:57:23.172Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{service_map,fts} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]},
+ 'ns_1@cb.local']
+[ns_server:debug,2023-07-18T19:57:23.203Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{30,63856929443}}]}]
+[ns_server:debug,2023-07-18T19:57:23.204Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/indexing/rebalance/RebalanceToken">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]}|
+ <<"{\"MasterId\":\"fc6bd4a2dd76337f941781c7d450e484\",\"RebalId\":\"f98c81542c3ebc3205c77d01d27884bc\",\"Source\":0,\"Error\":\"\",\"MasterIP\":\"127.0.0.1\"}">>]
+[ns_server:debug,2023-07-18T19:57:23.225Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{31,63856929443}}]}]
+[ns_server:debug,2023-07-18T19:57:23.225Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/indexing/rebalance/RebalanceToken">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{2,63856929443}}]}|
+ '_deleted']
+[ns_server:debug,2023-07-18T19:57:23.236Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{33,63856929443}}]}]
+[ns_server:debug,2023-07-18T19:57:23.236Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{service_map,index} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]},
+ 'ns_1@cb.local']
+[ns_server:debug,2023-07-18T19:57:23.236Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{service_map,n1ql} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]},
+ 'ns_1@cb.local']
+[ns_server:debug,2023-07-18T19:57:23.301Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{34,63856929443}}]}]
+[ns_server:debug,2023-07-18T19:57:23.301Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/indexing/info/versionToken">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929443}}]}|
+ <<"{\"Version\":4}">>]
+[ns_server:debug,2023-07-18T19:57:25.154Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{35,63856929445}}]}]
+[ns_server:debug,2023-07-18T19:57:25.154Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/cbas/config/node/fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929445}}]}|
+ <<"{\"configVersion\":1,\"config\":{\"additionalCcNodes\":[],\"address\":\"0.0.0.0\",\"analyticsCbHome\":\"/opt/couchbase\",\"analyticsCcHttpPort\":\"9111\",\"analyticsHttpAdminListenPort\":\"9110\",\"analyticsHttpListenAddress\":\"0.0.0.0\",\"analyticsHttpListenPort\":\"8095\",\"analyticsHttpsListenAddress\":\"0.0.0.0\",\"analyticsHttpsListenPort\":\"18095\",\"analyticsNodeName\":\"127.0.0.1:8091\",\"analyticsSslEnabled\":true,\"cb"...>>]
+[ns_server:debug,2023-07-18T19:57:25.387Z,couchdb_ns_1@cb.local:roles_cache<0.278.0>:active_cache:renew:211]Starting roles_cache cache renewal
+[ns_server:debug,2023-07-18T19:57:25.387Z,couchdb_ns_1@cb.local:roles_cache<0.278.0>:active_cache:renew:217]roles_cache cache renewal process originated 0 queries
+[ns_server:debug,2023-07-18T19:57:25.389Z,couchdb_ns_1@cb.local:compiled_roles_cache<0.255.0>:versioned_cache:handle_info:92]Flushing cache compiled_roles_cache due to version change from {[6,6],
+                                                                {0,3480592195},
+                                                                {0,3480592195},
                                                                 true,
                                                                 [{"datadog-test",
-                                                                  <<"8c8ee4b9406f357fe7e000a0e02bd8fe">>}]} to {[6,
-                                                                                                                 0],
+                                                                  <<"fbbd3de581d647301f410f35705d9ed5">>}]} to {[6,
+                                                                                                                 6],
                                                                                                                 {1,
-                                                                                                                 1423366914},
+                                                                                                                 3480592195},
+                                                                                                                {0,
+                                                                                                                 3480592195},
                                                                                                                 true,
                                                                                                                 [{"datadog-test",
-                                                                                                                  <<"8c8ee4b9406f357fe7e000a0e02bd8fe">>}]}
-[ns_server:debug,2019-07-21T21:58:22.085Z,couchdb_ns_1@127.0.0.1:menelaus_users_cache<0.95.0>:versioned_cache:handle_info:89]Flushing cache menelaus_users_cache due to version change from undefined to {{0,
-                                                                              1423366914},
+                                                                                                                  <<"fbbd3de581d647301f410f35705d9ed5">>}]}
+[ns_server:debug,2023-07-18T19:57:25.390Z,couchdb_ns_1@cb.local:menelaus_users_cache<0.131.0>:versioned_cache:handle_info:92]Flushing cache menelaus_users_cache due to version change from undefined to {{1,
+                                                                              3480592195},
                                                                              {1,
-                                                                              1423366914}}
-[ns_server:debug,2019-07-21T21:58:22.091Z,couchdb_ns_1@127.0.0.1:menelaus_users_cache<0.95.0>:versioned_cache:handle_info:89]Flushing cache menelaus_users_cache due to version change from {{0,1423366914},
-                                                                {1,
-                                                                 1423366914}} to {{1,
-                                                                                   1423366914},
-                                                                                  {1,
-                                                                                   1423366914}}
-[ns_server:debug,2019-07-21T21:58:22.243Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{20,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.244Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+                                                                              3480592195},
+                                                                             {0,
+                                                                              3480592195}}
+[ns_server:debug,2023-07-18T19:57:25.702Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{36,63856929445}}]}]
+[ns_server:debug,2023-07-18T19:57:25.702Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 {metakv,<<"/fts/cbgt/cfg/indexDefs">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965502}}]}|
- <<"{\"uuid\":\"b433686cd66ae061\",\"indexDefs\":{\"test\":{\"type\":\"fulltext-index\",\"name\":\"test\",\"uuid\":\"b433686cd66ae061\",\"sourceType\":\"couchbase\",\"sourceName\":\"datadog-test\",\"planParams\":{\"maxPartitionsPerPIndex\":171},\"params\":{\"doc_config\":{\"docid_prefix_delim\":\"\",\"docid_regexp\":\"\",\"mode\":\"type_field\",\"type_field\":\"type\"},\"mapping\":{\"analysis\":{},\"default_analyzer\":\"standard\",\"default_datetime"...>>]
-[ns_server:debug,2019-07-21T21:58:22.316Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{21,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.316Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/fts/cbgt/cfg/planPIndexesLean/planPIndexesLean-8d614c0491ff171189c3afd3a02dfaa2-1563746302309/test">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965502}}]}|
- <<"{\"uuid\":\"d6388abfe1106dd6\",\"implVersion\":\"5.5.0\",\"indexPlanPIndexes\":{\"test\":{\"indexDef\":{\"type\":\"fulltext-index\",\"name\":\"test\",\"uuid\":\"b433686cd66ae061\",\"sourceType\":\"couchbase\",\"sourceName\":\"datadog-test\",\"planParams\":{},\"params\":{\"doc_config\":{\"docid_prefix_delim\":\"\",\"docid_regexp\":\"\",\"mode\":\"type_field\",\"type_field\":\"type\"},\"mapping\":{\"analysis\":{},\"default_analyzer\":\"standard\",\"de"...>>]
-[ns_server:debug,2019-07-21T21:58:22.327Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{22,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.327Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929445}}]}|
+ <<"{\"uuid\":\"745e897101a8a8e1\",\"indexDefs\":{\"test\":{\"type\":\"fulltext-index\",\"name\":\"test\",\"uuid\":\"745e897101a8a8e1\",\"sourceType\":\"couchbase\",\"sourceName\":\"datadog-test\",\"planParams\":{\"maxPartitionsPerPIndex\":171},\"params\":{\"doc_config\":{\"docid_prefix_delim\":\"\",\"docid_regexp\":\"\",\"mode\":\"type_field\",\"type_field\":\"type\"},\"mapping\":{\"analysis\":{},\"default_analyzer\":\"standard\",\"default_datetime"...>>]
+[ns_server:debug,2023-07-18T19:57:25.774Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{37,63856929445}}]}]
+[ns_server:debug,2023-07-18T19:57:25.775Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/fts/cbgt/cfg/planPIndexesLean/planPIndexesLean-631a83f49a9f8dd0d82faea39d57978a-1689710245770/test">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929445}}]}|
+ <<"{\"uuid\":\"19db858aa1dbd994\",\"implVersion\":\"5.5.0\",\"indexPlanPIndexes\":{\"test\":{\"indexDef\":{\"type\":\"fulltext-index\",\"name\":\"test\",\"uuid\":\"745e897101a8a8e1\",\"sourceType\":\"couchbase\",\"sourceName\":\"datadog-test\",\"planParams\":{},\"params\":{\"doc_config\":{\"docid_prefix_delim\":\"\",\"docid_regexp\":\"\",\"mode\":\"type_field\",\"type_field\":\"type\"},\"mapping\":{\"analysis\":{},\"default_analyzer\":\"standard\",\"de"...>>]
+[ns_server:debug,2023-07-18T19:57:25.788Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{38,63856929445}}]}]
+[ns_server:debug,2023-07-18T19:57:25.788Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 {metakv,<<"/fts/cbgt/cfg/curMetaKvPlanKey">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965502}}]}|
- <<"{\"path\":\"/fts/cbgt/cfg/planPIndexesLean/planPIndexesLean-8d614c0491ff171189c3afd3a02dfaa2-1563746302309/\",\"uuid\":\"d6388abfe1106dd6\",\"implVersion\":\"5.5.0\"}">>]
-[ns_server:debug,2019-07-21T21:58:22.335Z,couchdb_ns_1@127.0.0.1:compiled_roles_cache<0.214.0>:menelaus_roles:build_compiled_roles:828]Retrieve compiled roles for user {"<ud>Administrator</ud>",admin} from ns_server node
-[ns_server:debug,2019-07-21T21:58:22.346Z,couchdb_ns_1@127.0.0.1:capi_ddoc_manager-datadog-test<0.280.0>:replicated_storage:handle_call:115]Writing interactively saved doc {doc,<<"_design/datadoc">>,
-                                     {1,<<82,133,186,9>>},
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929445}}]}|
+ <<"{\"path\":\"/fts/cbgt/cfg/planPIndexesLean/planPIndexesLean-631a83f49a9f8dd0d82faea39d57978a-1689710245770/\",\"uuid\":\"19db858aa1dbd994\",\"implVersion\":\"5.5.0\"}">>]
+[ns_server:debug,2023-07-18T19:57:25.830Z,couchdb_ns_1@cb.local:compiled_roles_cache<0.255.0>:menelaus_roles:build_compiled_roles:1085]Retrieve compiled roles for user {"<ud>Administrator</ud>",admin} from ns_server node
+[ns_server:debug,2023-07-18T19:57:25.838Z,couchdb_ns_1@cb.local:capi_ddoc_manager-datadog-test<0.370.0>:replicated_storage:handle_call:118]Writing interactively saved doc {doc,<<"_design/datadoc">>,
+                                     {1,<<197,155,0,1>>},
                                      <<"{\"views\":{\"by_name\":{\"map\":\"function (doc, meta) {\\n if (doc.type && doc.type == 'landmark') {\\n emit(doc.name, null)\\n }\\n }\"}}}">>,
                                      0,false,[]}
-[ns_server:info,2019-07-21T21:58:22.445Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:handle_call:250]Processing ddoc update: id _design/datadoc, deleted false
-[views:debug,2019-07-21T21:58:22.446Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:maybe_define_group:299]
+[ns_server:info,2023-07-18T19:57:25.960Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:handle_call:250]Processing ddoc update: id _design/datadoc, deleted false
+[views:debug,2023-07-18T19:57:25.960Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:maybe_define_group:299]
 Calling couch_set_view:define_group(mapreduce_view, <<"datadog-test">>, <<"_design/datadoc">>, [{set_view_params,1024,[],[],false}])
-[views:debug,2019-07-21T21:58:22.525Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:maybe_define_group:299]
-couch_set_view:define_group(mapreduce_view, <<"datadog-test">>, <<"_design/datadoc">>, [{set_view_params,1024,[],[],false}]) returned ok in 79ms
-[views:debug,2019-07-21T21:58:22.525Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:maybe_define_group:305]
+[views:debug,2023-07-18T19:57:25.996Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:maybe_define_group:299]
+couch_set_view:define_group(mapreduce_view, <<"datadog-test">>, <<"_design/datadoc">>, [{set_view_params,1024,[],[],false}]) returned ok in 35ms
+[views:debug,2023-07-18T19:57:25.996Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:maybe_define_group:305]
 Calling couch_set_view:define_group(spatial_view, <<"datadog-test">>, <<"_design/datadoc">>, [{set_view_params,1024,[],[],false}])
-[views:debug,2019-07-21T21:58:22.525Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:maybe_define_group:305]
+[views:debug,2023-07-18T19:57:25.996Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:maybe_define_group:305]
 couch_set_view:define_group(spatial_view, <<"datadog-test">>, <<"_design/datadoc">>, [{set_view_params,1024,[],[],false}]) returned ok in 0ms
-[views:debug,2019-07-21T21:58:22.525Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:346]
+[views:debug,2023-07-18T19:57:25.996Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:346]
 Calling couch_set_view:mark_partitions_indexable(mapreduce_view, <<"datadog-test">>, <<"_design/datadoc">>, [[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023]])
-[views:debug,2019-07-21T21:58:22.526Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:347]
+[views:debug,2023-07-18T19:57:25.996Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:347]
 couch_set_view:mark_partitions_indexable(mapreduce_view, <<"datadog-test">>, <<"_design/datadoc">>, [[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023]]) returned ok in 0ms
-[views:debug,2019-07-21T21:58:22.526Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:347]
+[views:debug,2023-07-18T19:57:25.997Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:347]
 Calling couch_set_view:mark_partitions_indexable(spatial_view, <<"datadog-test">>, <<"_design/datadoc">>, [[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023]])
-[views:debug,2019-07-21T21:58:22.527Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:347]
+[views:debug,2023-07-18T19:57:25.997Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:347]
 couch_set_view:mark_partitions_indexable(spatial_view, <<"datadog-test">>, <<"_design/datadoc">>, [[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023]]) returned ok in 0ms
-[views:debug,2019-07-21T21:58:22.527Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:352]
+[views:debug,2023-07-18T19:57:25.997Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:352]
 Calling couch_set_view:set_partition_states(mapreduce_view, <<"datadog-test">>, <<"_design/datadoc">>, [[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023],[],[]])
-[views:debug,2019-07-21T21:58:22.561Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:353]
-couch_set_view:set_partition_states(mapreduce_view, <<"datadog-test">>, <<"_design/datadoc">>, [[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023],[],[]]) returned ok in 33ms
-[views:debug,2019-07-21T21:58:22.561Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:353]
+[views:debug,2023-07-18T19:57:26.019Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:353]
+couch_set_view:set_partition_states(mapreduce_view, <<"datadog-test">>, <<"_design/datadoc">>, [[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023],[],[]]) returned ok in 21ms
+[views:debug,2023-07-18T19:57:26.020Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:353]
 Calling couch_set_view:set_partition_states(spatial_view, <<"datadog-test">>, <<"_design/datadoc">>, [[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023],[],[]])
-[views:debug,2019-07-21T21:58:22.561Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:353]
+[views:debug,2023-07-18T19:57:26.020Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:353]
 couch_set_view:set_partition_states(spatial_view, <<"datadog-test">>, <<"_design/datadoc">>, [[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023],[],[]]) returned ok in 0ms
-[views:debug,2019-07-21T21:58:22.562Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:369]
+[views:debug,2023-07-18T19:57:26.020Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:369]
 Calling couch_set_view:mark_partitions_unindexable(mapreduce_view, <<"datadog-test">>, <<"_design/datadoc">>, [[]])
-[views:debug,2019-07-21T21:58:22.562Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:370]
+[views:debug,2023-07-18T19:57:26.020Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:370]
 couch_set_view:mark_partitions_unindexable(mapreduce_view, <<"datadog-test">>, <<"_design/datadoc">>, [[]]) returned ok in 0ms
-[views:debug,2019-07-21T21:58:22.563Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:370]
+[views:debug,2023-07-18T19:57:26.020Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:370]
 Calling couch_set_view:mark_partitions_unindexable(spatial_view, <<"datadog-test">>, <<"_design/datadoc">>, [[]])
-[views:debug,2019-07-21T21:58:22.564Z,couchdb_ns_1@127.0.0.1:capi_set_view_manager-datadog-test<0.286.0>:capi_set_view_manager:apply_index_states:370]
+[views:debug,2023-07-18T19:57:26.020Z,couchdb_ns_1@cb.local:capi_set_view_manager-datadog-test<0.378.0>:capi_set_view_manager:apply_index_states:370]
 couch_set_view:mark_partitions_unindexable(spatial_view, <<"datadog-test">>, <<"_design/datadoc">>, [[]]) returned ok in 0ms
-[ns_server:debug,2019-07-21T21:58:22.592Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{23,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.592Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/cbas/nextPartitionId">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965502}}]}|
- <<"1">>]
-[ns_server:debug,2019-07-21T21:58:22.596Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{24,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.597Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/cbas/nextControllerId">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965502}}]}|
- <<"1">>]
-[ns_server:debug,2019-07-21T21:58:22.609Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{25,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.609Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/cbas/topology">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965502}}]}|
- <<"{\"nodes\":[{\"nodeId\":\"8ba1ce2e183ff908d4723b87c7fdb9b3\",\"priority\":0,\"opaque\":{\"cc-http-port\":\"9111\",\"controller-id\":\"0\",\"host\":\"127.0.0.1\",\"num-iodevices\":\"1\",\"starting-partition-id\":\"0\"}}],\"id\":\"4bec35391580dcd1385d52ee27c6ab27\",\"type\":\"topology-change-rebalance\",\"ccNodeId\":\"8ba1ce2e183ff908d4723b87c7fdb9b3\",\"metadataNodeId\":\"8ba1ce2e183ff908d4723b87c7fdb9b3\",\"metadataPartition\":0,\"re"...>>]
-[ns_server:debug,2019-07-21T21:58:22.631Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{26,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.632Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{service_map,cbas} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965502}}]},
- 'ns_1@127.0.0.1']
-[ns_server:debug,2019-07-21T21:58:22.803Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{27,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.803Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/indexing/rebalance/RebalanceToken">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965502}}]}|
- <<"{\"MasterId\":\"8ba1ce2e183ff908d4723b87c7fdb9b3\",\"RebalId\":\"9bb5b00639f893e9277c2470b3c781f4\",\"Source\":0,\"Error\":\"\"}">>]
-[ns_server:debug,2019-07-21T21:58:22.833Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{28,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.833Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/indexing/rebalance/RebalanceToken">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{2,63730965502}}]}|
- '_deleted']
-[ns_server:debug,2019-07-21T21:58:22.850Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{30,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.850Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{service_map,index} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{2,63730965502}}]},
- 'ns_1@127.0.0.1']
-[ns_server:debug,2019-07-21T21:58:22.850Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{service_map,n1ql} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{2,63730965502}}]},
- 'ns_1@127.0.0.1']
-[ns_server:debug,2019-07-21T21:58:22.929Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{31,63730965502}}]}]
-[ns_server:debug,2019-07-21T21:58:22.929Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/indexing/info/versionToken">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965502}}]}|
- <<"{\"Version\":3}">>]
-[ns_server:debug,2019-07-21T21:58:24.627Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{32,63730965504}}]}]
-[ns_server:debug,2019-07-21T21:58:24.627Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/cbas/config/node/8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965504}}]}|
- <<"{\"configVersion\":1,\"config\":{\"additionalCcNodes\":[],\"address\":\"0.0.0.0\",\"analyticsCbHome\":\"/opt/couchbase\",\"analyticsCcHttpPort\":\"9111\",\"analyticsHttpAdminListenPort\":\"9110\",\"analyticsHttpListenPort\":\"8095\",\"analyticsHttpsListenPort\":\"18095\",\"analyticsNodeName\":\"127.0.0.1:8091\",\"analyticsSslEnabled\":true,\"cbasAddress\":\"127.0.0.1\",\"cbasPort\":\"9122\",\"ccAddress\":\"0.0.0.0\",\"ccAnalyticsHttp"...>>]
-[ns_server:debug,2019-07-21T21:58:27.610Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{33,63730965507}}]}]
-[ns_server:debug,2019-07-21T21:58:27.610Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{metakv,<<"/cbas/bootstrap/ensureCc/8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965507}}]}|
- <<"2019-07-21T21:58:27.587198Z">>]
-[ns_server:debug,2019-07-21T21:58:30.685Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
-{local_changes_count,<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{34,63730965510}}]}]
-[ns_server:debug,2019-07-21T21:58:30.685Z,couchdb_ns_1@127.0.0.1:ns_config_log<0.212.0>:ns_config_log:log_common:227]config change:
+[ns_server:debug,2023-07-18T19:57:29.587Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{39,63856929449}}]}]
+[ns_server:debug,2023-07-18T19:57:29.587Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{metakv,<<"/cbas/bootstrap/ensureCc/fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929449}}]}|
+ <<"{}">>]
+[ns_server:debug,2023-07-18T19:57:31.951Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
+{local_changes_count,<<"fc6bd4a2dd76337f941781c7d450e484">>} ->
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{40,63856929451}}]}]
+[ns_server:debug,2023-07-18T19:57:31.951Z,couchdb_ns_1@cb.local:ns_config_log<0.252.0>:ns_config_log:log_common:229]config change:
 {metakv,<<"/cbas/cluster/state/metadata/replica">>} ->
-[{'_vclock',[{<<"8ba1ce2e183ff908d4723b87c7fdb9b3">>,{1,63730965510}}]}|
+[{'_vclock',[{<<"fc6bd4a2dd76337f941781c7d450e484">>,{1,63856929451}}]}|
  <<"{\"revision\":1,\"nodes\":[]}">>]
+[ns_server:info,2023-07-18T19:57:48.027Z,couchdb_ns_1@cb.local:<0.513.0>:ns_couchdb_api:handle_rpc:259]Cleaning up indexes for bucket `datadog-test`
+[ns_server:info,2023-07-18T19:58:18.040Z,couchdb_ns_1@cb.local:<0.627.0>:ns_couchdb_api:handle_rpc:259]Cleaning up indexes for bucket `datadog-test`
+[ns_server:info,2023-07-18T19:58:48.049Z,couchdb_ns_1@cb.local:<0.741.0>:ns_couchdb_api:handle_rpc:259]Cleaning up indexes for bucket `datadog-test`
+[ns_server:info,2023-07-18T19:59:18.080Z,couchdb_ns_1@cb.local:<0.858.0>:ns_couchdb_api:handle_rpc:259]Cleaning up indexes for bucket `datadog-test`

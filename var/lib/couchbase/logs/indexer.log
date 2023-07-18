@@ -1,141 +1,216 @@
-2019-07-21T21:58:19.384+00:00 [Info] Indexer started with command line: [/opt/couchbase/bin/indexer -vbuckets=1024 -cluster=127.0.0.1:8091 -adminPort=9100 -scanPort=9101 -httpPort=9102 -streamInitPort=9103 -streamCatchupPort=9104 -streamMaintPort=9105 -storageDir=/opt/couchbase/var/lib/couchbase/data/@2i -diagDir=/opt/couchbase/var/lib/couchbase/crash -nodeUUID=8ba1ce2e183ff908d4723b87c7fdb9b3 -ipv6=false -isEnterprise=true --httpsPort=19102 --certFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem --keyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem]
-2019-07-21T21:58:19.401+00:00 [Info] Indexer::NewIndexer Status Warmup
-2019-07-21T21:58:19.404+00:00 [Info] Setting buffer block size to 16384 bytes
-2019-07-21T21:58:19.404+00:00 [Info] Setting maxcpus = 4
-2019-07-21T21:58:19.404+00:00 [Info] Setting log level to Info
-2019-07-21T21:58:19.404+00:00 [Info] Indexer::NewIndexer Build Mode Set Enterprise
-2019-07-21T21:58:19.404+00:00 [Info] Indexer::Cluster Storage Mode Set memory_optimized
-2019-07-21T21:58:19.404+00:00 [Info] Indexer::NewIndexer Starting with Vbuckets 1024
-2019-07-21T21:58:19.413+00:00 [Info] SettingsMgr:: Dropped request /indexing/settings/config {"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.log_level":"info","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":2,"indexer.settings.memory_quota":268435456,"indexer.settings.compaction.abort_exceed_interval":false}. Any setting change will get applied once Indexer is ready.
-2019-07-21T21:58:19.418+00:00 [Info] [Queryport ":9101"] started ...
-2019-07-21T21:58:19.427+00:00 [Info] Unable to fetch storage mode from metakv during bootrap.  Use storage mode setting for bootstrap
-2019-07-21T21:58:19.428+00:00 [Info] bootstrap storage mode memory_optimized
-2019-07-21T21:58:19.470+00:00 [INFO][FDB] Forestdb blockcache size 1048576 initialized in 57 us
+2023-07-18T19:57:21.888+00:00 [Info] Indexer started with command line: [/opt/couchbase/bin/indexer -adminPort=9100 -scanPort=9101 -httpPort=9102 -streamInitPort=9103 -streamCatchupPort=9104 -streamMaintPort=9105 --httpsPort=19102 --certFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem --keyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem -vbuckets=1024 -cluster=127.0.0.1:8091 -storageDir=/opt/couchbase/var/lib/couchbase/data/@2i -diagDir=/opt/couchbase/var/lib/couchbase/crash -nodeUUID=fc6bd4a2dd76337f941781c7d450e484 -ipv6=false -isEnterprise=true]
+2023-07-18T19:57:21.920+00:00 [Info] Indexer::NewIndexer Status Warmup
+2023-07-18T19:57:21.935+00:00 [Info] Setting buffer block size to 16384 bytes
+2023-07-18T19:57:21.935+00:00 [Info] Setting maxcpus = 5
+2023-07-18T19:57:21.935+00:00 [Info] Setting log level to Info
+2023-07-18T19:57:21.937+00:00 [Info] Recieve security change notification. code 3
+2023-07-18T19:57:21.937+00:00 [Info] TLS config refreshed successfully
+2023-07-18T19:57:21.946+00:00 [Info] SettingsMgr:: Dropped request /indexing/settings/config {"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.log_level":"info","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":2,"indexer.settings.memory_quota":268435456,"indexer.settings.compaction.abort_exceed_interval":false}. Any setting change will get applied once Indexer is ready.
+2023-07-18T19:57:21.954+00:00 [Info] Certificate refreshed successfully
+2023-07-18T19:57:21.954+00:00 [Info] Encryption config refresh successfully.   Encryption enabled=false
+2023-07-18T19:57:21.955+00:00 [Info] security context:  encryptLocalHost true Local IP's: map[127.0.0.1:true 172.17.0.2:true]
+2023-07-18T19:57:21.995+00:00 [Info] security context initialized
+2023-07-18T19:57:21.995+00:00 [Info] security port mapping updated : map[11210:11207 8091:18091 8093:18093 9100:9100 9101:9101 9102:19102 9103:9103 9104:9104 9105:9105 9999:9999]
+2023-07-18T19:57:21.996+00:00 [Info] Indexer::NewIndexer Build Mode Set Enterprise
+2023-07-18T19:57:21.996+00:00 [Info] Indexer::Cluster Storage Mode Set memory_optimized
+2023-07-18T19:57:21.996+00:00 [Info] memcachedTimeout set to 120
+2023-07-18T19:57:21.996+00:00 [Info] Indexer::NewIndexer Starting with Vbuckets 1024
+2023-07-18T19:57:22.015+00:00 [Info] MutationMgr::checkPortAvailability for dataport servers ...
+2023-07-18T19:57:22.016+00:00 [Info] MutationMgr::checkPortAvailability all dataport server ports are available.
+2023-07-18T19:57:22.042+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40index-cbauth@127.0.0.1:8091, default
+2023-07-18T19:57:22.044+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2023-07-18T19:57:22.045+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2023-07-18T19:57:22.047+00:00 [Info] [Queryport ":9101"] started ...
+2023-07-18T19:57:22.048+00:00 [Info] OperationsMonitor(kvSender) starting monitor ...
+2023-07-18T19:57:22.048+00:00 [Info] Unable to fetch storage mode from metakv during bootrap.  Use storage mode setting for bootstrap
+2023-07-18T19:57:22.052+00:00 [Info] bootstrap storage mode memory_optimized
+2023-07-18T19:57:22.114+00:00 [Info] Starting metadadta repo: quota 1048576 sleep duration 900 threshold 0 min file size 0
+2023-07-18T19:57:22.120+00:00 [INFO][FDB] Forestdb blockcache size 1048576 initialized in 1034 us
 
-2019-07-21T21:58:19.472+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40index-cbauth@127.0.0.1:8091, default
-2019-07-21T21:58:19.474+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
-2019-07-21T21:58:19.476+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
-2019-07-21T21:58:19.477+00:00 [INFO][FDB] Forestdb opened database file /opt/couchbase/var/lib/couchbase/data/@2i/MetadataStore
-2019-07-21T21:58:19.486+00:00 [Info] Indexer::indexer version 3
-2019-07-21T21:58:19.486+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerId
-2019-07-21T21:58:19.486+00:00 [Info] PeriodicStats = {"cpu_utilization":0,"index_not_found_errcount":0,"indexer_state":"Warmup","memory_free":0,"memory_quota":268435456,"memory_rss":0,"memory_total":0,"memory_total_storage":0,"memory_used":0,"memory_used_queue":0,"memory_used_storage":0,"needs_restart":false,"num_connections":0,"num_cpu_core":4,"storage_mode":"not_set","timings/stats_response":"0 0 0","uptime":"102.3027ms"}
-2019-07-21T21:58:19.490+00:00 [Info] ClustMgr:handleSetLocalValue Key IndexerId Value 8ba1ce2e183ff908d4723b87c7fdb9b3
-2019-07-21T21:58:19.492+00:00 [Info] Indexer Id 8ba1ce2e183ff908d4723b87c7fdb9b3
-2019-07-21T21:58:19.495+00:00 [Info] indexer:: SSL server started: :19102
-2019-07-21T21:58:19.517+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_8ba1ce2e183ff908d4723b87c7fdb9b3
-2019-07-21T21:58:19.518+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_8ba1ce2e183ff908d4723b87c7fdb9b3. Err projector.topicMissing
-2019-07-21T21:58:19.518+00:00 [Error] KVSender::closeMutationStream MAINT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
-2019-07-21T21:58:19.518+00:00 [Info] KVSender::closeMutationStream MAINT_STREAM  Treating projector.topicMissing As Success
-2019-07-21T21:58:19.540+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_8ba1ce2e183ff908d4723b87c7fdb9b3
-2019-07-21T21:58:19.541+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_8ba1ce2e183ff908d4723b87c7fdb9b3. Err projector.topicMissing
-2019-07-21T21:58:19.541+00:00 [Error] KVSender::closeMutationStream INIT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
-2019-07-21T21:58:19.541+00:00 [Info] KVSender::closeMutationStream INIT_STREAM  Treating projector.topicMissing As Success
-2019-07-21T21:58:19.541+00:00 [Info] ClustMgr:handleGetLocalValue Key RebalanceRunning
-2019-07-21T21:58:19.541+00:00 [Info] ClustMgr:handleGetLocalValue Key RebalanceToken
-2019-07-21T21:58:19.541+00:00 [Info] Indexer::recoverRebalanceState RebalanceRunning false RebalanceToken <nil>
-2019-07-21T21:58:19.541+00:00 [Info] ClustMgr:handleGetGlobalTopology &{map[]}
-2019-07-21T21:58:19.541+00:00 [Info] Indexer::initFromPersistedState Recovered IndexInstMap 
-2019-07-21T21:58:19.544+00:00 [Info] indexer.upgradeStorage: check index for storage upgrade.   disable false overrride not_set
-2019-07-21T21:58:19.544+00:00 [Info] DDLServiceMgr: intialized. Local nodeUUID 8ba1ce2e183ff908d4723b87c7fdb9b3
-2019-07-21T21:58:19.544+00:00 [Info] RebalanceMgr::NewRebalanceMgr false <nil> 
-2019-07-21T21:58:19.545+00:00 [Info] RebalanceMgr::initService Init
-2019-07-21T21:58:19.545+00:00 [Error] ServiceMgr::getWithAuth Error setting auth Unable to find given hostport in cbauth database: `127.0.0.1:9102'
-2019-07-21T21:58:19.545+00:00 [Info] ServiceMgr::registerWithServer nodeuuid 8ba1ce2e183ff908d4723b87c7fdb9b3 
-2019-07-21T21:58:19.546+00:00 [Info] ServiceMgr::updateNodeList Updated Node List []
-2019-07-21T21:58:19.551+00:00 [Info] Indexer::local storage mode memory_optimized
-2019-07-21T21:58:19.551+00:00 [Info] MutationMgr::handleUpdateIndexInstMap 
+2023-07-18T19:57:22.125+00:00 [INFO][FDB] Forestdb opened database file /opt/couchbase/var/lib/couchbase/data/@2i/MetadataStore
+2023-07-18T19:57:22.141+00:00 [Info] EmbeddedServer.runOnce() : Start Running Server
+2023-07-18T19:57:22.150+00:00 [Info] PeriodicStats = {"cpu_utilization":0,"index_not_found_errcount":0,"indexer_state":"Warmup","memory_free":0,"memory_quota":268435456,"memory_rss":0,"memory_total":0,"memory_total_storage":0,"memory_used":0,"memory_used_queue":0,"memory_used_storage":0,"needs_restart":false,"num_connections":0,"num_cpu_core":5,"storage_mode":"not_set","timestamp":"1689710242148343000","timings/stats_response":"0 0 0","uptime":"260.625ms"}
+2023-07-18T19:57:22.150+00:00 [Info] indexer:: Staring http server : :9102
+2023-07-18T19:57:22.150+00:00 [Info] HTTPS server created for :19102
+2023-07-18T19:57:22.151+00:00 [Info] indexer:: SSL server started: :19102
+2023-07-18T19:57:22.151+00:00 [Info] Indexer::indexer version 4
+2023-07-18T19:57:22.151+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerId
+2023-07-18T19:57:22.151+00:00 [Info] ClustMgr:handleSetLocalValue Key IndexerId Value fc6bd4a2dd76337f941781c7d450e484
+2023-07-18T19:57:22.152+00:00 [Info] Indexer Id fc6bd4a2dd76337f941781c7d450e484
+2023-07-18T19:57:22.154+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_fc6bd4a2dd76337f941781c7d450e484
+2023-07-18T19:57:22.165+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic MAINT_STREAM_TOPIC_fc6bd4a2dd76337f941781c7d450e484. Err projector.topicMissing
+2023-07-18T19:57:22.165+00:00 [Error] KVSender::closeMutationStream MAINT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
+2023-07-18T19:57:22.165+00:00 [Info] KVSender::closeMutationStream MAINT_STREAM  Treating projector.topicMissing As Success
+2023-07-18T19:57:22.165+00:00 [Info] KVSender::sendShutdownTopic Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_fc6bd4a2dd76337f941781c7d450e484
+2023-07-18T19:57:22.166+00:00 [Error] KVSender::sendShutdownTopic Unexpected Error During Shutdown Projector 127.0.0.1:9999 Topic INIT_STREAM_TOPIC_fc6bd4a2dd76337f941781c7d450e484. Err projector.topicMissing
+2023-07-18T19:57:22.166+00:00 [Error] KVSender::closeMutationStream INIT_STREAM  Error Received projector.topicMissing from 127.0.0.1:9999
+2023-07-18T19:57:22.166+00:00 [Info] KVSender::closeMutationStream INIT_STREAM  Treating projector.topicMissing As Success
+2023-07-18T19:57:22.166+00:00 [Info] ClustMgr:handleGetLocalValue Key RebalanceRunning
+2023-07-18T19:57:22.166+00:00 [Info] ClustMgr:handleGetLocalValue Key RebalanceToken
+2023-07-18T19:57:22.167+00:00 [Info] Indexer::recoverRebalanceState RebalanceRunning false RebalanceToken <nil>
+2023-07-18T19:57:22.167+00:00 [Info] ClustMgr:handleGetGlobalTopology &{map[]}
+2023-07-18T19:57:22.167+00:00 [Info] Indexer::initFromPersistedState Recovered IndexInstMap 
+2023-07-18T19:57:22.171+00:00 [Info] indexer.upgradeStorage: check index for storage upgrade.   disable false overrride not_set
+2023-07-18T19:57:22.172+00:00 [Info] DDLServiceMgr: intialized. Local nodeUUID fc6bd4a2dd76337f941781c7d450e484
+2023-07-18T19:57:22.172+00:00 [Info] RebalanceMgr::NewRebalanceMgr false <nil> 
+2023-07-18T19:57:22.172+00:00 [Info] DDLServiceMgr: starting buildTokenCleaner ...
+2023-07-18T19:57:22.172+00:00 [Info] DDLServiceMgr: starting dropTokenCleaner ...
+2023-07-18T19:57:22.173+00:00 [Info] RebalanceMgr::initService Init
+2023-07-18T19:57:22.173+00:00 [Info] ServiceMgr::registerWithServer nodeuuid fc6bd4a2dd76337f941781c7d450e484 
+2023-07-18T19:57:22.175+00:00 [Error] ServiceMgr::getGlobalTopology Error gathering global topology 127.0.0.1:9102/getIndexMetadata Unable to find given hostport in cbauth database: `127.0.0.1:9102'
+2023-07-18T19:57:22.175+00:00 [Info] Indexer::local storage mode memory_optimized
+2023-07-18T19:57:22.175+00:00 [Error] ServiceMgr::updateNodeList Error Fetching Topology Unable to find given hostport in cbauth database: `127.0.0.1:9102'
+2023-07-18T19:57:22.179+00:00 [Warn] Encountered error while reading persisted stats. Skipping read. Error: open /opt/couchbase/var/lib/couchbase/data/@2i/indexstats/stats: no such file or directory
+2023-07-18T19:57:22.181+00:00 [Info] ServiceMgr::GetTaskList []
+2023-07-18T19:57:22.182+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 0] []}
+2023-07-18T19:57:22.183+00:00 [Info] MutationMgr::handleUpdateIndexInstMap 
 	Message: MsgUpdateInstMap
-2019-07-21T21:58:19.551+00:00 [Info] MutationMgr::handleUpdateIndexPartnMap 
+2023-07-18T19:57:22.185+00:00 [Info] MutationMgr::handleUpdateIndexPartnMap 
 	Message: MsgUpdatePartnMap
-2019-07-21T21:58:19.551+00:00 [Info] ClustMgr:handleIndexMap 
+2023-07-18T19:57:22.185+00:00 [Info] ClustMgr:handleIndexMap 
 	Message: MsgUpdateInstMap
-2019-07-21T21:58:19.551+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerState
-2019-07-21T21:58:19.551+00:00 [Info] Indexer::bootstrap No Previous Indexer State Recovered
-2019-07-21T21:58:19.565+00:00 [Info] Indexer::bootstrap ManualGC Time Taken 13.7548ms
-2019-07-21T21:58:19.566+00:00 [Info] Indexer::ReadMemstats Time Taken 153.6µs
-2019-07-21T21:58:19.566+00:00 [Info] ClustMgr:handleIndexerReady &{56 [] {false false false false false false false}  0 false <nil>}
-2019-07-21T21:58:19.566+00:00 [Info] ClustMgr:handleSetLocalValue Key IndexerNodeUUID Value 8ba1ce2e183ff908d4723b87c7fdb9b3
-2019-07-21T21:58:19.567+00:00 [Info] ServiceMgr::listenMoveIndex &{8ba1ce2e183ff908d4723b87c7fdb9b3 3 <nil>}
-2019-07-21T21:58:19.566+00:00 [Info] SettingsMgr::handleIndexerReady apply pending setting changes
-2019-07-21T21:58:19.569+00:00 [Info] Indexer::NewIndexer Status Active
-2019-07-21T21:58:19.569+00:00 [Info] 127.0.0.1:8091 starting RESTful services
-2019-07-21T21:58:19.569+00:00 [Info] progress stats collection done.
-2019-07-21T21:58:19.569+00:00 [Info] send progress stats to clients
-2019-07-21T21:58:19.569+00:00 [Info] Indexer::monitorMemUsage started...
-2019-07-21T21:58:19.569+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 56582144 Idle 32768
-2019-07-21T21:58:19.569+00:00 [Info] memstats {"Alloc":50844368, "TotalAlloc":52017456, "Sys":59230456, "Lookups":40, "Mallocs":20206,"Frees":12292, "HeapAlloc":50844368, "HeapSys":53608448, "HeapIdle":1581056, "HeapInuse":52027392,"HeapReleased":1548288, "HeapObjects":7914,"GCSys":1921024, "LastGC":1563746299565311500,"PauseTotalNs":15646200, "PauseNs":[1098600, 1023100, 13524500], "NumGC":3}
-2019-07-21T21:58:19.689+00:00 [Info] New settings received: 
-{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.log_level":"info","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":2,"indexer.settings.memory_quota":268435456,"indexer.settings.compaction.abort_exceed_interval":false}
-2019-07-21T21:58:19.689+00:00 [Info] Setting maxcpus = 4
-2019-07-21T21:58:19.689+00:00 [Info] Setting log level to Info
-2019-07-21T21:58:19.689+00:00 [Info] ServiceMgr::GetTaskList []
-2019-07-21T21:58:19.689+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 1] []}
-2019-07-21T21:58:19.690+00:00 [Info] ServiceMgr::GetCurrentTopology []
-2019-07-21T21:58:19.691+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 1] [8ba1ce2e183ff908d4723b87c7fdb9b3] false []}
-2019-07-21T21:58:19.692+00:00 [Info] Indexer::updateStorageMode Try setting storage mode to memory_optimized
-2019-07-21T21:58:19.692+00:00 [Info] Indexer: Setting GC percent to 100
-2019-07-21T21:58:19.703+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 1]
-2019-07-21T21:58:19.703+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 1]
-2019-07-21T21:58:19.703+00:00 [Info] CompactionManager: Refreshing settings
-2019-07-21T21:58:19.703+00:00 [Info] MutationMgr::MaxQueueMemoryQuota 26843545
-2019-07-21T21:58:19.703+00:00 [Info] ClustMgr:handleConfigUpdate
-2019-07-21T21:58:19.721+00:00 [Info] updator: updating service map.  server group=Group 1, indexerVersion=3 nodeAddr 127.0.0.1:8091 clusterVersion 3 excludeNode %!(EXTRA uint64=1)
-2019-07-21T21:58:19.819+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
-2019-07-21T21:58:22.254+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
-2019-07-21T21:58:22.683+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
-2019-07-21T21:58:22.783+00:00 [Info] ServiceMgr::PrepareTopologyChange {9bb5b00639f893e9277c2470b3c781f4 [] topology-change-rebalance [{{8ba1ce2e183ff908d4723b87c7fdb9b3 3 <nil>} recovery-full}] []}
-2019-07-21T21:58:22.785+00:00 [Info] ServiceMgr::prepareRebalance Init Prepare Phase
-2019-07-21T21:58:22.785+00:00 [Info] ClustMgr:handleSetLocalValue Key RebalanceRunning Value 
-2019-07-21T21:58:22.788+00:00 [Info] ClustMgr:handleRebalanceRunning &{57 [] {false false false false false false false}  0 false <nil>}
-2019-07-21T21:58:22.788+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 2] [8ba1ce2e183ff908d4723b87c7fdb9b3] true []}
-2019-07-21T21:58:22.788+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 2] [{[0 0 0 0 0 0 0 0] prepare/9bb5b00639f893e9277c2470b3c781f4 task-prepared task-running true 0 map[]   map[rebalanceId:9bb5b00639f893e9277c2470b3c781f4]}]}
-2019-07-21T21:58:22.789+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 2]
-2019-07-21T21:58:22.789+00:00 [Info] ServiceMgr::StartTopologyChange {9bb5b00639f893e9277c2470b3c781f4 [] topology-change-rebalance [{{8ba1ce2e183ff908d4723b87c7fdb9b3 3 <nil>} recovery-full}] []}
-2019-07-21T21:58:22.790+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 2]
-2019-07-21T21:58:22.795+00:00 [Info] ClustMgr:handleSetLocalValue Key RebalanceToken Value {"MasterId":"8ba1ce2e183ff908d4723b87c7fdb9b3","RebalId":"9bb5b00639f893e9277c2470b3c781f4","Source":0,"Error":""}
-2019-07-21T21:58:22.798+00:00 [Info] ServiceMgr::registerLocalRebalanceToken Registered Rebalance Token In Local Meta &{8ba1ce2e183ff908d4723b87c7fdb9b3 9bb5b00639f893e9277c2470b3c781f4 Rebalance }
-2019-07-21T21:58:22.802+00:00 [Info] ServiceMgr::registerRebalanceTokenInMetakv Registered Global Rebalance Token In Metakv &{8ba1ce2e183ff908d4723b87c7fdb9b3 9bb5b00639f893e9277c2470b3c781f4 Rebalance }
-2019-07-21T21:58:22.824+00:00 [Info] ServiceMgr::registerGlobalRebalanceToken ClusterInfo Node List doesn't match Known Nodes in Rebalance Request. Skip Rebalance. cinfo &{{{1 0} 0 0 -1073741824 0} http://%40index-cbauth:b20a9c107b79d53f0a559a4cfa9bbcb0@127.0.0.1:8091 default ServiceMgr:  600 false map[] {0xc42001ab80 {@index-cbauth b20a9c107b79d53f0a559a4cfa9bbcb0} {map[sasl:2.3.4 inets:5.9.8 os_mon:2.2.14 public_key:0.21 asn1:2.0.4 kernel:2.16.4 ale:6.0.1-2037-enterprise ns_server:6.0.1-2037-enterprise crypto:3.2 lhttpc:1.3.0 stdlib:1.19.4 ssl:5.3.3] 6.0.1-2037-enterprise true 6b98b87643b1f2c767c8c17d236afda4 [{default /poolsStreaming/default?uuid=6b98b87643b1f2c767c8c17d236afda4 /pools/default?uuid=6b98b87643b1f2c767c8c17d236afda4}] false}} {map[datadog-test:{0xc42346f0c0 0xc423378570 0xc4233785b8 sasl [couchapi xattr dcp cbhello touch cccp xdcrCheckpointing nodesExt]  membase datadog-test vbucket map[ram:1.048576e+08 rawRAM:1.048576e+08] 0 757023e005c528efcbc846b98e6ff7ad /pools/default/buckets/datadog-test?bucket_uuid=8c8ee4b9406f357fe7e000a0e02bd8fe /pools/default/bucketsStreaming/datadog-test?bucket_uuid=8c8ee4b9406f357fe7e000a0e02bd8fe /pools/default/buckets/datadog-test/localRandomKey 8c8ee4b9406f357fe7e000a0e02bd8fe map[diskFetches:0 itemCount:0 diskUsed:34 dataUsed:4.241408e+06 memUsed:2.1529688e+07 vbActiveNumNonResident:0 quotaPercentUsed:20.53231048583984 opsPerSec:0] map[startRecovery:/pools/default/buckets/datadog-test/controller/startRecovery compactAll:/pools/default/buckets/datadog-test/controller/compactBucket compactDB:/pools/default/buckets/datadog-test/controller/compactDatabases purgeDeletes:/pools/default/buckets/datadog-test/controller/unsafePurgeBucket] {CRC 0 [127.0.0.1:11210] [[0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0] [0]]} [{393216 active http://127.0.0.1:8092/datadog-test%2B8c8ee4b9406f357fe7e000a0e02bd8fe 127.0.0.1:8091 map[couch_docs_data_size:4.241408e+06 curr_items_tot:0 get_hits:0 mem_used:2.1529688e+07 ops:0 cmd_get:0 couch_docs_actual_disk_size:34 couch_spatial_data_size:0 couch_views_actual_disk_size:0 couch_views_data_size:0 couch_spatial_disk_size:0 curr_items:0 ep_bg_fetched:0 vb_active_num_non_resident:0 vb_replica_curr_items:0] 3157 3157 3.068751872e+09 4.1391104e+09 x86_64-unknown-linux-gnu map[httpsMgmt:18091 httpsCAPI:18092 proxy:11211 direct:11210] healthy 10 6.0.1-2037-enterprise true [cbas fts index kv n1ql]}] 0xc420087040 }] [{393216 active http://127.0.0.1:8092/ 127.0.0.1:8091 map[cmd_get:0 couch_views_actual_disk_size:0 vb_active_num_non_resident:0 vb_replica_curr_items:0 couch_spatial_data_size:0 couch_views_data_size:0 curr_items_tot:0 mem_used:2.1529688e+07 ops:0 curr_items:0 get_hits:0 couch_docs_actual_disk_size:34 couch_docs_data_size:4.241408e+06 couch_spatial_disk_size:0 ep_bg_fetched:0] 3157 3157 3.068751872e+09 4.1391104e+09 x86_64-unknown-linux-gnu map[httpsMgmt:18091 httpsCAPI:18092 proxy:11211 direct:11210] healthy 10 6.0.1-2037-enterprise true [cbas fts index kv n1ql]}] map[uri:/pools/default/buckets?v=81468561&uuid=6b98b87643b1f2c767c8c17d236afda4 terseBucketsBase:/pools/default/b/ terseStreamingBucketsBase:/pools/default/bs/] /pools/default/serverGroups?v=52184775 {0xc42001ab80 {@index-cbauth b20a9c107b79d53f0a559a4cfa9bbcb0} {map[lhttpc:1.3.0 os_mon:2.2.14 public_key:0.21 asn1:2.0.4 kernel:2.16.4 ale:6.0.1-2037-enterprise ns_server:6.0.1-2037-enterprise crypto:3.2 ssl:5.3.3 stdlib:1.19.4 inets:5.9.8 sasl:2.3.4] 6.0.1-2037-enterprise true 6b98b87643b1f2c767c8c17d236afda4 [{default /poolsStreaming/default?uuid=6b98b87643b1f2c767c8c17d236afda4 /pools/default?uuid=6b98b87643b1f2c767c8c17d236afda4}] false}}} [{393216 active http://127.0.0.1:8092/ 127.0.0.1:8091 map[ep_bg_fetched:0 couch_docs_actual_disk_size:34 couch_docs_data_size:4.241408e+06 couch_spatial_disk_size:0 vb_replica_curr_items:0 cmd_get:0 couch_views_actual_disk_size:0 vb_active_num_non_resident:0 mem_used:2.1529688e+07 ops:0 couch_spatial_data_size:0 couch_views_data_size:0 curr_items_tot:0 curr_items:0 get_hits:0] 3157 3157 3.068751872e+09 4.1391104e+09 x86_64-unknown-linux-gnu map[httpsCAPI:18092 proxy:11211 direct:11210 httpsMgmt:18091] healthy 10 6.0.1-2037-enterprise true [cbas fts index kv n1ql]}] [{map[mgmt:8091 cbasAdmin:9110 capi:8092 projector:9999 kv:11210 moxi:11211 mgmtSSL:18091 cbas:8095 cbasCc:9111 cbasSSL:18095 capiSSL:18092 kvSSL:11207]  true}] map[0:Group 1] [] [] 6 0}, change {9bb5b00639f893e9277c2470b3c781f4 [] topology-change-rebalance [{{8ba1ce2e183ff908d4723b87c7fdb9b3 3 <nil>} recovery-full}] []}
-2019-07-21T21:58:22.824+00:00 [Info] ServiceMgr::startRebalance skip planner due to skipRebalance flag
-2019-07-21T21:58:22.824+00:00 [Info] NewRebalancer nodeId 8ba1ce2e183ff908d4723b87c7fdb9b3 rebalToken &{8ba1ce2e183ff908d4723b87c7fdb9b3 9bb5b00639f893e9277c2470b3c781f4 Rebalance } master true localaddr 127.0.0.1:9102 runPlanner false
-2019-07-21T21:58:22.825+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 3] [{[0 0 0 0 0 0 0 0] prepare/9bb5b00639f893e9277c2470b3c781f4 task-prepared task-running true 0 map[]   map[rebalanceId:9bb5b00639f893e9277c2470b3c781f4]} {[0 0 0 0 0 0 0 0] rebalance/9bb5b00639f893e9277c2470b3c781f4 task-rebalance task-running true 0 map[]   map[rebalanceId:9bb5b00639f893e9277c2470b3c781f4]}]}
-2019-07-21T21:58:22.825+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 3] [8ba1ce2e183ff908d4723b87c7fdb9b3] true []}
-2019-07-21T21:58:22.825+00:00 [Info] Rebalancer::doFinish Cleanup <nil>
-2019-07-21T21:58:22.825+00:00 [Info] ServiceMgr::onRebalanceDoneLOCKED Rebalance Done <nil>
-2019-07-21T21:58:22.825+00:00 [Info] ServiceMgr::runCleanupPhase path /indexing/rebalance/RebalanceToken isMaster true
-2019-07-21T21:58:22.825+00:00 [Info] Rebalancer::processDropIndexQueue Done Received
-2019-07-21T21:58:22.828+00:00 [Info] ServiceMgr::GetTaskList []
-2019-07-21T21:58:22.829+00:00 [Info] ServiceMgr::GetCurrentTopology []
-2019-07-21T21:58:22.830+00:00 [Info] ServiceMgr::cleanupGlobalRToken Delete Global Rebalance Token {8ba1ce2e183ff908d4723b87c7fdb9b3 9bb5b00639f893e9277c2470b3c781f4 Rebalance }
-2019-07-21T21:58:22.834+00:00 [Info] ServiceMgr::cleanupLocalRToken Cleanup
-2019-07-21T21:58:22.834+00:00 [Info] ClustMgr:handleDelLocalValue Key RebalanceToken
-2019-07-21T21:58:22.836+00:00 [Info] ServiceMgr::cleanupRebalanceRunning Cleanup
-2019-07-21T21:58:22.836+00:00 [Info] ClustMgr:handleDelLocalValue Key RebalanceRunning
-2019-07-21T21:58:22.837+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 5] []}
-2019-07-21T21:58:22.837+00:00 [Info] DDLServiceMgr: handling rebalacne done
-2019-07-21T21:58:22.837+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 5] [8ba1ce2e183ff908d4723b87c7fdb9b3] true []}
-2019-07-21T21:58:22.837+00:00 [Info] DDLServiceMgr.refreshOnTopologyChange()
-2019-07-21T21:58:22.838+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 5]
-2019-07-21T21:58:22.840+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 5]
-2019-07-21T21:58:22.841+00:00 [Info] ServiceMgr::GetTaskList []
-2019-07-21T21:58:22.841+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 5] []}
-2019-07-21T21:58:22.842+00:00 [Info] ServiceMgr::GetCurrentTopology []
-2019-07-21T21:58:22.843+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 5] [8ba1ce2e183ff908d4723b87c7fdb9b3] true []}
-2019-07-21T21:58:22.844+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 5]
-2019-07-21T21:58:22.845+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 5]
-2019-07-21T21:58:22.888+00:00 [Info] DDLServiceMgr: connecting to node 127.0.0.1:9100
-2019-07-21T21:58:22.888+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
-2019-07-21T21:58:22.897+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
-2019-07-21T21:58:22.913+00:00 [Info] WatchMetadata(): successfully reach indexer at 127.0.0.1:9100.
-2019-07-21T21:58:22.913+00:00 [Info] MetadataProvider.CheckIndexerStatus(): adminport=127.0.0.1:9100 connected=true
-2019-07-21T21:58:22.928+00:00 [Info] MetadataProvider: Posting indexer version to metakv. Version=3
-2019-07-21T21:58:22.928+00:00 [Info] MetadataProvider: Updating indexer version to 3
-2019-07-21T21:58:22.928+00:00 [Info] MetadataProvider is terminated. Cleaning up ...
-2019-07-21T21:58:22.928+00:00 [Info] Unwatching metadata for indexer at 127.0.0.1:9100.
-2019-07-21T21:58:22.928+00:00 [Error] PeerPipe.doRecieve() : ecounter error when received mesasage from Peer 127.0.0.1:9100.  Error = read tcp 127.0.0.1:59956->127.0.0.1:9100: use of closed network connection. Kill Pipe.
-2019-07-21T21:58:22.928+00:00 [Error] PeerPipe.doRecieve() : ecounter error when received mesasage from Peer 127.0.0.1:59956.  Error = EOF. Kill Pipe.
-2019-07-21T21:58:22.928+00:00 [Info] messageListener.start(): message channel closed. Remove peer fb:78:b1:eb:a1:67:8d:41 as follower.
-2019-07-21T21:58:22.943+00:00 [Info] [Queryport ":9101"] connection "127.0.0.1:39170" doReceive() ...
-2019-07-21T21:58:23.415+00:00 [Info] Fetch new stats upon request by life cycle manager
-2019-07-21T21:58:23.440+00:00 [Info] Fetch new stats upon request by life cycle manager
-2019-07-21T21:58:29.570+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 57589760 Idle 32768
+2023-07-18T19:57:22.186+00:00 [Info] ClustMgr:handleGetLocalValue Key IndexerState
+2023-07-18T19:57:22.186+00:00 [Info] Indexer::bootstrap No Previous Indexer State Recovered
+2023-07-18T19:57:22.188+00:00 [Info] ServiceMgr::GetCurrentTopology []
+2023-07-18T19:57:22.188+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 0] [fc6bd4a2dd76337f941781c7d450e484] true []}
+2023-07-18T19:57:22.192+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 0]
+2023-07-18T19:57:22.192+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 0]
+2023-07-18T19:57:22.197+00:00 [Info] Indexer::bootstrap ManualGC Time Taken 11.056ms
+2023-07-18T19:57:22.199+00:00 [Info] Indexer::ReadMemstats Time Taken 129µs
+2023-07-18T19:57:22.200+00:00 [Info] ClustMgr:handleIndexerReady &{60 [] {false false false false false false false}  0 false <nil>}
+2023-07-18T19:57:22.200+00:00 [Info] ClustMgr:handleSetLocalValue Key IndexerNodeUUID Value fc6bd4a2dd76337f941781c7d450e484
+2023-07-18T19:57:22.200+00:00 [Info] ServiceMgr::listenMoveIndex &{fc6bd4a2dd76337f941781c7d450e484 4 <nil>}
+2023-07-18T19:57:22.201+00:00 [Info] SettingsMgr::handleIndexerReady apply pending setting changes
+2023-07-18T19:57:22.202+00:00 [Info] Indexer::NewIndexer Status Active
+2023-07-18T19:57:22.202+00:00 [Info] 127.0.0.1:8091 starting RESTful services
+2023-07-18T19:57:22.205+00:00 [Info] Indexer::monitorMemUsage started...
+2023-07-18T19:57:22.205+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 63666176 Idle 32768
+2023-07-18T19:57:22.205+00:00 [Info] memstats {"Alloc":54841808, "TotalAlloc":59417616, "Sys":72548600, "Lookups":0, "Mallocs":58638,"Frees":44601, "HeapAlloc":54841808, "HeapSys":65961984, "HeapIdle":9166848, "HeapInuse":56795136,"HeapReleased":9134080, "HeapObjects":14037,"GCSys":2381824, "LastGC":1689710242195982000,"PauseTotalNs":1279000, "PauseNs":[929000, 228000, 91000, 31000], "NumGC":4}
+2023-07-18T19:57:22.205+00:00 [Info] progress stats collection done.
+2023-07-18T19:57:22.205+00:00 [Info] send progress stats to clients
+2023-07-18T19:57:22.209+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.log_level":"info","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":2,"indexer.settings.memory_quota":268435456,"indexer.settings.compaction.abort_exceed_interval":false}
+2023-07-18T19:57:22.210+00:00 [Info] Setting maxcpus = 5
+2023-07-18T19:57:22.210+00:00 [Info] Setting log level to Info
+2023-07-18T19:57:22.224+00:00 [Info] Indexer::updateStorageMode Try setting storage mode to memory_optimized
+2023-07-18T19:57:22.224+00:00 [Info] Indexer: Setting GC percent to 100
+2023-07-18T19:57:22.225+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2023-07-18T19:57:22.225+00:00 [Info] CompactionManager: Refreshing settings
+2023-07-18T19:57:22.226+00:00 [Info] MutationMgr::MaxQueueMemoryQuota 26843545
+2023-07-18T19:57:22.227+00:00 [Info] ClustMgr:handleConfigUpdate
+2023-07-18T19:57:22.230+00:00 [Info] lifecycleMgr.dispatchRequest: op OPCODE_CONFIG_UPDATE elapsed 1.048ms len(expediates) 0 len(incomings) 0 len(outgoings) 0
+2023-07-18T19:57:22.243+00:00 [Info] updator: updating service map.  server group=Group 1, indexerVersion=4 nodeAddr 127.0.0.1:8091 clusterVersion 4 excludeNode  storageMode 1
+2023-07-18T19:57:23.174+00:00 [Info] ServiceMgr::PrepareTopologyChange {f98c81542c3ebc3205c77d01d27884bc [] topology-change-rebalance [{{fc6bd4a2dd76337f941781c7d450e484 4 <nil>} recovery-full}] []}
+2023-07-18T19:57:23.176+00:00 [Info] ServiceMgr::prepareRebalance Found DDL Running []
+2023-07-18T19:57:23.176+00:00 [Info] ServiceMgr::prepareRebalance Init Prepare Phase
+2023-07-18T19:57:23.176+00:00 [Info] ClustMgr:handleSetLocalValue Key RebalanceRunning Value 
+2023-07-18T19:57:23.177+00:00 [Info] ClustMgr:handleRebalanceRunning &{61 [] {false false false false false false false}  0 false <nil>}
+2023-07-18T19:57:23.177+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 1] [fc6bd4a2dd76337f941781c7d450e484] true []}
+2023-07-18T19:57:23.177+00:00 [Info] lifecycleMgr.dispatchRequest: op OPCODE_REBALANCE_RUNNING elapsed 39µs len(expediates) 0 len(incomings) 0 len(outgoings) 0
+2023-07-18T19:57:23.177+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 1] [{[0 0 0 0 0 0 0 0] prepare/f98c81542c3ebc3205c77d01d27884bc task-prepared task-running true 0 map[]   map[rebalanceId:f98c81542c3ebc3205c77d01d27884bc]}]}
+2023-07-18T19:57:23.178+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 1]
+2023-07-18T19:57:23.178+00:00 [Info] ServiceMgr::StartTopologyChange {f98c81542c3ebc3205c77d01d27884bc [] topology-change-rebalance [{{fc6bd4a2dd76337f941781c7d450e484 4 <nil>} recovery-full}] []}
+2023-07-18T19:57:23.178+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 1]
+2023-07-18T19:57:23.180+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2023-07-18T19:57:23.200+00:00 [Info] ClustMgr:handleSetLocalValue Key RebalanceToken Value {"MasterId":"fc6bd4a2dd76337f941781c7d450e484","RebalId":"f98c81542c3ebc3205c77d01d27884bc","Source":0,"Error":"","MasterIP":"127.0.0.1"}
+2023-07-18T19:57:23.201+00:00 [Info] ServiceMgr::registerLocalRebalanceToken Registered Rebalance Token In Local Meta &{fc6bd4a2dd76337f941781c7d450e484 f98c81542c3ebc3205c77d01d27884bc Rebalance  127.0.0.1}
+2023-07-18T19:57:23.203+00:00 [Info] ServiceMgr::registerRebalanceTokenInMetakv Registered Global Rebalance Token In Metakv &{fc6bd4a2dd76337f941781c7d450e484 f98c81542c3ebc3205c77d01d27884bc Rebalance  127.0.0.1}
+2023-07-18T19:57:23.221+00:00 [Info] ServiceMgr::registerGlobalRebalanceToken ClusterInfo Node List doesn't match Known Nodes in Rebalance Request. Skip Rebalance. cinfo.nodes : [{393222 active http://127.0.0.1:8092/ 127.0.0.1:8091 map[] 25647 25647 2.8371161088e+10 3.3616498688e+10 x86_64-unknown-linux-gnu map[direct:11210 distTCP:21100 distTLS:21150 httpsCAPI:18092 httpsMgmt:18091] warmup 8 6.6.5-10080-enterprise true [cbas fts index kv n1ql] fc6bd4a2dd76337f941781c7d450e484}], change : {f98c81542c3ebc3205c77d01d27884bc [] topology-change-rebalance [{{fc6bd4a2dd76337f941781c7d450e484 4 <nil>} recovery-full}] []}
+2023-07-18T19:57:23.221+00:00 [Info] ServiceMgr::startRebalance skip planner due to skipRebalance flag
+2023-07-18T19:57:23.222+00:00 [Info] NewRebalancer nodeId fc6bd4a2dd76337f941781c7d450e484 rebalToken &{fc6bd4a2dd76337f941781c7d450e484 f98c81542c3ebc3205c77d01d27884bc Rebalance  127.0.0.1} master true localaddr 127.0.0.1:9102 runPlanner false runParam &{false []}
+2023-07-18T19:57:23.222+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 2] [{[0 0 0 0 0 0 0 0] prepare/f98c81542c3ebc3205c77d01d27884bc task-prepared task-running true 0 map[]   map[rebalanceId:f98c81542c3ebc3205c77d01d27884bc]} {[0 0 0 0 0 0 0 0] rebalance/f98c81542c3ebc3205c77d01d27884bc task-rebalance task-running true 0 map[]   map[rebalanceId:f98c81542c3ebc3205c77d01d27884bc]}]}
+2023-07-18T19:57:23.222+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 2] [fc6bd4a2dd76337f941781c7d450e484] true []}
+2023-07-18T19:57:23.222+00:00 [Info] Rebalancer::doFinish Cleanup <nil>
+2023-07-18T19:57:23.222+00:00 [Info] ServiceMgr::onRebalanceDoneLOCKED Rebalance Done, cancel: false, err: <nil>
+2023-07-18T19:57:23.222+00:00 [Info] ServiceMgr::runCleanupPhase path /indexing/rebalance/RebalanceToken isMaster true
+2023-07-18T19:57:23.222+00:00 [Info] ServiceMgr::GetTaskList []
+2023-07-18T19:57:23.223+00:00 [Info] Rebalancer::processDropIndexQueue Done Received
+2023-07-18T19:57:23.223+00:00 [Info] ServiceMgr::GetCurrentTopology []
+2023-07-18T19:57:23.223+00:00 [Info] ServiceMgr::cleanupGlobalRToken Delete Global Rebalance Token {fc6bd4a2dd76337f941781c7d450e484 f98c81542c3ebc3205c77d01d27884bc Rebalance  127.0.0.1}
+2023-07-18T19:57:23.226+00:00 [Info] ServiceMgr::cleanupLocalRToken Cleanup
+2023-07-18T19:57:23.226+00:00 [Info] ClustMgr:handleDelLocalValue Key RebalanceToken
+2023-07-18T19:57:23.227+00:00 [Info] ServiceMgr::cleanupRebalanceRunning Cleanup
+2023-07-18T19:57:23.228+00:00 [Info] ClustMgr:handleDelLocalValue Key RebalanceRunning
+2023-07-18T19:57:23.228+00:00 [Info] ServiceMgr::onRebalanceDoneLOCKED isBalanced: true, isMaster: true
+2023-07-18T19:57:23.228+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 4] []}
+2023-07-18T19:57:23.228+00:00 [Info] DDLServiceMgr: handling rebalacne done
+2023-07-18T19:57:23.229+00:00 [Info] DDLServiceMgr.refreshOnTopologyChange()
+2023-07-18T19:57:23.229+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 4] [fc6bd4a2dd76337f941781c7d450e484] true []}
+2023-07-18T19:57:23.231+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 4]
+2023-07-18T19:57:23.231+00:00 [Info] ServiceMgr::GetTaskList []
+2023-07-18T19:57:23.231+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 4] []}
+2023-07-18T19:57:23.231+00:00 [Info] ServiceMgr::GetCurrentTopology []
+2023-07-18T19:57:23.231+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 4] [fc6bd4a2dd76337f941781c7d450e484] true []}
+2023-07-18T19:57:23.234+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 4]
+2023-07-18T19:57:23.234+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 4]
+2023-07-18T19:57:23.263+00:00 [Info] DDLServiceMgr: connecting to node 127.0.0.1:9100
+2023-07-18T19:57:23.263+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
+2023-07-18T19:57:23.283+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2023-07-18T19:57:23.283+00:00 [Info] lifecycleMgr.dispatchRequest: op OPCODE_SERVICE_MAP elapsed 10.255ms len(expediates) 0 len(incomings) 0 len(outgoings) 0
+2023-07-18T19:57:23.286+00:00 [Info] WatchMetadata(): successfully reach indexer at 127.0.0.1:9100.
+2023-07-18T19:57:23.288+00:00 [Info] MetadataProvider.CheckIndexerStatus(): adminport=127.0.0.1:9100 connected=true
+2023-07-18T19:57:23.299+00:00 [Info] MetadataProvider: Posting indexer version to metakv. Version=4
+2023-07-18T19:57:23.300+00:00 [Info] MetadataProvider: Updating indexer version to 4
+2023-07-18T19:57:23.300+00:00 [Info] MetadataProvider is terminated. Cleaning up ...
+2023-07-18T19:57:23.300+00:00 [Info] Unwatching metadata for indexer at 127.0.0.1:9100.
+2023-07-18T19:57:23.300+00:00 [Error] PeerPipe.doRecieve() : ecounter error when received mesasage from Peer 127.0.0.1:9100.  Error = read tcp 127.0.0.1:40086->127.0.0.1:9100: use of closed network connection. Kill Pipe.
+2023-07-18T19:57:23.301+00:00 [Error] PeerPipe.doRecieve() : ecounter error when received mesasage from Peer 127.0.0.1:40086.  Error = EOF. Kill Pipe.
+2023-07-18T19:57:23.301+00:00 [Info] messageListener.start(): message channel closed. Remove peer 28:e9:1d:6d:6a:63:b6:93 as follower.
+2023-07-18T19:57:23.355+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2023-07-18T19:57:23.790+00:00 [Info] Fetch new stats upon request by life cycle manager
+2023-07-18T19:57:25.509+00:00 [Info] lifecycleMgr.dispatchRequest: op OPCODE_SERVICE_MAP elapsed 17.732ms len(expediates) 0 len(incomings) 0 len(outgoings) 0
+2023-07-18T19:57:25.514+00:00 [Info] [Queryport ":9101"] connection "127.0.0.1:48472" doReceive() ...
+2023-07-18T19:57:26.010+00:00 [Info] Fetch new stats upon request by life cycle manager
+2023-07-18T19:57:32.205+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 64358400 Idle 32768
+2023-07-18T19:57:42.206+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 64628736 Idle 32768
+2023-07-18T19:57:52.201+00:00 [Info] ServiceMgr::rebalanceJanitor Running Periodic Cleanup
+2023-07-18T19:57:52.207+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 64628736 Idle 32768
+2023-07-18T19:57:53.231+00:00 [Info] ServiceMgr::GetTaskList []
+2023-07-18T19:57:53.232+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 4] []}
+2023-07-18T19:57:53.234+00:00 [Info] ServiceMgr::GetCurrentTopology []
+2023-07-18T19:57:53.235+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 4] [fc6bd4a2dd76337f941781c7d450e484] true []}
+2023-07-18T19:57:53.235+00:00 [Info] ServiceMgr::GetTaskList []
+2023-07-18T19:57:53.235+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 4] []}
+2023-07-18T19:57:53.236+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 4]
+2023-07-18T19:57:53.236+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 4]
+2023-07-18T19:58:02.210+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 64866304 Idle 32768
+2023-07-18T19:58:12.211+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 65087488 Idle 32768
+2023-07-18T19:58:22.150+00:00 [Info] PeriodicStats = {"cpu_utilization":0.8666666666666666,"index_not_found_errcount":0,"indexer_state":"Active","memory_free":17806389248,"memory_quota":268435456,"memory_rss":60416000,"memory_total":33616498688,"memory_total_storage":5898240,"memory_used":65239040,"memory_used_queue":0,"memory_used_storage":163840,"needs_restart":false,"num_connections":1,"num_cpu_core":5,"storage_mode":"memory_optimized","timestamp":"1689710302150714000","timings/stats_response":"71 22034000 12826016000000","uptime":"1m0.262933s"}
+2023-07-18T19:58:22.202+00:00 [Info] janitor: running cleanup.
+2023-07-18T19:58:22.202+00:00 [Info] builder: recovering scheduled index
+2023-07-18T19:58:22.205+00:00 [Info] memstats {"Alloc":54841808, "TotalAlloc":59417616, "Sys":72548600, "Lookups":0, "Mallocs":58638,"Frees":44601, "HeapAlloc":54841808, "HeapSys":65961984, "HeapIdle":9166848, "HeapInuse":56795136,"HeapReleased":9134080, "HeapObjects":14037,"GCSys":2381824, "LastGC":1689710242195982000,"PauseTotalNs":1279000, "PauseNs":[], "NumGC":4}
+2023-07-18T19:58:22.211+00:00 [Info] ServiceMgr::rebalanceJanitor Running Periodic Cleanup
+2023-07-18T19:58:22.212+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 65271808 Idle 32768
+2023-07-18T19:58:22.212+00:00 [Info] Indexer::ReadMemstats Time Taken 128µs
+2023-07-18T19:58:23.238+00:00 [Info] ServiceMgr::GetCurrentTopology []
+2023-07-18T19:58:23.238+00:00 [Info] ServiceMgr::GetTaskList []
+2023-07-18T19:58:23.239+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 4] [fc6bd4a2dd76337f941781c7d450e484] true []}
+2023-07-18T19:58:23.239+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 4] []}
+2023-07-18T19:58:23.240+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 4]
+2023-07-18T19:58:23.240+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 4]
+2023-07-18T19:58:32.214+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 81727488 Idle 32768
+2023-07-18T19:58:42.217+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 81727488 Idle 32768
+2023-07-18T19:58:52.213+00:00 [Info] ServiceMgr::rebalanceJanitor Running Periodic Cleanup
+2023-07-18T19:58:52.223+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 81727488 Idle 32768
+2023-07-18T19:58:53.240+00:00 [Info] ServiceMgr::GetTaskList []
+2023-07-18T19:58:53.241+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 4] []}
+2023-07-18T19:58:53.241+00:00 [Info] ServiceMgr::GetCurrentTopology []
+2023-07-18T19:58:53.241+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 4] [fc6bd4a2dd76337f941781c7d450e484] true []}
+2023-07-18T19:58:53.242+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 4]
+2023-07-18T19:58:53.242+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 4]
+2023-07-18T19:59:02.224+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 81727488 Idle 32768
+2023-07-18T19:59:12.225+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 81756160 Idle 32768
+2023-07-18T19:59:22.151+00:00 [Info] PeriodicStats = {"cpu_utilization":1.1666666666666667,"index_not_found_errcount":0,"indexer_state":"Active","memory_free":17769160704,"memory_quota":268435456,"memory_rss":67784704,"memory_total":33616498688,"memory_total_storage":6070272,"memory_used":81752064,"memory_used_queue":0,"memory_used_storage":163840,"needs_restart":false,"num_connections":1,"num_cpu_core":5,"storage_mode":"memory_optimized","timestamp":"1689710362151167000","timings/stats_response":"143 50240000 44518712000000","uptime":"2m0.263397s"}
+2023-07-18T19:59:22.203+00:00 [Info] janitor: running cleanup.
+2023-07-18T19:59:22.206+00:00 [Info] memstats {"Alloc":68507656, "TotalAlloc":73083464, "Sys":141822200, "Lookups":0, "Mallocs":204840,"Frees":51149, "HeapAlloc":68507656, "HeapSys":132415488, "HeapIdle":61456384, "HeapInuse":70959104,"HeapReleased":61423616, "HeapObjects":153691,"GCSys":4558848, "LastGC":1689710242195982000,"PauseTotalNs":1279000, "PauseNs":[], "NumGC":4}
+2023-07-18T19:59:22.225+00:00 [Info] ServiceMgr::rebalanceJanitor Running Periodic Cleanup
+2023-07-18T19:59:22.226+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 81973248 Idle 32768
+2023-07-18T19:59:22.226+00:00 [Info] Indexer::ReadMemstats Time Taken 54µs
+2023-07-18T19:59:23.243+00:00 [Info] ServiceMgr::GetTaskList []
+2023-07-18T19:59:23.243+00:00 [Info] ServiceMgr::GetCurrentTopology []
+2023-07-18T19:59:23.243+00:00 [Info] ServiceMgr::GetTaskList returns &{[0 0 0 0 0 0 0 4] []}
+2023-07-18T19:59:23.243+00:00 [Info] ServiceMgr::GetCurrentTopology returns &{[0 0 0 0 0 0 0 4] [fc6bd4a2dd76337f941781c7d450e484] true []}
+2023-07-18T19:59:23.245+00:00 [Info] ServiceMgr::GetCurrentTopology [0 0 0 0 0 0 0 4]
+2023-07-18T19:59:23.245+00:00 [Info] ServiceMgr::GetTaskList [0 0 0 0 0 0 0 4]
+2023-07-18T19:59:32.227+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 84107264 Idle 12787712
+2023-07-18T19:59:42.228+00:00 [Info] Indexer::monitorMemUsage MemoryUsed Total 84107264 Idle 12787712

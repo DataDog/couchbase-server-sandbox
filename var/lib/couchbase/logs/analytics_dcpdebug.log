@@ -1,1 +1,1 @@
-2019-07-21T21:58:27.730Z INFO CBAS.bootstrap.AnalyticsNCApplication [main] Starting Couchbase Analytics driver, version: {"build.date":"Mon Jan 21 08:20:43 PST 2019","build.number":"2037","build.version":"6.0.1-2037"}
+2023-07-18T19:57:29.666+00:00 INFO CBAS.bootstrap.AnalyticsNCApplication [main] Starting Couchbase Analytics driver, version: {"build.date":"Tue Jan 18 23:39:13 GMT 2022","build.number":"10080","build.version":"6.6.5-10080"}

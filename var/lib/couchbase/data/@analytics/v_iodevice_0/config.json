@@ -2,6 +2,7 @@
     "commonConfig": {
         "configVersion": 0,
         "config": {
+            "compilerSortParallel": false,
             "logLevel": "DEBUG"
         }
     },
@@ -14,7 +15,9 @@
                 "analyticsCbHome": "/opt/couchbase",
                 "analyticsCcHttpPort": "9111",
                 "analyticsHttpAdminListenPort": "9110",
+                "analyticsHttpListenAddress": "0.0.0.0",
                 "analyticsHttpListenPort": "8095",
+                "analyticsHttpsListenAddress": "0.0.0.0",
                 "analyticsHttpsListenPort": "18095",
                 "analyticsNodeName": "127.0.0.1:8091",
                 "analyticsSslEnabled": true,
@@ -30,7 +33,9 @@
                 "ccHeartbeatMaxMisses": "4",
                 "ccHeartbeatPeriod": "30000",
                 "ccPublicAddress": "127.0.0.1",
+                "ccSslEnabled": false,
                 "clusterAddress": "127.0.0.1",
+                "clusterCompatibility": 393222,
                 "clusterListenPort": "9115",
                 "clusterPort": "9112",
                 "dataListenPort": "9116",
@@ -43,10 +48,12 @@
                 "messagingListenPort": "9118",
                 "metadataCallbackPort": "9119",
                 "metadataListenPort": "9121",
-                "metadataNode": "8ba1ce2e183ff908d4723b87c7fdb9b3",
+                "metadataNode": "fc6bd4a2dd76337f941781c7d450e484",
                 "ncservicePort": "-1",
                 "nsServerAddress": "127.0.0.1",
                 "nsServerPort": 8091,
+                "nsServerSslPort": 18091,
+                "productVersion": "6.6.5-10080",
                 "publicAddress": "127.0.0.1",
                 "replicationEnabled": true,
                 "replicationFactor": 4096,
@@ -54,10 +61,11 @@
                 "replicationLogBufferPagesize": 262144,
                 "replicationStrategy": "metadata",
                 "resultListenPort": "9117",
+                "sslEnabled": false,
                 "startingPartitionId": "0",
                 "txnLogBufferPagesize": 262144
             },
-            "nodeId": "8ba1ce2e183ff908d4723b87c7fdb9b3"
+            "nodeId": "fc6bd4a2dd76337f941781c7d450e484"
         }
     ]
 }

@@ -32,8 +32,8 @@ wait_for_uri() {
     if [ "x$status" = "x$expected" ]; then
       break
     fi
-    echo "$uri not up yet, waiting 2 seconds..."
-    sleep 2
+    echo "$uri not up yet, waiting 10 seconds..."
+    sleep 10
   done
   echo "$uri ready, continuing"
 }
@@ -47,8 +47,8 @@ wait_for_uri_with_auth() {
     if [ "x$status" = "x$expected" ]; then
       break
     fi
-    echo "$uri not up yet, waiting 2 seconds..."
-    sleep 2
+    echo "$uri not up yet, waiting 10 seconds..."
+    sleep 10
   done
   echo "$uri ready, continuing"
 }
@@ -133,7 +133,7 @@ rm /opt/couchbase/create-ddoc.json
 echo
 
 echo "Creating datatest analytics dataset"
-wait_for_uri_with_auth http://127.0.0.1:8095/query/service 405
+wait_for_uri_with_auth http://127.0.0.1:8095/query/service 400
 sleep 3
 curl_check -u Administrator:password -X POST http://127.0.0.1:8095/query/service -H Content-Type:application/json -d @/opt/couchbase/create-dataset.json
 rm /opt/couchbase/create-dataset.json

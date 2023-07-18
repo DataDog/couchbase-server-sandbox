@@ -1,66 +1,108 @@
-_time=2019-07-21T21:58:19.693+00:00 _level=INFO _msg= Initialization of cbauth succeeded  
-_time=2019-07-21T21:58:19.702+00:00 _level=INFO _msg=New store created with url http://127.0.0.1:8091 
-_time=2019-07-21T21:58:19.702+00:00 _level=INFO _msg=pollEOF: About to start stdin polling 
-_time=2019-07-21T21:58:19.709+00:00 _level=INFO _msg=New settings received: {"query.settings.curl_whitelist":{"all_access":false,"allowed_urls":[],"disallowed_urls":[]},"query.settings.tmp_space_dir":"/opt/couchbase/var/lib/couchbase/tmp","query.settings.tmp_space_size":5120}
- 
-_time=2019-07-21T21:58:19.714+00:00 _level=INFO _msg=Settings notifier from metakv
- 
-_time=2019-07-21T21:58:19.715+00:00 _level=INFO _msg=New Value for curl whitelist <ud>map[allowed_urls:[] disallowed_urls:[] all_access:false]</ud> 
-2019-07-21T21:58:19.737+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
-2019-07-21T21:58:19.738+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
-2019-07-21T21:58:19.739+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
-2019-07-21T21:58:19.740+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
-2019-07-21T21:58:19.741+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
-2019/07/21 21:58:19 audit: created new audit service
-2019-07-21T21:58:19.744+00:00 [Info] GSIC - Setting config map[query_tmpspace_limit:5120 query_tmpspace_dir:/opt/couchbase/var/lib/couchbase/tmp]
-_time=2019-07-21T21:58:19.744+00:00 _level=INFO _msg= Indexer settings have been updated map[query_tmpspace_limit:5120 query_tmpspace_dir:/opt/couchbase/var/lib/couchbase/tmp] 
-_time=2019-07-21T21:58:19.753+00:00 _level=INFO _msg=cbq-engine started version=2.0.0-N1QL pipeline-cap=512 max-index-api=3 timeout=0s max-concurrency=4 pipeline-batch=16 scan-cap=512 request-cap=256 n1ql_feat_cntrl=0 servicers=16 plus-servicers=64 request-size-cap=67108864 datastore=http://127.0.0.1:8091 loglevel=INFO 
-_time=2019-07-21T21:58:19.755+00:00 _level=INFO _msg=Starting audit settings worker 1. 
-_time=2019-07-21T21:58:19.755+00:00 _level=INFO _msg=Starting audit worker 4 
-_time=2019-07-21T21:58:19.756+00:00 _level=INFO _msg=Starting audit worker 1 
-_time=2019-07-21T21:58:19.756+00:00 _level=INFO _msg=Starting audit worker 2 
-_time=2019-07-21T21:58:19.756+00:00 _level=INFO _msg=Starting audit worker 3 
-_time=2019-07-21T21:58:19.756+00:00 _level=INFO _msg=HttpEndpoint: Listen Address=[::]:8093 
-_time=2019-07-21T21:58:19.757+00:00 _level=INFO _msg= Certificates have been refreshed by ns server  
-_time=2019-07-21T21:58:19.763+00:00 _level=INFO _msg=HttpEndpoint: ListenTLS Address=[::]:18093 
-_time=2019-07-21T21:58:20.756+00:00 _level=INFO _msg=Starting audit update stream 
-_time=2019-07-21T21:58:22.114+00:00 _level=INFO _msg=Created New Bucket datadog-test 
-_time=2019-07-21T21:58:22.114+00:00 _level=WARN _msg=Error loading indexes for keyspace datadog-test, Error Failed to load indexes Keyspace datadog-test - cause: All nodes failed to respond or no healthy nodes for bucket found 
-2019-07-21T21:58:22.123+00:00 [Info] New settings received: 
-{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.log_level":"info","indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":2,"indexer.settings.memory_quota":268435456,"indexer.settings.compaction.abort_exceed_interval":false}
-2019-07-21T21:58:22.169+00:00 [Info] MetadataProvider.SetClusterStatus(): healthy nodes 1 failed node 0 unhealthy node 0 add node 0
-2019-07-21T21:58:22.169+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
-2019-07-21T21:58:22.169+00:00 [Info] Refreshed Indexer List: []
-2019-07-21T21:58:22.172+00:00 [Info] initialized currmeta 0 force true 
-2019-07-21T21:58:22.172+00:00 [Info] GSIC[default/datadog-test-1563746302114857400] started ...
-2019-07-21T21:58:22.172+00:00 [INFO]  Trying with http://127.0.0.1:8091/pools/default/bucketsStreaming/datadog-test 
-2019-07-21T21:58:22.175+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40cbq-engine-cbauth@127.0.0.1:8091, default
-2019-07-21T21:58:22.179+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
-2019-07-21T21:58:22.180+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
-2019-07-21T21:58:22.183+00:00 [INFO] Got new configuration for bucket datadog-test 
-2019-07-21T21:58:22.183+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
-2019-07-21T21:58:22.203+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
-2019-07-21T21:58:22.203+00:00 [Info] Refreshed Indexer List: []
-2019-07-21T21:58:22.206+00:00 [Info] switched currmeta from 0 -> 0 force true 
-2019-07-21T21:58:22.216+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
-2019-07-21T21:58:22.216+00:00 [Info] Refreshed Indexer List: []
-2019-07-21T21:58:22.221+00:00 [Info] switched currmeta from 0 -> 0 force true 
-2019-07-21T21:58:22.254+00:00 [INFO] Got new configuration for bucket datadog-test 
-2019-07-21T21:58:22.256+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
-2019-07-21T21:58:22.281+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
-2019-07-21T21:58:22.281+00:00 [Info] Refreshed Indexer List: []
-2019-07-21T21:58:22.284+00:00 [Info] switched currmeta from 0 -> 0 force true 
-2019-07-21T21:58:22.683+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
-2019-07-21T21:58:22.736+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
-2019-07-21T21:58:22.736+00:00 [Info] Refreshed Indexer List: []
-2019-07-21T21:58:22.740+00:00 [Info] switched currmeta from 0 -> 0 force true 
-2019-07-21T21:58:22.898+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
-2019-07-21T21:58:22.917+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
-2019-07-21T21:58:22.917+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
-2019-07-21T21:58:22.917+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
-2019-07-21T21:58:22.939+00:00 [Info] WatchMetadata(): successfully reach indexer at 127.0.0.1:9100.
-2019-07-21T21:58:22.941+00:00 [Info] MetadataProvider: Updating indexer version to 3
-2019-07-21T21:58:22.941+00:00 [Info] switched currmeta from 0 -> 1 force true 
-2019-07-21T21:58:22.941+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] started poolsize 5000 overflow 30 low WM 1000 relConn batch size 100 ...
-2019-07-21T21:58:22.941+00:00 [Info] [GsiScanClient:"127.0.0.1:9101"] started ...
-2019-07-21T21:58:22.943+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] open new connection ...
+_time=2023-07-18T19:57:22.118+00:00 _level=INFO _msg= Initialization of cbauth succeeded  
+_time=2023-07-18T19:57:22.133+00:00 _level=INFO _msg=New store created with url http://127.0.0.1:8091 
+2023/07/18 19:57:22 cfg_metakv: metaKVCallback, path: /fts/cbgt/cfg/nodeDefs-known/fc6bd4a2dd76337f941781c7d450e484, key: nodeDefs-known/fc6bd4a2dd76337f941781c7d450e484, deletion: false
+_time=2023-07-18T19:57:22.145+00:00 _level=INFO _msg=pollEOF: About to start stdin polling 
+2023/07/18 19:57:22 cfg_metakv: metaKVCallback, path: /fts/cbgt/cfg/nodeDefs-wanted/fc6bd4a2dd76337f941781c7d450e484, key: nodeDefs-wanted/fc6bd4a2dd76337f941781c7d450e484, deletion: false
+_time=2023-07-18T19:57:22.194+00:00 _level=INFO _msg=Unable to initialize dictionary cache monitor Cound not access dictionary cache change counter due to <nil> 
+_time=2023-07-18T19:57:22.214+00:00 _level=INFO _msg=New settings received: {"timeout":0,"n1ql-feat-ctrl":12,"max-parallelism":1,"query.settings.curl_whitelist":{"all_access":false,"allowed_urls":[],"disallowed_urls":[]},"query.settings.tmp_space_dir":"/opt/couchbase/var/lib/couchbase/tmp","completed-limit":4000,"prepared-limit":16384,"pipeline-batch":16,"pipeline-cap":512,"scan-cap":512,"loglevel":"info","completed-threshold":1000,"query.settings.tmp_space_size":5120} 
+_time=2023-07-18T19:57:22.215+00:00 _level=INFO _msg=Settings notifier from metakv 
+_time=2023-07-18T19:57:22.216+00:00 _level=INFO _msg=New Value for curl whitelist <ud>map[all_access:false allowed_urls:[] disallowed_urls:[]]</ud> 
+2023-07-18T19:57:22.224+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2023-07-18T19:57:22.225+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2023-07-18T19:57:22.226+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2023-07-18T19:57:22.226+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2023-07-18T19:57:22.227+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2023/07/18 19:57:22 audit: created new audit service
+2023-07-18T19:57:22.231+00:00 [Info] GSIC - Setting config map[query_tmpspace_dir:/opt/couchbase/var/lib/couchbase/tmp query_tmpspace_limit:5120]
+_time=2023-07-18T19:57:22.231+00:00 _level=INFO _msg= GSI indexer settings have been updated map[query_tmpspace_dir:/opt/couchbase/var/lib/couchbase/tmp query_tmpspace_limit:5120] 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg= n1fty indexer settings have been updated map[query_tmpspace_dir:/opt/couchbase/var/lib/couchbase/tmp query_tmpspace_limit:5120] 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg=Query Configuration changed for max-parallelism. New value is 1 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg=Query Configuration changed for completed-limit. New value is 4000 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg=Query Configuration changed for pipeline-cap. New value is 512 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg=Query Configuration changed for prepared-limit. New value is 16384 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg=Query Configuration changed for pipeline-batch. New value is 16 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg=Query Configuration changed for loglevel. New value is info 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg=Query Configuration changed for n1ql-feat-ctrl. New value is 12 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg=Query Configuration changed for scan-cap. New value is 512 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg=Query Configuration changed for completed-threshold. New value is 1000 
+_time=2023-07-18T19:57:22.232+00:00 _level=INFO _msg=Query Configuration changed for timeout. New value is 0 
+_time=2023-07-18T19:57:22.233+00:00 _level=INFO _msg=cbq-engine started version=6.6.5-N1QL plus-servicers=80 pipeline-cap=512 pipeline-batch=16 request-size-cap=67108864 timeout=0s max-concurrency=5 servicers=20 scan-cap=512 n1ql_feat_cntrl=12 datastore=http://127.0.0.1:8091 loglevel=INFO request-cap=256 max-index-api=4 max-parallelism=1 
+_time=2023-07-18T19:57:22.234+00:00 _level=INFO _msg=Starting audit settings worker 1. 
+_time=2023-07-18T19:57:22.234+00:00 _level=INFO _msg=Starting audit worker 2 
+_time=2023-07-18T19:57:22.235+00:00 _level=INFO _msg=Starting audit worker 4 
+_time=2023-07-18T19:57:22.235+00:00 _level=INFO _msg=Starting audit worker 3 
+_time=2023-07-18T19:57:22.235+00:00 _level=INFO _msg=Starting audit worker 1 
+_time=2023-07-18T19:57:22.235+00:00 _level=INFO _msg=Starting audit worker 5 
+_time=2023-07-18T19:57:22.235+00:00 _level=INFO _msg= Certificates have been refreshed by ns server  
+_time=2023-07-18T19:57:22.244+00:00 _level=INFO _msg=HttpEndpoint: Listen Address=0.0.0.0:8093 
+_time=2023-07-18T19:57:22.246+00:00 _level=INFO _msg=HttpEndpoint: Listen Address=[::]:8093 
+2023/07/18 19:57:22 cfg_metakv: metaKVCallback, path: /fts/cbgt/cfg/version, key: version, deletion: false
+_time=2023-07-18T19:57:22.247+00:00 _level=INFO _msg=HttpEndpoint: ListenTLS Address=0.0.0.0:18093 
+_time=2023-07-18T19:57:22.247+00:00 _level=INFO _msg=HttpEndpoint: ListenTLS Address=[::]:18093 
+_time=2023-07-18T19:57:22.248+00:00 _level=ERROR _msg=Updating node-to-node encryption level: {EncryptData:false DisableNonSSLPorts:false} 
+_time=2023-07-18T19:57:22.260+00:00 _level=INFO _msg=Unable to initialize functions cache monitor Could not access functions change counter because <nil> 
+2023-07-18T19:57:22.364+00:00 [INFO] 38:68:58:c7:3f:af:31:a2 5163496945404354390 : Initialized isolate
+2023-07-18T19:57:22.391+00:00 [INFO] Reponse : Message:"Evaluator initialized successfully" 
+2023-07-18T19:57:22.474+00:00 [INFO] 98:38:99:29:96:6c:1d:50 5163496945404354390 : Initialized isolate
+2023-07-18T19:57:22.486+00:00 [INFO] Reponse : Message:"Evaluator initialized successfully" 
+_time=2023-07-18T19:57:23.235+00:00 _level=INFO _msg=Starting audit update stream 
+_time=2023-07-18T19:57:25.452+00:00 _level=INFO _msg=Created New Bucket datadog-test 
+2023-07-18T19:57:25.456+00:00 [Info] creating GsiClient for 127.0.0.1:8091
+2023-07-18T19:57:25.456+00:00 [Info] Recieve security change notification. encryption=false
+2023-07-18T19:57:25.456+00:00 [Info] Certificate refreshed successfully
+2023-07-18T19:57:25.460+00:00 [Info] New settings received: 
+{"indexer.settings.compaction.days_of_week":"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday","indexer.settings.compaction.interval":"00:00,00:00","indexer.settings.compaction.compaction_mode":"circular","indexer.settings.log_level":"info","indexer.settings.persisted_snapshot.interval":5000,"indexer.settings.compaction.min_frag":30,"indexer.settings.inmemory_snapshot.interval":200,"indexer.settings.max_cpu_percent":0,"indexer.settings.storage_mode":"memory_optimized","indexer.settings.recovery.max_rollbacks":2,"indexer.settings.memory_quota":268435456,"indexer.settings.compaction.abort_exceed_interval":false}
+2023-07-18T19:57:25.471+00:00 [Info] security context initialized
+2023-07-18T19:57:25.471+00:00 [Info] security port mapping updated : map[9102:19102 9103:9103 8093:18093 9101:9101 9104:9104 9105:9105 9999:9999 8091:18091 11210:11207 9100:9100]
+2023-07-18T19:57:25.487+00:00 [Info] MetadataProvider.SetClusterStatus(): healthy nodes 1 failed node 0 unhealthy node 0 add node 0
+2023-07-18T19:57:25.487+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2023-07-18T19:57:25.487+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2023-07-18T19:57:25.487+00:00 [Info] MetadataProvider.WatchMetadata(): indexer 127.0.0.1:9100
+2023-07-18T19:57:25.510+00:00 [Info] WatchMetadata(): successfully reach indexer at 127.0.0.1:9100.
+2023-07-18T19:57:25.511+00:00 [Info] MetadataProvider: Updating indexer version to 4
+2023-07-18T19:57:25.512+00:00 [Info] initialized currmeta 1 force true 
+2023-07-18T19:57:25.512+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] started poolsize 5000 overflow 30 low WM 1000 relConn batch size 100 ...
+2023-07-18T19:57:25.512+00:00 [Info] [GsiScanClient:"127.0.0.1:9101"] started ...
+2023-07-18T19:57:25.514+00:00 [Info] servicesChangeNotifier: Creating new notifier instance for http://%40cbq-engine-cbauth@127.0.0.1:8091, default
+2023-07-18T19:57:25.514+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] open new connection ...
+2023-07-18T19:57:25.521+00:00 [Info] serviceChangeNotifier: received ServiceChangeNotification
+2023-07-18T19:57:25.524+00:00 [Info] serviceChangeNotifier: received PoolChangeNotification
+2023-07-18T19:57:25.528+00:00 [Info] GsiClient::UpdateUsecjson: using collatejson as data format between indexer and GsiClient
+2023-07-18T19:57:25.528+00:00 [Info] GsiClient::UpdateUsecjson: using collatejson as data format between indexer and GsiClient
+2023-07-18T19:57:25.529+00:00 [Info] GSIC[default/datadog-test-1689710245454697000] started ...
+2023-07-18T19:57:25.529+00:00 [Info] Recieve security change notification. encryption=false
+2023-07-18T19:57:25.530+00:00 [Info] Certificate refreshed successfully
+_time=2023-07-18T19:57:25.531+00:00 _level=INFO _msg=n1fty: server: http://127.0.0.1:8091, namespace: default, keyspace: datadog-test 
+2023-07-18T19:57:25.544+00:00 [INFO]  Trying with http://127.0.0.1:8091/pools/default/bucketsStreaming/datadog-test 
+2023-07-18T19:57:25.546+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2023-07-18T19:57:25.546+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2023-07-18T19:57:25.548+00:00 [Info] switched currmeta from 1 -> 1 force true 
+2023-07-18T19:57:25.549+00:00 [INFO] Got new configuration for bucket datadog-test 
+2023-07-18T19:57:25.553+00:00 [INFO] Using plain authentication for user <ud>@cbq-engine</ud> 
+2023-07-18T19:57:25.559+00:00 [Info] Refreshing indexer list due to cluster changes or auto-refresh.
+2023-07-18T19:57:25.559+00:00 [Info] Refreshed Indexer List: [127.0.0.1:9100]
+2023-07-18T19:57:25.560+00:00 [Info] switched currmeta from 1 -> 1 force true 
+2023/07/18 19:57:25 cfg_metakv: metaKVCallback, path: /fts/cbgt/cfg/indexDefs, key: indexDefs, deletion: false
+_time=2023-07-18T19:57:25.718+00:00 _level=INFO _msg=client: grpc client connection #0 created for host: 127.0.0.1:9130 
+_time=2023-07-18T19:57:25.718+00:00 _level=INFO _msg=client: grpc client connection #1 created for host: 127.0.0.1:9130 
+_time=2023-07-18T19:57:25.718+00:00 _level=INFO _msg=client: grpc client connection #2 created for host: 127.0.0.1:9130 
+_time=2023-07-18T19:57:25.718+00:00 _level=INFO _msg=client: grpc client connection #3 created for host: 127.0.0.1:9130 
+_time=2023-07-18T19:57:25.718+00:00 _level=INFO _msg=client: grpc client connection #4 created for host: 127.0.0.1:9130 
+2023/07/18 19:57:25 cfg_metakv: metaKVCallback, path: /fts/cbgt/cfg/planPIndexesLean/planPIndexesLean-631a83f49a9f8dd0d82faea39d57978a-1689710245770/test, key: planPIndexesLean/planPIndexesLean-631a83f49a9f8dd0d82faea39d57978a-1689710245770/test, deletion: false
+2023/07/18 19:57:25 cfg_metakv: metaKVCallback, path: /fts/cbgt/cfg/curMetaKvPlanKey, key: curMetaKvPlanKey, deletion: false
+2023-07-18T19:58:25.516+00:00 [Info] connected with 1 indexers
+2023-07-18T19:58:25.516+00:00 [Info] client load stats {}
+2023-07-18T19:58:25.517+00:00 [Info] client hit stats {}
+2023-07-18T19:58:25.517+00:00 [Info] client pending item stats {}
+2023-07-18T19:58:25.517+00:00 [Info] client stats current {}
+2023-07-18T19:58:25.528+00:00 [Info] num concurrent scans {0}
+2023-07-18T19:58:25.529+00:00 [Info] average scan response {0 ms}
+2023-07-18T19:58:25.614+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] active conns 0, free conns 1
+2023-07-18T19:59:25.514+00:00 [Info] connected with 1 indexers
+2023-07-18T19:59:25.514+00:00 [Info] client load stats {}
+2023-07-18T19:59:25.514+00:00 [Info] client hit stats {}
+2023-07-18T19:59:25.514+00:00 [Info] client pending item stats {}
+2023-07-18T19:59:25.514+00:00 [Info] client stats current {}
+2023-07-18T19:59:25.528+00:00 [Info] num concurrent scans {0}
+2023-07-18T19:59:25.528+00:00 [Info] average scan response {0 ms}
+2023-07-18T19:59:25.715+00:00 [Info] [Queryport-connpool:127.0.0.1:9101] active conns 0, free conns 1

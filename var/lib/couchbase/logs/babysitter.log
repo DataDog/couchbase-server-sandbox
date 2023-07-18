@@ -1,5 +1,5 @@
-[ns_server:info,2019-07-21T21:58:10.577Z,babysitter_of_ns_1@127.0.0.1:<0.56.0>:ns_babysitter:init_logging:122]Brought up babysitter logging
-[ns_server:info,2019-07-21T21:58:10.581Z,babysitter_of_ns_1@127.0.0.1:<0.56.0>:ns_babysitter:log_pending:87]Static config terms:
+[ns_server:info,2023-07-18T19:57:14.077Z,babysitter_of_ns_1@cb.local:<0.91.0>:ns_babysitter:init_logging:136]Brought up babysitter logging
+[ns_server:info,2023-07-18T19:57:14.090Z,babysitter_of_ns_1@cb.local:<0.91.0>:ns_babysitter:log_pending:101]Static config terms:
 [{error_logger_mf_dir,"/opt/couchbase/var/lib/couchbase/logs"},
  {path_config_bindir,"/opt/couchbase/bin"},
  {path_config_etcdir,"/opt/couchbase/etc/couchbase"},
@@ -22,6 +22,7 @@
  {loglevel_mapreduce_errors,debug},
  {loglevel_xdcr,debug},
  {loglevel_access,info},
+ {loglevel_cbas,debug},
  {disk_sink_opts,[{rotation,[{compress,true},
                              {size,41943040},
                              {num_files,10},
@@ -31,132 +32,144 @@
                                       {num_files,2},
                                       {buffer_size_max,52428800}]}]},
  {net_kernel_verbosity,10}]
-[ns_server:debug,2019-07-21T21:58:10.630Z,babysitter_of_ns_1@127.0.0.1:<0.56.0>:dist_manager:configure_net_kernel:339]Set net_kernel vebosity to 10 -> 0
-[ns_server:info,2019-07-21T21:58:10.640Z,babysitter_of_ns_1@127.0.0.1:<0.56.0>:ns_babysitter:start:55]babysitter cookie: '6b4af00be5a983b779abc64734190c63dab533da560dd0e0c940db62b70aef80'
+[ns_server:debug,2023-07-18T19:57:14.091Z,babysitter_of_ns_1@cb.local:<0.91.0>:dist_manager:configure_net_kernel:293]Set net_kernel vebosity to 10 -> 0
+[ns_server:info,2023-07-18T19:57:14.106Z,babysitter_of_ns_1@cb.local:<0.91.0>:ns_babysitter:start:62]babysitter cookie: {sanitized,<<"GPlIBo9T+3NwuBMK9ZCbHcpH8ScASjYtnmuAC/5v//o=">>}
 
-[ns_server:info,2019-07-21T21:58:10.645Z,babysitter_of_ns_1@127.0.0.1:<0.56.0>:ns_babysitter:maybe_write_file:77]Saved babysitter cookie to /opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie
-[ns_server:info,2019-07-21T21:58:10.650Z,babysitter_of_ns_1@127.0.0.1:<0.56.0>:ns_babysitter:maybe_write_file:77]Saved babysitter node name to /opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node
-[ns_server:info,2019-07-21T21:58:10.668Z,babysitter_of_ns_1@127.0.0.1:ns_crash_log<0.67.0>:ns_crash_log:init:57]crash_log path: /opt/couchbase/var/lib/couchbase/logs/crash_log_v2.bin
-[ns_server:warn,2019-07-21T21:58:10.671Z,babysitter_of_ns_1@127.0.0.1:ns_crash_log<0.67.0>:ns_crash_log:read_crash_log:148]Couldn't load crash_log from /opt/couchbase/var/lib/couchbase/logs/crash_log_v2.bin (perhaps it's first startup): {error,
+[ns_server:info,2023-07-18T19:57:14.109Z,babysitter_of_ns_1@cb.local:<0.91.0>:ns_babysitter:do_write_file:94]Saved babysitter cookie to /opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie
+[ns_server:info,2023-07-18T19:57:14.111Z,babysitter_of_ns_1@cb.local:<0.91.0>:ns_babysitter:do_write_file:94]Saved babysitter node name to /opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node
+[ns_server:info,2023-07-18T19:57:14.115Z,babysitter_of_ns_1@cb.local:ns_crash_log<0.101.0>:ns_crash_log:init:57]crash_log path: /opt/couchbase/var/lib/couchbase/logs/crash_log_v2.bin
+[ns_server:warn,2023-07-18T19:57:14.115Z,babysitter_of_ns_1@cb.local:ns_crash_log<0.101.0>:ns_crash_log:read_crash_log:148]Couldn't load crash_log from /opt/couchbase/var/lib/couchbase/logs/crash_log_v2.bin (perhaps it's first startup): {error,
                                                                                                                    enoent}
-[error_logger:info,2019-07-21T21:58:10.671Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:14.115Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_babysitter_sup}
-             started: [{pid,<0.67.0>},
-                       {name,ns_crash_log},
+             started: [{pid,<0.101.0>},
+                       {id,ns_crash_log},
                        {mfargs,{ns_crash_log,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:10.674Z,babysitter_of_ns_1@127.0.0.1:encryption_service<0.68.0>:encryption_service:init:141]Encrypted data key is not found in "/opt/couchbase/var/lib/couchbase/config/encrypted_data_keys"
-[ns_server:debug,2019-07-21T21:58:10.674Z,babysitter_of_ns_1@127.0.0.1:<0.69.0>:encryption_service:start_gosecrets:232]Starting "/opt/couchbase/bin/gosecrets"
-[ns_server:debug,2019-07-21T21:58:10.674Z,babysitter_of_ns_1@127.0.0.1:encryption_service<0.68.0>:encryption_service:start_gosecrets:237]Gosecrets loop started with pid = <0.69.0>
-[ns_server:debug,2019-07-21T21:58:10.674Z,babysitter_of_ns_1@127.0.0.1:encryption_service<0.68.0>:encryption_service:set_password:121]Sending password to gosecrets
-[ns_server:debug,2019-07-21T21:58:10.916Z,babysitter_of_ns_1@127.0.0.1:encryption_service<0.68.0>:encryption_service:init:157]Create new data key.
-[error_logger:info,2019-07-21T21:58:10.932Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:debug,2023-07-18T19:57:14.116Z,babysitter_of_ns_1@cb.local:encryption_service<0.102.0>:encryption_service:init:160]Encrypted data key is not found in "/opt/couchbase/var/lib/couchbase/config/encrypted_data_keys"
+[ns_server:debug,2023-07-18T19:57:14.116Z,babysitter_of_ns_1@cb.local:<0.103.0>:encryption_service:start_gosecrets:251]Starting "/opt/couchbase/bin/gosecrets"
+[ns_server:debug,2023-07-18T19:57:14.117Z,babysitter_of_ns_1@cb.local:encryption_service<0.102.0>:encryption_service:start_gosecrets:256]Gosecrets loop started with pid = <0.103.0>
+[ns_server:debug,2023-07-18T19:57:14.117Z,babysitter_of_ns_1@cb.local:encryption_service<0.102.0>:encryption_service:set_password:140]Sending password to gosecrets
+[ns_server:debug,2023-07-18T19:57:14.144Z,babysitter_of_ns_1@cb.local:encryption_service<0.102.0>:encryption_service:init:176]Create new data key.
+[error_logger:info,2023-07-18T19:57:14.148Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_babysitter_sup}
-             started: [{pid,<0.68.0>},
-                       {name,encryption_service},
+             started: [{pid,<0.102.0>},
+                       {id,encryption_service},
                        {mfargs,{encryption_service,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:10.975Z,babysitter_of_ns_1@127.0.0.1:<0.72.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
-[ns_server:debug,2019-07-21T21:58:10.979Z,babysitter_of_ns_1@127.0.0.1:<0.71.0>:restartable:start_child:98]Started child process <0.72.0>
+[ns_server:debug,2023-07-18T19:57:14.203Z,babysitter_of_ns_1@cb.local:<0.106.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[ns_server:debug,2023-07-18T19:57:14.206Z,babysitter_of_ns_1@cb.local:<0.105.0>:restartable:start_child:98]Started child process <0.106.0>
   MFA: {supervisor_cushion,start_link,
                            [ns_server,5000,infinity,ns_port_server,start_link,
-                            [#Fun<ns_child_ports_sup.4.5182122>]]}
-[error_logger:info,2019-07-21T21:58:10.979Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:info,2023-07-18T19:57:14.208Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,child_ns_server_sup}
-             started: [{pid,<0.71.0>},
-                       {name,
-                           {ns_server,"/opt/couchbase/lib/erlang/bin/erl",
+             started: [{pid,<0.105.0>},
+                       {id,{ns_server,"/opt/couchbase/lib/erlang/bin/erl",
                                ["+A","16","-smp","enable","+sbt","u","+P",
-                                "327680","+K","true","+swt","low","+MMmcs",
-                                "30","+e102400","-setcookie","nocookie",
-                                "-kernel","inet_dist_listen_min","21100",
-                                "inet_dist_listen_max","21299","error_logger",
-                                "false","-sasl","sasl_error_logger","false",
-                                "-user","user_io","-run","child_erlang",
-                                "child_start","ns_bootstrap","--","-smp",
-                                "enable","-proto_dist","inet_tcp",
+                                "327680","+K","true","+swt","low","+sbwt",
+                                "none","+MMmcs","30","+e102400","-setcookie",
+                                "nocookie","-kernel","error_logger","false",
+                                "-sasl","sasl_error_logger","false","-user",
+                                "user_io","-run","child_erlang","child_start",
+                                "ns_bootstrap","--","-smp","enable","-kernel",
+                                "error_logger","false","inetrc",
+                                "\"/opt/couchbase/etc/couchbase/hosts.cfg\"",
+                                "dist_config_file",
+                                "\"/opt/couchbase/var/lib/couchbase/config/dist_cfg\"",
+                                "-proto_dist","cb","-epmd_module","cb_epmd",
+                                "-start_epmd","false","-ssl_dist_optfile",
+                                "/opt/couchbase/etc/couchbase/ssl_dist_opts",
+                                "-kernel","global_enable_tracing","false",
                                 "-couch_ini",
                                 "/opt/couchbase/etc/couchdb/default.ini",
                                 "/opt/couchbase/etc/couchdb/default.d/capi.ini",
                                 "/opt/couchbase/etc/couchdb/default.d/geocouch.ini",
                                 "/opt/couchbase/etc/couchdb/local.ini"],
                                [{env,
-                                    [{"NS_SERVER_BABYSITTER_COOKIE",
-                                      "6b4af00be5a983b779abc64734190c63dab533da560dd0e0c940db62b70aef80"},
-                                     {"NS_SERVER_BABYSITTER_PID","43"},
+                                    [{"NS_SERVER_BABYSITTER_PID","43"},
                                      {"CHILD_ERLANG_ENV_ARGS",
-                                      "[{sasl,\n     [{errlog_type,all},{included_applications,[]},{sasl_error_logger,false}]},\n {kernel,\n     [{inet_dist_listen_min,21100},\n      {inet_dist_listen_max,21299},\n      {included_applications,[]},\n      {error_logger,false},\n      {global_enable_tracing,false}]},\n {ns_babysitter,\n     [{nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {included_applications,[]},\n      {pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"},\n      {cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"}]},\n {ns_server,\n     [{max_t,10},\n      {included_applications,[]},\n      {loglevel_cluster,debug},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_ns_server,debug},\n      {loglevel_access,info},\n      {loglevel_error_logger,debug},\n      {loglevel_xdcr,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_mapreduce_errors,debug},\n      {loglevel_ns_doctor,debug},\n      {loglevel_default,debug},\n      {loglevel_stats,debug},\n      {ipv6,false},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {loglevel_user,debug},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {net_kernel_verbosity,10},\n      {max_r,20},\n      {loglevel_rebalance,debug},\n      {loglevel_menelaus,debug},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {loglevel_views,debug},\n      {path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {loglevel_couchdb,info}]}]"},
+                                      "[{sasl,\n     [{included_applications,[]},{errlog_type,all},{sasl_error_logger,false}]},\n {ns_babysitter,\n     [{pidfile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.pid\"},\n      {included_applications,[]},\n      {nodefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node\"},\n      {cookiefile,\n          \"/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie\"}]},\n {ns_server,\n     [{max_t,10},\n      {path_config_tmpdir,\"/opt/couchbase/var/lib/couchbase/tmp\"},\n      {loglevel_ns_server,debug},\n      {path_config_etcdir,\"/opt/couchbase/etc/couchbase\"},\n      {disk_sink_opts,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,10},\n                {buffer_size_max,52428800}]}]},\n      {max_r,20},\n      {disk_sink_opts_json_rpc,\n          [{rotation,\n               [{compress,true},\n                {size,41943040},\n                {num_files,2},\n                {buffer_size_max,52428800}]}]},\n      {included_applications,[]},\n      {loglevel_access,info},\n      {config_path,\"/opt/couchbase/etc/couchbase/static_config\"},\n      {path_config_datadir,\"/opt/couchbase/var/lib/couchbase\"},\n      {loglevel_stats,debug},\n      {loglevel_menelaus,debug},\n      {path_config_bindir,\"/opt/couchbase/bin\"},\n      {loglevel_cbas,debug},\n      {loglevel_default,debug},\n      {loglevel_xdcr,debug},\n      {loglevel_views,debug},\n      {net_kernel_verbosity,10},\n      {loglevel_cluster,debug},\n      {loglevel_rebalance,debug},\n      {path_config_libdir,\"/opt/couchbase/lib\"},\n      {error_logger_mf_dir,\"/opt/couchbase/var/lib/couchbase/logs\"},\n      {loglevel_mapreduce_errors,debug},\n      {path_config_secdir,\"/opt/couchbase/etc/security\"},\n      {loglevel_couchdb,info},\n      {loglevel_user,debug},\n      {nodefile,\"/opt/couchbase/var/lib/couchbase/couchbase-server.node\"},\n      {loglevel_ns_doctor,debug},\n      {loglevel_error_logger,debug}]}]"},
                                      {"ERL_CRASH_DUMP",
-                                      "erl_crash.dump.1563746286.43.ns_server"}]},
+                                      "erl_crash.dump.1689710231.43.ns_server"}]},
                                 exit_status,use_stdio,stream,eof]}},
                        {mfargs,
                            {restartable,start_link,
                                [{supervisor_cushion,start_link,
                                     [ns_server,5000,infinity,ns_port_server,
                                      start_link,
-                                     [#Fun<ns_child_ports_sup.4.5182122>]]},
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
                                 86400000]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:10.979Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:14.208Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_babysitter_sup}
-             started: [{pid,<0.70.0>},
-                       {name,child_ns_server_sup},
+             started: [{pid,<0.104.0>},
+                       {id,child_ns_server_sup},
                        {mfargs,{child_ns_server_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[error_logger:info,2019-07-21T21:58:10.979Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:14.209Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_babysitter_sup}
-             started: [{pid,<0.74.0>},
-                       {name,ns_child_ports_sup},
+             started: [{pid,<0.108.0>},
+                       {id,ns_child_ports_sup},
                        {mfargs,{ns_child_ports_sup,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,supervisor}]
 
-[ns_server:info,2019-07-21T21:58:10.981Z,babysitter_of_ns_1@127.0.0.1:<0.2.0>:ns_babysitter_bootstrap:start:26]43: babysitter has started
-[error_logger:info,2019-07-21T21:58:10.981Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[error_logger:info,2023-07-18T19:57:14.210Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_babysitter_sup}
-             started: [{pid,<0.75.0>},
-                       {name,ns_ports_manager},
+             started: [{pid,<0.109.0>},
+                       {id,ns_ports_manager},
                        {mfargs,{ns_ports_manager,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[error_logger:info,2019-07-21T21:58:10.981Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:info,2023-07-18T19:57:14.210Z,babysitter_of_ns_1@cb.local:<0.5.0>:ns_babysitter_bootstrap:start:26]43: babysitter has started
+[error_logger:info,2023-07-18T19:57:14.210Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
          application: ns_babysitter
-          started_at: 'babysitter_of_ns_1@127.0.0.1'
+          started_at: 'babysitter_of_ns_1@cb.local'
 
-[error_logger:info,2019-07-21T21:58:17.199Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:debug,2023-07-18T19:57:15.546Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:811]cb_dist: Accepted new connection from <0.58.0> DistCtrl #Port<0.3906>: {con,
+                                                                        #Ref<0.3081131376.3250847745.47735>,
+                                                                        inet_tcp_dist,
+                                                                        undefined,
+                                                                        undefined}
+[ns_server:debug,2023-07-18T19:57:15.547Z,babysitter_of_ns_1@cb.local:net_kernel<0.57.0>:cb_dist:info_msg:811]cb_dist: Accepting connection from acceptor <0.58.0> using module inet_tcp_dist
+[ns_server:debug,2023-07-18T19:57:15.547Z,babysitter_of_ns_1@cb.local:cb_dist<0.54.0>:cb_dist:info_msg:811]cb_dist: Updated connection: {con,#Ref<0.3081131376.3250847745.47735>,
+                                  inet_tcp_dist,<0.110.0>,
+                                  #Ref<0.3081131376.3250847745.47738>}
+[error_logger:info,2023-07-18T19:57:17.885Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,kernel_safe_sup}
-             started: [{pid,<0.78.0>},
-                       {name,timer2_server},
+             started: [{pid,<0.112.0>},
+                       {id,timer2_server},
                        {mfargs,{timer2,start_link,[]}},
                        {restart_type,permanent},
                        {shutdown,1000},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:17.256Z,babysitter_of_ns_1@127.0.0.1:ns_ports_manager<0.75.0>:ns_ports_manager:handle_call:88]New list of children is received: [memcached,saslauthd_port,goxdcr]
-[ns_server:info,2019-07-21T21:58:17.258Z,babysitter_of_ns_1@127.0.0.1:ns_ports_manager<0.75.0>:ns_child_ports_sup:launch_port:96]supervising port: {memcached,"/opt/couchbase/bin/memcached",
+[ns_server:debug,2023-07-18T19:57:17.956Z,babysitter_of_ns_1@cb.local:ns_ports_manager<0.109.0>:ns_ports_manager:handle_call:91]New list of children is received: [memcached,saslauthd_port,goxdcr]
+[ns_server:info,2023-07-18T19:57:17.957Z,babysitter_of_ns_1@cb.local:ns_ports_manager<0.109.0>:ns_child_ports_sup:launch_port:94]supervising port: {memcached,"/opt/couchbase/bin/memcached",
                              ["-C",
                               "/opt/couchbase/var/lib/couchbase/config/memcached.json"],
                              [{env,[{"EVENT_NOSELECT","1"},
@@ -165,25 +178,24 @@
                                      "/opt/couchbase/var/lib/couchbase/isasl.pw"}]},
                               use_stdio,stderr_to_stdout,exit_status,
                               port_server_dont_start,stream]}
-[ns_server:debug,2019-07-21T21:58:17.259Z,babysitter_of_ns_1@127.0.0.1:<0.80.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
-[ns_server:debug,2019-07-21T21:58:17.259Z,babysitter_of_ns_1@127.0.0.1:<0.79.0>:restartable:start_child:98]Started child process <0.80.0>
+[ns_server:debug,2023-07-18T19:57:17.957Z,babysitter_of_ns_1@cb.local:<0.114.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[ns_server:debug,2023-07-18T19:57:17.957Z,babysitter_of_ns_1@cb.local:<0.113.0>:restartable:start_child:98]Started child process <0.114.0>
   MFA: {supervisor_cushion,start_link,
                            [memcached,5000,infinity,ns_port_server,start_link,
-                            [#Fun<ns_child_ports_sup.4.5182122>]]}
-[ns_server:info,2019-07-21T21:58:17.259Z,babysitter_of_ns_1@127.0.0.1:ns_ports_manager<0.75.0>:ns_child_ports_sup:launch_port:96]supervising port: {saslauthd_port,"/opt/couchbase/bin/saslauthd-port",[],
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[ns_server:info,2023-07-18T19:57:17.957Z,babysitter_of_ns_1@cb.local:ns_ports_manager<0.109.0>:ns_child_ports_sup:launch_port:94]supervising port: {saslauthd_port,"/opt/couchbase/bin/saslauthd-port",[],
                       [use_stdio,exit_status,stderr_to_stdout,
                        {env,
                            [{"GOTRACEBACK","single"},
                             {"CBAUTH_REVRPC_URL",
-                             <<25,250,182,87,172,81,10,108,131,71,78,23,
-                               36,234,121,5,43,161,241,162,163,112,249,
-                               247,185,115,93,3,171,212,18,143>>}]}]}
-[error_logger:info,2019-07-21T21:58:17.259Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+                             <<205,168,162,12,209,76,196,35,135,194,210,
+                               98,110,46,27,35,122,184,178,3,221,115,200,
+                               122,204,144,85,34,6,204,7,242>>}]}]}
+[error_logger:info,2023-07-18T19:57:17.958Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_child_ports_sup}
-             started: [{pid,<0.79.0>},
-                       {name,
-                           {memcached,"/opt/couchbase/bin/memcached",
+             started: [{pid,<0.113.0>},
+                       {id,{memcached,"/opt/couchbase/bin/memcached",
                                ["-C",
                                 "/opt/couchbase/var/lib/couchbase/config/memcached.json"],
                                [{env,
@@ -198,61 +210,59 @@
                                [{supervisor_cushion,start_link,
                                     [memcached,5000,infinity,ns_port_server,
                                      start_link,
-                                     [#Fun<ns_child_ports_sup.4.5182122>]]},
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
                                 86400000]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:17.259Z,babysitter_of_ns_1@127.0.0.1:<0.83.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
-[ns_server:debug,2019-07-21T21:58:17.260Z,babysitter_of_ns_1@127.0.0.1:<0.82.0>:restartable:start_child:98]Started child process <0.83.0>
+[ns_server:debug,2023-07-18T19:57:17.958Z,babysitter_of_ns_1@cb.local:<0.117.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[ns_server:debug,2023-07-18T19:57:17.958Z,babysitter_of_ns_1@cb.local:<0.116.0>:restartable:start_child:98]Started child process <0.117.0>
   MFA: {supervisor_cushion,start_link,
                            [saslauthd_port,5000,infinity,ns_port_server,
                             start_link,
-                            [#Fun<ns_child_ports_sup.4.5182122>]]}
-[ns_server:info,2019-07-21T21:58:17.260Z,babysitter_of_ns_1@127.0.0.1:ns_ports_manager<0.75.0>:ns_child_ports_sup:launch_port:96]supervising port: {goxdcr,"/opt/couchbase/bin/goxdcr",
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[ns_server:info,2023-07-18T19:57:17.958Z,babysitter_of_ns_1@cb.local:ns_ports_manager<0.109.0>:ns_child_ports_sup:launch_port:94]supervising port: {goxdcr,"/opt/couchbase/bin/goxdcr",
                           ["-sourceKVAdminPort=8091","-xdcrRestPort=9998",
                            "-isEnterprise=true","-ipv6=false"],
                           [via_goport,exit_status,stderr_to_stdout,
-                           {log,"goxdcr.log"},
                            {env,[{"GOTRACEBACK","single"},
                                  {"CBAUTH_REVRPC_URL",
-                                  <<250,82,184,57,25,95,231,170,162,6,66,
-                                    107,157,240,245,174,7,21,148,230,11,
-                                    203,132,225,10,210,137,106,232,21,230,
-                                    225>>}]}]}
-[error_logger:info,2019-07-21T21:58:17.260Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+                                  <<67,42,81,176,42,142,159,18,24,104,211,
+                                    81,8,124,122,21,85,62,91,158,165,155,
+                                    166,63,202,37,146,17,230,167,183,199>>}]},
+                           {log,"goxdcr.log"}]}
+[error_logger:info,2023-07-18T19:57:17.958Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_child_ports_sup}
-             started: [{pid,<0.82.0>},
-                       {name,
-                           {saslauthd_port,
+             started: [{pid,<0.116.0>},
+                       {id,{saslauthd_port,
                                "/opt/couchbase/bin/saslauthd-port",[],
                                [use_stdio,exit_status,stderr_to_stdout,
                                 {env,
                                     [{"GOTRACEBACK","single"},
                                      {"CBAUTH_REVRPC_URL",
-                                      <<25,250,182,87,172,81,10,108,131,
-                                        71,78,23,36,234,121,5,43,161,241,
-                                        162,163,112,249,247,185,115,93,3,
-                                        171,212,18,143>>}]}]}},
+                                      <<205,168,162,12,209,76,196,35,135,
+                                        194,210,98,110,46,27,35,122,184,
+                                        178,3,221,115,200,122,204,144,85,
+                                        34,6,204,7,242>>}]}]}},
                        {mfargs,
                            {restartable,start_link,
                                [{supervisor_cushion,start_link,
                                     [saslauthd_port,5000,infinity,
                                      ns_port_server,start_link,
-                                     [#Fun<ns_child_ports_sup.4.5182122>]]},
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
                                 86400000]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:17.261Z,babysitter_of_ns_1@127.0.0.1:<0.86.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
-[error_logger:info,2019-07-21T21:58:17.283Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:debug,2023-07-18T19:57:17.958Z,babysitter_of_ns_1@cb.local:<0.120.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[error_logger:info,2023-07-18T19:57:17.977Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ale_dynamic_sup}
-             started: [{pid,<0.88.0>},
-                       {name,'sink-goxdcr'},
+             started: [{pid,<0.122.0>},
+                       {id,'sink-goxdcr'},
                        {mfargs,
                         {ale_dynamic_sup,delay_death,
                          [{ale_disk_sink,start_link,
@@ -268,144 +278,72 @@
                        {shutdown,5000},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:17.389Z,babysitter_of_ns_1@127.0.0.1:<0.85.0>:restartable:start_child:98]Started child process <0.86.0>
+[ns_server:debug,2023-07-18T19:57:18.023Z,babysitter_of_ns_1@cb.local:<0.119.0>:restartable:start_child:98]Started child process <0.120.0>
   MFA: {supervisor_cushion,start_link,
                            [goxdcr,5000,infinity,ns_port_server,start_link,
-                            [#Fun<ns_child_ports_sup.4.5182122>]]}
-[error_logger:info,2019-07-21T21:58:17.389Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:info,2023-07-18T19:57:18.023Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_child_ports_sup}
-             started: [{pid,<0.85.0>},
-                       {name,
-                           {goxdcr,"/opt/couchbase/bin/goxdcr",
+             started: [{pid,<0.119.0>},
+                       {id,{goxdcr,"/opt/couchbase/bin/goxdcr",
                                ["-sourceKVAdminPort=8091",
                                 "-xdcrRestPort=9998","-isEnterprise=true",
                                 "-ipv6=false"],
                                [via_goport,exit_status,stderr_to_stdout,
-                                {log,"goxdcr.log"},
                                 {env,
                                     [{"GOTRACEBACK","single"},
                                      {"CBAUTH_REVRPC_URL",
-                                      <<250,82,184,57,25,95,231,170,162,
-                                        6,66,107,157,240,245,174,7,21,
-                                        148,230,11,203,132,225,10,210,
-                                        137,106,232,21,230,225>>}]}]}},
+                                      <<67,42,81,176,42,142,159,18,24,104,
+                                        211,81,8,124,122,21,85,62,91,158,
+                                        165,155,166,63,202,37,146,17,230,
+                                        167,183,199>>}]},
+                                {log,"goxdcr.log"}]}},
                        {mfargs,
                            {restartable,start_link,
                                [{supervisor_cushion,start_link,
                                     [goxdcr,5000,infinity,ns_port_server,
                                      start_link,
-                                     [#Fun<ns_child_ports_sup.4.5182122>]]},
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
                                 86400000]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,worker}]
 
-[ns_server:info,2019-07-21T21:58:17.400Z,babysitter_of_ns_1@127.0.0.1:<0.73.0>:ns_port_server:log:223]ns_server<0.73.0>: working as port
+[ns_server:info,2023-07-18T19:57:18.086Z,babysitter_of_ns_1@cb.local:<0.107.0>:ns_port_server:log:224]ns_server<0.107.0>: working as port
 
-[ns_server:info,2019-07-21T21:58:17.818Z,babysitter_of_ns_1@127.0.0.1:<0.73.0>:ns_port_server:log:223]ns_server<0.73.0>: 155: Booted. Waiting for shutdown request
+[ns_server:info,2023-07-18T19:57:18.277Z,babysitter_of_ns_1@cb.local:<0.115.0>:ns_port_server:log:224]memcached<0.115.0>: set_mempolicy: Operation not permitted
 
-[ns_server:info,2019-07-21T21:58:18.079Z,babysitter_of_ns_1@127.0.0.1:<0.81.0>:ns_port_server:log:223]memcached<0.81.0>: set_mempolicy: Operation not permitted
-memcached<0.81.0>: 2019-07-21T21:58:17.880695+00:00 INFO Setting SSL minimum protocol to: tlsv1
-memcached<0.81.0>: 2019-07-21T21:58:17.888735+00:00 INFO Breakpad enabled. Minidumps will be written to '/opt/couchbase/var/lib/couchbase/crash'
-memcached<0.81.0>: 2019-07-21T21:58:17.891194+00:00 INFO Setting SSL minimum protocol to: tlsv1
-memcached<0.81.0>: 2019-07-21T21:58:17.892772+00:00 INFO Disabling Breakpad
-memcached<0.81.0>: 2019-07-21T21:58:17.892924+00:00 INFO Breakpad enabled. Minidumps will be written to '/opt/couchbase/var/lib/couchbase/crash'
+[ns_server:info,2023-07-18T19:57:18.331Z,babysitter_of_ns_1@cb.local:<0.107.0>:ns_port_server:log:224]ns_server<0.107.0>: 158: Booted. Waiting for shutdown request
 
-[ns_server:debug,2019-07-21T21:58:18.892Z,babysitter_of_ns_1@127.0.0.1:ns_ports_manager<0.75.0>:ns_ports_manager:handle_call:88]New list of children is received: [memcached,projector,indexer,query,
-                                   saslauthd_port,goxdcr,fts,cbas]
-[ns_server:info,2019-07-21T21:58:18.901Z,babysitter_of_ns_1@127.0.0.1:ns_ports_manager<0.75.0>:ns_child_ports_sup:launch_port:96]supervising port: {projector,"/opt/couchbase/bin/projector",
-                             ["-kvaddrs=127.0.0.1:11210","-adminport=:9999",
-                              "-diagDir=/opt/couchbase/var/lib/couchbase/crash",
-                              "-ipv6=false","127.0.0.1:8091"],
-                             [via_goport,exit_status,stderr_to_stdout,
-                              {log,"projector.log"},
-                              {env,[{"GOTRACEBACK","single"},
-                                    {"CBAUTH_REVRPC_URL",
-                                     <<44,79,137,68,235,255,234,125,10,
-                                       121,20,137,241,79,17,240,153,74,1,
-                                       44,128,250,39,135,202,35,101,70,69,
-                                       162,73,204>>}]}]}
-[ns_server:debug,2019-07-21T21:58:18.901Z,babysitter_of_ns_1@127.0.0.1:<0.110.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
-[error_logger:info,2019-07-21T21:58:18.929Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================PROGRESS REPORT=========================
-          supervisor: {local,ale_dynamic_sup}
-             started: [{pid,<0.112.0>},
-                       {name,'sink-projector'},
-                       {mfargs,
-                        {ale_dynamic_sup,delay_death,
-                         [{ale_disk_sink,start_link,
-                           ['sink-projector',
-                            "/opt/couchbase/var/lib/couchbase/logs/projector.log",
-                            [{rotation,
-                              [{compress,true},
-                               {size,41943040},
-                               {num_files,10},
-                               {buffer_size_max,52428800}]}]]},
-                          1000]}},
-                       {restart_type,permanent},
-                       {shutdown,5000},
-                       {child_type,worker}]
-
-[ns_server:debug,2019-07-21T21:58:19.011Z,babysitter_of_ns_1@127.0.0.1:<0.109.0>:restartable:start_child:98]Started child process <0.110.0>
-  MFA: {supervisor_cushion,start_link,
-                           [projector,5000,infinity,ns_port_server,start_link,
-                            [#Fun<ns_child_ports_sup.4.5182122>]]}
-[ns_server:info,2019-07-21T21:58:19.011Z,babysitter_of_ns_1@127.0.0.1:ns_ports_manager<0.75.0>:ns_child_ports_sup:launch_port:96]supervising port: {indexer,"/opt/couchbase/bin/indexer",
-                           ["-vbuckets=1024","-cluster=127.0.0.1:8091",
-                            "-adminPort=9100","-scanPort=9101",
+[ns_server:debug,2023-07-18T19:57:21.704Z,babysitter_of_ns_1@cb.local:ns_ports_manager<0.109.0>:ns_ports_manager:handle_call:91]New list of children is received: [memcached,saslauthd_port,indexer,projector,
+                                   goxdcr,query,fts,cbas]
+[ns_server:info,2023-07-18T19:57:21.706Z,babysitter_of_ns_1@cb.local:ns_ports_manager<0.109.0>:ns_child_ports_sup:launch_port:94]supervising port: {indexer,"/opt/couchbase/bin/indexer",
+                           ["-adminPort=9100","-scanPort=9101",
                             "-httpPort=9102","-streamInitPort=9103",
                             "-streamCatchupPort=9104","-streamMaintPort=9105",
-                            "-storageDir=/opt/couchbase/var/lib/couchbase/data/@2i",
-                            "-diagDir=/opt/couchbase/var/lib/couchbase/crash",
-                            "-nodeUUID=8ba1ce2e183ff908d4723b87c7fdb9b3",
-                            "-ipv6=false","-isEnterprise=true",
                             "--httpsPort=19102",
                             "--certFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
-                            "--keyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem"],
+                            "--keyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem",
+                            "-vbuckets=1024","-cluster=127.0.0.1:8091",
+                            "-storageDir=/opt/couchbase/var/lib/couchbase/data/@2i",
+                            "-diagDir=/opt/couchbase/var/lib/couchbase/crash",
+                            "-nodeUUID=fc6bd4a2dd76337f941781c7d450e484",
+                            "-ipv6=false","-isEnterprise=true"],
                            [via_goport,exit_status,stderr_to_stdout,
-                            {log,"indexer.log"},
-                            {env,[{"GOTRACEBACK","single"},
+                            {env,[{"GODEBUG","madvdontneed=1"},
+                                  {"GOTRACEBACK","single"},
                                   {"CBAUTH_REVRPC_URL",
-                                   <<14,40,222,200,113,136,15,79,118,24,
-                                     228,75,135,90,21,34,193,134,58,245,
-                                     69,2,166,169,243,53,183,100,224,53,
-                                     216,189>>}]}]}
-[error_logger:info,2019-07-21T21:58:19.011Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
-=========================PROGRESS REPORT=========================
-          supervisor: {local,ns_child_ports_sup}
-             started: [{pid,<0.109.0>},
-                       {name,
-                           {projector,"/opt/couchbase/bin/projector",
-                               ["-kvaddrs=127.0.0.1:11210","-adminport=:9999",
-                                "-diagDir=/opt/couchbase/var/lib/couchbase/crash",
-                                "-ipv6=false","127.0.0.1:8091"],
-                               [via_goport,exit_status,stderr_to_stdout,
-                                {log,"projector.log"},
-                                {env,
-                                    [{"GOTRACEBACK","single"},
-                                     {"CBAUTH_REVRPC_URL",
-                                      <<44,79,137,68,235,255,234,125,10,
-                                        121,20,137,241,79,17,240,153,74,
-                                        1,44,128,250,39,135,202,35,101,
-                                        70,69,162,73,204>>}]}]}},
-                       {mfargs,
-                           {restartable,start_link,
-                               [{supervisor_cushion,start_link,
-                                    [projector,5000,infinity,ns_port_server,
-                                     start_link,
-                                     [#Fun<ns_child_ports_sup.4.5182122>]]},
-                                86400000]}},
-                       {restart_type,permanent},
-                       {shutdown,infinity},
-                       {child_type,worker}]
-
-[ns_server:debug,2019-07-21T21:58:19.011Z,babysitter_of_ns_1@127.0.0.1:<0.119.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
-[error_logger:info,2019-07-21T21:58:19.042Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+                                   <<232,210,40,203,226,175,86,43,88,59,13,
+                                     27,69,179,110,4,71,226,232,29,1,223,
+                                     102,3,242,217,128,127,53,111,72,3>>}]},
+                            {log,"indexer.log"}]}
+[ns_server:debug,2023-07-18T19:57:21.706Z,babysitter_of_ns_1@cb.local:<0.163.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[error_logger:info,2023-07-18T19:57:21.709Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ale_dynamic_sup}
-             started: [{pid,<0.121.0>},
-                       {name,'sink-indexer'},
+             started: [{pid,<0.165.0>},
+                       {id,'sink-indexer'},
                        {mfargs,
                         {ale_dynamic_sup,delay_death,
                          [{ale_disk_sink,start_link,
@@ -421,70 +359,139 @@ memcached<0.81.0>: 2019-07-21T21:58:17.892924+00:00 INFO Breakpad enabled. Minid
                        {shutdown,5000},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:19.099Z,babysitter_of_ns_1@127.0.0.1:<0.118.0>:restartable:start_child:98]Started child process <0.119.0>
+[ns_server:debug,2023-07-18T19:57:21.738Z,babysitter_of_ns_1@cb.local:<0.162.0>:restartable:start_child:98]Started child process <0.163.0>
   MFA: {supervisor_cushion,start_link,
                            [indexer,5000,infinity,ns_port_server,start_link,
-                            [#Fun<ns_child_ports_sup.4.5182122>]]}
-[ns_server:info,2019-07-21T21:58:19.099Z,babysitter_of_ns_1@127.0.0.1:ns_ports_manager<0.75.0>:ns_child_ports_sup:launch_port:96]supervising port: {query,"/opt/couchbase/bin/cbq-engine",
-                         ["--datastore=http://127.0.0.1:8091","--http=:8093",
-                          "--configstore=http://127.0.0.1:8091",
-                          "--enterprise=true","--ipv6=false","--https=:18093",
-                          "--certfile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
-                          "--keyfile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem",
-                          "--ssl_minimum_protocol=tlsv1"],
-                         [via_goport,exit_status,stderr_to_stdout,
-                          {env,[{"GOTRACEBACK","single"},
-                                {"CBAUTH_REVRPC_URL",
-                                 <<241,161,176,5,25,15,54,126,53,28,248,213,
-                                   202,139,183,114,78,202,132,25,236,67,69,87,
-                                   198,28,169,34,157,103,22,121>>},
-                                {"CBAUTH_TLS_CONFIG",
-                                 "{\"minTLSVersion\":\"tlsv1\",\"ciphersStrength\":[\"high\"]}"}]},
-                          {log,"query.log"}]}
-[error_logger:info,2019-07-21T21:58:19.099Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:info,2023-07-18T19:57:21.738Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_child_ports_sup}
-             started: [{pid,<0.118.0>},
-                       {name,
-                           {indexer,"/opt/couchbase/bin/indexer",
-                               ["-vbuckets=1024","-cluster=127.0.0.1:8091",
-                                "-adminPort=9100","-scanPort=9101",
+             started: [{pid,<0.162.0>},
+                       {id,{indexer,"/opt/couchbase/bin/indexer",
+                               ["-adminPort=9100","-scanPort=9101",
                                 "-httpPort=9102","-streamInitPort=9103",
                                 "-streamCatchupPort=9104",
-                                "-streamMaintPort=9105",
+                                "-streamMaintPort=9105","--httpsPort=19102",
+                                "--certFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
+                                "--keyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem",
+                                "-vbuckets=1024","-cluster=127.0.0.1:8091",
                                 "-storageDir=/opt/couchbase/var/lib/couchbase/data/@2i",
                                 "-diagDir=/opt/couchbase/var/lib/couchbase/crash",
-                                "-nodeUUID=8ba1ce2e183ff908d4723b87c7fdb9b3",
-                                "-ipv6=false","-isEnterprise=true",
-                                "--httpsPort=19102",
-                                "--certFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
-                                "--keyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem"],
+                                "-nodeUUID=fc6bd4a2dd76337f941781c7d450e484",
+                                "-ipv6=false","-isEnterprise=true"],
                                [via_goport,exit_status,stderr_to_stdout,
-                                {log,"indexer.log"},
                                 {env,
-                                    [{"GOTRACEBACK","single"},
+                                    [{"GODEBUG","madvdontneed=1"},
+                                     {"GOTRACEBACK","single"},
                                      {"CBAUTH_REVRPC_URL",
-                                      <<14,40,222,200,113,136,15,79,118,
-                                        24,228,75,135,90,21,34,193,134,
-                                        58,245,69,2,166,169,243,53,183,
-                                        100,224,53,216,189>>}]}]}},
+                                      <<232,210,40,203,226,175,86,43,88,59,
+                                        13,27,69,179,110,4,71,226,232,29,1,
+                                        223,102,3,242,217,128,127,53,111,72,
+                                        3>>}]},
+                                {log,"indexer.log"}]}},
                        {mfargs,
                            {restartable,start_link,
                                [{supervisor_cushion,start_link,
                                     [indexer,5000,infinity,ns_port_server,
                                      start_link,
-                                     [#Fun<ns_child_ports_sup.4.5182122>]]},
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
                                 86400000]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:19.099Z,babysitter_of_ns_1@127.0.0.1:<0.128.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
-[error_logger:info,2019-07-21T21:58:19.128Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:info,2023-07-18T19:57:21.738Z,babysitter_of_ns_1@cb.local:ns_ports_manager<0.109.0>:ns_child_ports_sup:launch_port:94]supervising port: {projector,"/opt/couchbase/bin/projector",
+                             ["--httpsPort=9999",
+                              "--certFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
+                              "--keyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem",
+                              "-kvaddrs=127.0.0.1:11210","-adminport=:9999",
+                              "-diagDir=/opt/couchbase/var/lib/couchbase/crash",
+                              "-ipv6=false","127.0.0.1:8091"],
+                             [via_goport,exit_status,stderr_to_stdout,
+                              {env,[{"GODEBUG","madvdontneed=1"},
+                                    {"GOTRACEBACK","single"},
+                                    {"CBAUTH_REVRPC_URL",
+                                     <<135,142,100,182,19,130,54,150,45,32,
+                                       81,50,24,49,27,164,192,194,151,225,
+                                       155,73,147,36,90,217,117,14,3,32,151,
+                                       240>>}]},
+                              {log,"projector.log"}]}
+[ns_server:debug,2023-07-18T19:57:21.739Z,babysitter_of_ns_1@cb.local:<0.172.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[error_logger:info,2023-07-18T19:57:21.749Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ale_dynamic_sup}
-             started: [{pid,<0.130.0>},
-                       {name,'sink-query'},
+             started: [{pid,<0.174.0>},
+                       {id,'sink-projector'},
+                       {mfargs,
+                        {ale_dynamic_sup,delay_death,
+                         [{ale_disk_sink,start_link,
+                           ['sink-projector',
+                            "/opt/couchbase/var/lib/couchbase/logs/projector.log",
+                            [{rotation,
+                              [{compress,true},
+                               {size,41943040},
+                               {num_files,10},
+                               {buffer_size_max,52428800}]}]]},
+                          1000]}},
+                       {restart_type,permanent},
+                       {shutdown,5000},
+                       {child_type,worker}]
+
+[ns_server:debug,2023-07-18T19:57:21.779Z,babysitter_of_ns_1@cb.local:<0.171.0>:restartable:start_child:98]Started child process <0.172.0>
+  MFA: {supervisor_cushion,start_link,
+                           [projector,5000,infinity,ns_port_server,start_link,
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:info,2023-07-18T19:57:21.779Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ns_child_ports_sup}
+             started: [{pid,<0.171.0>},
+                       {id,{projector,"/opt/couchbase/bin/projector",
+                               ["--httpsPort=9999",
+                                "--certFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
+                                "--keyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem",
+                                "-kvaddrs=127.0.0.1:11210","-adminport=:9999",
+                                "-diagDir=/opt/couchbase/var/lib/couchbase/crash",
+                                "-ipv6=false","127.0.0.1:8091"],
+                               [via_goport,exit_status,stderr_to_stdout,
+                                {env,
+                                    [{"GODEBUG","madvdontneed=1"},
+                                     {"GOTRACEBACK","single"},
+                                     {"CBAUTH_REVRPC_URL",
+                                      <<135,142,100,182,19,130,54,150,45,32,
+                                        81,50,24,49,27,164,192,194,151,225,
+                                        155,73,147,36,90,217,117,14,3,32,
+                                        151,240>>}]},
+                                {log,"projector.log"}]}},
+                       {mfargs,
+                           {restartable,start_link,
+                               [{supervisor_cushion,start_link,
+                                    [projector,5000,infinity,ns_port_server,
+                                     start_link,
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
+                                86400000]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,worker}]
+
+[ns_server:info,2023-07-18T19:57:21.779Z,babysitter_of_ns_1@cb.local:ns_ports_manager<0.109.0>:ns_child_ports_sup:launch_port:94]supervising port: {query,"/opt/couchbase/bin/cbq-engine",
+                         ["--datastore=http://127.0.0.1:8091","--http=:8093",
+                          "--configstore=http://127.0.0.1:8091",
+                          "--enterprise=true","--ipv6=false","--https=:18093",
+                          "--certfile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
+                          "--keyfile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem"],
+                         [via_goport,exit_status,stderr_to_stdout,
+                          {env,[{"GOTRACEBACK","single"},
+                                {"CBAUTH_REVRPC_URL",
+                                 <<82,81,52,83,90,201,69,222,34,139,11,229,
+                                   29,58,210,60,244,249,127,233,117,32,194,
+                                   4,29,215,43,194,15,52,194,131>>}]},
+                          {log,"query.log"}]}
+[ns_server:debug,2023-07-18T19:57:21.779Z,babysitter_of_ns_1@cb.local:<0.181.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[error_logger:info,2023-07-18T19:57:21.784Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
+=========================PROGRESS REPORT=========================
+          supervisor: {local,ale_dynamic_sup}
+             started: [{pid,<0.183.0>},
+                       {id,'sink-query'},
                        {mfargs,
                         {ale_dynamic_sup,delay_death,
                          [{ale_disk_sink,start_link,
@@ -500,78 +507,69 @@ memcached<0.81.0>: 2019-07-21T21:58:17.892924+00:00 INFO Breakpad enabled. Minid
                        {shutdown,5000},
                        {child_type,worker}]
 
-[ns_server:info,2019-07-21T21:58:19.221Z,babysitter_of_ns_1@127.0.0.1:<0.81.0>:ns_port_server:log:223]memcached<0.81.0>: 2019-07-21T21:58:19.017519+00:00 WARNING (datadog-test) Transitioning from "off"->"passive" compression mode
-memcached<0.81.0>: 2019-07-21T21:58:19.053263+00:00 WARNING (datadog-test) Slow runtime for 'Warmup - completion' on thread reader_worker_1: 10 ms
-
-[ns_server:debug,2019-07-21T21:58:19.226Z,babysitter_of_ns_1@127.0.0.1:<0.127.0>:restartable:start_child:98]Started child process <0.128.0>
+[ns_server:debug,2023-07-18T19:57:21.819Z,babysitter_of_ns_1@cb.local:<0.180.0>:restartable:start_child:98]Started child process <0.181.0>
   MFA: {supervisor_cushion,start_link,
                            [query,5000,infinity,ns_port_server,start_link,
-                            [#Fun<ns_child_ports_sup.4.5182122>]]}
-[ns_server:info,2019-07-21T21:58:19.227Z,babysitter_of_ns_1@127.0.0.1:ns_ports_manager<0.75.0>:ns_child_ports_sup:launch_port:96]supervising port: {fts,"/opt/couchbase/bin/cbft",
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[ns_server:info,2023-07-18T19:57:21.819Z,babysitter_of_ns_1@cb.local:ns_ports_manager<0.109.0>:ns_child_ports_sup:launch_port:94]supervising port: {fts,"/opt/couchbase/bin/cbft",
                        ["-cfg=metakv",
-                        [45,117,117,105,100,61|
-                         <<"8ba1ce2e183ff908d4723b87c7fdb9b3">>],
+                        "-uuid=fc6bd4a2dd76337f941781c7d450e484",
                         "-server=http://127.0.0.1:8091",
-                        [45,98,105,110,100,72,116,116,112,61,"127.0.0.1",58,
-                         "8094",44,"0.0.0.0",58,"8094"],
                         "-dataDir=/opt/couchbase/var/lib/couchbase/data/@fts",
                         "-tags=feed,janitor,pindex,queryer,cbauth_service",
-                        "-auth=cbauth",
-                        [45,101,120,116,114,97,61,"127.0.0.1",58,"8091"],
+                        "-auth=cbauth","-extra=127.0.0.1:8091",
                         "-options=startCheckServer=skip,slowQueryLogTimeout=5s,defaultMaxPartitionsPerPIndex=171,bleveMaxResultWindow=10000,failoverAssignAllPrimaries=false,hideUI=true,cbaudit=true,ipv6=false,ftsMemoryQuota=262144000,maxReplicasAllowed=3,bucketTypesAllowed=membase:ephemeral,http2=true,vbuckets=1024",
+                        "-bindHttp=127.0.0.1:8094,0.0.0.0:8094",
                         "-bindHttps=:18094",
                         "-tlsCertFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
-                        "-tlsKeyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem"],
+                        "-tlsKeyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem",
+                        "-bindGrpc=127.0.0.1:9130,0.0.0.0:9130",
+                        "-bindGrpcSsl=127.0.0.1:19130,0.0.0.0:19130"],
                        [via_goport,exit_status,stderr_to_stdout,
-                        {log,"fts.log"},
                         {env,[{"GOTRACEBACK","single"},
                               {"CBAUTH_REVRPC_URL",
-                               <<72,54,97,87,215,136,102,254,178,75,210,63,
-                                 202,165,239,59,33,157,124,122,88,39,105,228,
-                                 93,11,89,91,208,38,215,224>>},
-                              {"CBAUTH_TLS_CONFIG",
-                               "{\"minTLSVersion\":\"tlsv1\",\"ciphersStrength\":[\"high\"]}"}]}]}
-[error_logger:info,2019-07-21T21:58:19.227Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+                               <<59,214,95,35,123,168,180,152,244,25,58,110,
+                                 83,210,109,71,216,223,15,208,248,213,122,
+                                 129,16,218,242,152,231,119,213,19>>}]},
+                        {log,"fts.log"}]}
+[error_logger:info,2023-07-18T19:57:21.819Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_child_ports_sup}
-             started: [{pid,<0.127.0>},
-                       {name,
-                           {query,"/opt/couchbase/bin/cbq-engine",
+             started: [{pid,<0.180.0>},
+                       {id,{query,"/opt/couchbase/bin/cbq-engine",
                                ["--datastore=http://127.0.0.1:8091",
                                 "--http=:8093",
                                 "--configstore=http://127.0.0.1:8091",
                                 "--enterprise=true","--ipv6=false",
                                 "--https=:18093",
                                 "--certfile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
-                                "--keyfile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem",
-                                "--ssl_minimum_protocol=tlsv1"],
+                                "--keyfile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem"],
                                [via_goport,exit_status,stderr_to_stdout,
                                 {env,
                                     [{"GOTRACEBACK","single"},
                                      {"CBAUTH_REVRPC_URL",
-                                      <<241,161,176,5,25,15,54,126,53,28,248,
-                                        213,202,139,183,114,78,202,132,25,236,
-                                        67,69,87,198,28,169,34,157,103,22,121>>},
-                                     {"CBAUTH_TLS_CONFIG",
-                                      "{\"minTLSVersion\":\"tlsv1\",\"ciphersStrength\":[\"high\"]}"}]},
+                                      <<82,81,52,83,90,201,69,222,34,139,11,
+                                        229,29,58,210,60,244,249,127,233,
+                                        117,32,194,4,29,215,43,194,15,52,
+                                        194,131>>}]},
                                 {log,"query.log"}]}},
                        {mfargs,
                            {restartable,start_link,
                                [{supervisor_cushion,start_link,
                                     [query,5000,infinity,ns_port_server,
                                      start_link,
-                                     [#Fun<ns_child_ports_sup.4.5182122>]]},
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
                                 86400000]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:19.227Z,babysitter_of_ns_1@127.0.0.1:<0.137.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
-[error_logger:info,2019-07-21T21:58:19.260Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:debug,2023-07-18T19:57:21.819Z,babysitter_of_ns_1@cb.local:<0.190.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[error_logger:info,2023-07-18T19:57:21.849Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ale_dynamic_sup}
-             started: [{pid,<0.139.0>},
-                       {name,'sink-fts'},
+             started: [{pid,<0.192.0>},
+                       {id,'sink-fts'},
                        {mfargs,
                         {ale_dynamic_sup,delay_death,
                          [{ale_disk_sink,start_link,
@@ -587,85 +585,83 @@ memcached<0.81.0>: 2019-07-21T21:58:19.053263+00:00 WARNING (datadog-test) Slow 
                        {shutdown,5000},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:19.330Z,babysitter_of_ns_1@127.0.0.1:<0.136.0>:restartable:start_child:98]Started child process <0.137.0>
+[ns_server:debug,2023-07-18T19:57:21.891Z,babysitter_of_ns_1@cb.local:<0.189.0>:restartable:start_child:98]Started child process <0.190.0>
   MFA: {supervisor_cushion,start_link,
                            [fts,5000,infinity,ns_port_server,start_link,
-                            [#Fun<ns_child_ports_sup.4.5182122>]]}
-[ns_server:info,2019-07-21T21:58:19.331Z,babysitter_of_ns_1@127.0.0.1:ns_ports_manager<0.75.0>:ns_child_ports_sup:launch_port:96]supervising port: {cbas,"/opt/couchbase/bin/cbas",
-                        ["-uuid=8ba1ce2e183ff908d4723b87c7fdb9b3",
-                         "-serverAddress=127.0.0.1","-serverPort=8091",
-                         "-bindHttpAddress=127.0.0.1","-bindHttpPort=8095",
-                         "-bindAdminPort=9110",
-                         "-cbasExecutable=/opt/couchbase/bin/cbas",
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[ns_server:info,2023-07-18T19:57:21.891Z,babysitter_of_ns_1@cb.local:ns_ports_manager<0.109.0>:ns_child_ports_sup:launch_port:94]supervising port: {cbas,"/opt/couchbase/bin/cbas",
+                        ["-serverPort=8091","-serverSslPort=18091",
+                         "-bindHttpPort=8095","-bindAdminPort=9110",
                          "-debugPort=-1","-ccHttpPort=9111",
                          "-ccClusterPort=9112","-ccClientPort=9113",
                          "-consolePort=9114","-clusterPort=9115",
                          "-dataPort=9116","-resultPort=9117",
                          "-messagingPort=9118","-metadataPort=9121",
-                         "-metadataCallbackPort=9119","-memoryQuotaMb=1024",
-                         "-parentPort=9122","-bindReplicationPort=9120",
-                         "-ipv6=false",
-                         "-logDir=/opt/couchbase/var/lib/couchbase/logs",
-                         "-dataDir=/opt/couchbase/var/lib/couchbase/data/@analytics",
-                         "-bindHttpsPort=18095",
+                         "-metadataCallbackPort=9119","-parentPort=9122",
+                         "-bindReplicationPort=9120","-bindHttpsPort=18095",
                          "-tlsCertFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
-                         "-tlsKeyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem"],
+                         "-tlsKeyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem",
+                         "-uuid=fc6bd4a2dd76337f941781c7d450e484",
+                         "-serverAddress=127.0.0.1",
+                         "-bindHttpAddress=127.0.0.1",
+                         "-cbasExecutable=/opt/couchbase/bin/cbas",
+                         "-memoryQuotaMb=1024","-ipv6=false",
+                         "-logDir=/opt/couchbase/var/lib/couchbase/logs",
+                         "-tmpDir=/opt/couchbase/var/lib/couchbase/tmp",
+                         "-logRotationSize=41943040",
+                         "-logRotationNumFiles=10","-logLevel=debug",
+                         "-dataDir=/opt/couchbase/var/lib/couchbase/data/@analytics"],
                         [via_goport,exit_status,stderr_to_stdout,
-                         {log,"analytics_info.log"},
                          {env,[{"GOTRACEBACK","single"},
                                {"CBAUTH_REVRPC_URL",
-                                <<60,127,138,210,228,71,84,248,97,81,198,
-                                  40,20,12,88,140,244,197,137,255,143,4,
-                                  63,117,98,120,68,48,177,42,183,34>>}]}]}
-[error_logger:info,2019-07-21T21:58:19.331Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+                                <<235,229,145,183,211,219,244,151,156,98,
+                                  131,86,44,225,2,166,168,246,209,123,51,98,
+                                  241,109,108,178,197,35,198,206,27,149>>}]},
+                         {log,"analytics_info.log"}]}
+[error_logger:info,2023-07-18T19:57:21.891Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_child_ports_sup}
-             started: [{pid,<0.136.0>},
-                       {name,
-                           {fts,"/opt/couchbase/bin/cbft",
+             started: [{pid,<0.189.0>},
+                       {id,{fts,"/opt/couchbase/bin/cbft",
                                ["-cfg=metakv",
-                                [45,117,117,105,100,61|
-                                 <<"8ba1ce2e183ff908d4723b87c7fdb9b3">>],
+                                "-uuid=fc6bd4a2dd76337f941781c7d450e484",
                                 "-server=http://127.0.0.1:8091",
-                                [45,98,105,110,100,72,116,116,112,61,
-                                 "127.0.0.1",58,"8094",44,"0.0.0.0",58,"8094"],
                                 "-dataDir=/opt/couchbase/var/lib/couchbase/data/@fts",
                                 "-tags=feed,janitor,pindex,queryer,cbauth_service",
-                                "-auth=cbauth",
-                                [45,101,120,116,114,97,61,"127.0.0.1",58,
-                                 "8091"],
+                                "-auth=cbauth","-extra=127.0.0.1:8091",
                                 "-options=startCheckServer=skip,slowQueryLogTimeout=5s,defaultMaxPartitionsPerPIndex=171,bleveMaxResultWindow=10000,failoverAssignAllPrimaries=false,hideUI=true,cbaudit=true,ipv6=false,ftsMemoryQuota=262144000,maxReplicasAllowed=3,bucketTypesAllowed=membase:ephemeral,http2=true,vbuckets=1024",
+                                "-bindHttp=127.0.0.1:8094,0.0.0.0:8094",
                                 "-bindHttps=:18094",
                                 "-tlsCertFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
-                                "-tlsKeyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem"],
+                                "-tlsKeyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem",
+                                "-bindGrpc=127.0.0.1:9130,0.0.0.0:9130",
+                                "-bindGrpcSsl=127.0.0.1:19130,0.0.0.0:19130"],
                                [via_goport,exit_status,stderr_to_stdout,
-                                {log,"fts.log"},
                                 {env,
                                     [{"GOTRACEBACK","single"},
                                      {"CBAUTH_REVRPC_URL",
-                                      <<72,54,97,87,215,136,102,254,178,75,
-                                        210,63,202,165,239,59,33,157,124,122,
-                                        88,39,105,228,93,11,89,91,208,38,215,
-                                        224>>},
-                                     {"CBAUTH_TLS_CONFIG",
-                                      "{\"minTLSVersion\":\"tlsv1\",\"ciphersStrength\":[\"high\"]}"}]}]}},
+                                      <<59,214,95,35,123,168,180,152,244,25,
+                                        58,110,83,210,109,71,216,223,15,208,
+                                        248,213,122,129,16,218,242,152,231,
+                                        119,213,19>>}]},
+                                {log,"fts.log"}]}},
                        {mfargs,
                            {restartable,start_link,
                                [{supervisor_cushion,start_link,
                                     [fts,5000,infinity,ns_port_server,
                                      start_link,
-                                     [#Fun<ns_child_ports_sup.4.5182122>]]},
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
                                 86400000]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:19.331Z,babysitter_of_ns_1@127.0.0.1:<0.146.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
-[error_logger:info,2019-07-21T21:58:19.384Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+[ns_server:debug,2023-07-18T19:57:21.892Z,babysitter_of_ns_1@cb.local:<0.199.0>:supervisor_cushion:init:39]starting ns_port_server with delay of 5000
+[error_logger:info,2023-07-18T19:57:21.895Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ale_dynamic_sup}
-             started: [{pid,<0.148.0>},
-                       {name,'sink-cbas'},
+             started: [{pid,<0.202.0>},
+                       {id,'sink-cbas'},
                        {mfargs,
                         {ale_dynamic_sup,delay_death,
                          [{ale_disk_sink,start_link,
@@ -681,53 +677,58 @@ memcached<0.81.0>: 2019-07-21T21:58:19.053263+00:00 WARNING (datadog-test) Slow 
                        {shutdown,5000},
                        {child_type,worker}]
 
-[ns_server:debug,2019-07-21T21:58:19.525Z,babysitter_of_ns_1@127.0.0.1:<0.145.0>:restartable:start_child:98]Started child process <0.146.0>
+[ns_server:debug,2023-07-18T19:57:21.964Z,babysitter_of_ns_1@cb.local:<0.198.0>:restartable:start_child:98]Started child process <0.199.0>
   MFA: {supervisor_cushion,start_link,
                            [cbas,5000,infinity,ns_port_server,start_link,
-                            [#Fun<ns_child_ports_sup.4.5182122>]]}
-[error_logger:info,2019-07-21T21:58:19.525Z,babysitter_of_ns_1@127.0.0.1:error_logger<0.6.0>:ale_error_logger_handler:do_log:203]
+                            [#Fun<ns_child_ports_sup.4.69815219>]]}
+[error_logger:info,2023-07-18T19:57:21.964Z,babysitter_of_ns_1@cb.local:error_logger<0.32.0>:ale_error_logger_handler:do_log:203]
 =========================PROGRESS REPORT=========================
           supervisor: {local,ns_child_ports_sup}
-             started: [{pid,<0.145.0>},
-                       {name,
-                           {cbas,"/opt/couchbase/bin/cbas",
-                               ["-uuid=8ba1ce2e183ff908d4723b87c7fdb9b3",
-                                "-serverAddress=127.0.0.1","-serverPort=8091",
-                                "-bindHttpAddress=127.0.0.1",
+             started: [{pid,<0.198.0>},
+                       {id,{cbas,"/opt/couchbase/bin/cbas",
+                               ["-serverPort=8091","-serverSslPort=18091",
                                 "-bindHttpPort=8095","-bindAdminPort=9110",
-                                "-cbasExecutable=/opt/couchbase/bin/cbas",
                                 "-debugPort=-1","-ccHttpPort=9111",
                                 "-ccClusterPort=9112","-ccClientPort=9113",
                                 "-consolePort=9114","-clusterPort=9115",
                                 "-dataPort=9116","-resultPort=9117",
                                 "-messagingPort=9118","-metadataPort=9121",
                                 "-metadataCallbackPort=9119",
-                                "-memoryQuotaMb=1024","-parentPort=9122",
-                                "-bindReplicationPort=9120","-ipv6=false",
-                                "-logDir=/opt/couchbase/var/lib/couchbase/logs",
-                                "-dataDir=/opt/couchbase/var/lib/couchbase/data/@analytics",
+                                "-parentPort=9122",
+                                "-bindReplicationPort=9120",
                                 "-bindHttpsPort=18095",
                                 "-tlsCertFile=/opt/couchbase/var/lib/couchbase/config/memcached-cert.pem",
-                                "-tlsKeyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem"],
+                                "-tlsKeyFile=/opt/couchbase/var/lib/couchbase/config/memcached-key.pem",
+                                "-uuid=fc6bd4a2dd76337f941781c7d450e484",
+                                "-serverAddress=127.0.0.1",
+                                "-bindHttpAddress=127.0.0.1",
+                                "-cbasExecutable=/opt/couchbase/bin/cbas",
+                                "-memoryQuotaMb=1024","-ipv6=false",
+                                "-logDir=/opt/couchbase/var/lib/couchbase/logs",
+                                "-tmpDir=/opt/couchbase/var/lib/couchbase/tmp",
+                                "-logRotationSize=41943040",
+                                "-logRotationNumFiles=10","-logLevel=debug",
+                                "-dataDir=/opt/couchbase/var/lib/couchbase/data/@analytics"],
                                [via_goport,exit_status,stderr_to_stdout,
-                                {log,"analytics_info.log"},
                                 {env,
                                     [{"GOTRACEBACK","single"},
                                      {"CBAUTH_REVRPC_URL",
-                                      <<60,127,138,210,228,71,84,248,97,
-                                        81,198,40,20,12,88,140,244,197,
-                                        137,255,143,4,63,117,98,120,68,
-                                        48,177,42,183,34>>}]}]}},
+                                      <<235,229,145,183,211,219,244,151,156,
+                                        98,131,86,44,225,2,166,168,246,209,
+                                        123,51,98,241,109,108,178,197,35,
+                                        198,206,27,149>>}]},
+                                {log,"analytics_info.log"}]}},
                        {mfargs,
                            {restartable,start_link,
                                [{supervisor_cushion,start_link,
                                     [cbas,5000,infinity,ns_port_server,
                                      start_link,
-                                     [#Fun<ns_child_ports_sup.4.5182122>]]},
+                                     [#Fun<ns_child_ports_sup.4.69815219>]]},
                                 86400000]}},
                        {restart_type,permanent},
                        {shutdown,infinity},
                        {child_type,worker}]
 
-[ns_server:info,2019-07-21T21:58:33.886Z,babysitter_of_ns_1@127.0.0.1:<0.81.0>:ns_port_server:log:223]memcached<0.81.0>: 2019-07-21T21:58:33.595244+00:00 WARNING 72: Slow operation. {"cid":"127.0.0.1:56232/e03de","duration":"2075 ms","trace":"request=23979904009344:2075703","command":"STAT<ud>vbucket-details</ud>","peer":"127.0.0.1:56232"}
+[ns_server:info,2023-07-18T19:57:22.235Z,babysitter_of_ns_1@cb.local:<0.115.0>:ns_port_server:log:224]memcached<0.115.0>: 2023-07-18T19:57:22.024665+00:00 WARNING (datadog-test) Slow runtime for 'Warmup - populate VB Map: shard 4' on thread reader_worker_0: 1832 us
+memcached<0.115.0>: 2023-07-18T19:57:22.042644+00:00 WARNING (datadog-test) Slow runtime for 'Warmup - completion' on thread reader_worker_3: 3343 us
 
