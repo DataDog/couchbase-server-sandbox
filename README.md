@@ -12,7 +12,7 @@ You should need nothing installed on your machine except Docker. Type:
 docker run --rm -p 8091-8095:8091-8095 -p 11210:11210 $(docker build -q --no-cache .)
 ```
 
-(Replace "6.0.1" with the version of Couchbase Server you wish to explore.)
+(Replace "6.6.5" with the version of Couchbase Server you wish to explore.)
 
 Then visit [http://localhost:8091/](http://localhost:8091/) for the Server user interface. The login credentials are Administrator / password. You can also
 see this information by typing "docker logs couchbase-sandbox".

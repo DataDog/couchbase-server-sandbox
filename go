@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 
-TAG=6.0.1
+TAG=6.6.5
 IMAGE=couchbase/server-sandbox
 
 docker build -t ${IMAGE}:${TAG} .

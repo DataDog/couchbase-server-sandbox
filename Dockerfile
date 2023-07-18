@@ -1,4 +1,4 @@
-FROM couchbase/server:6.0.1
+FROM couchbase/server:6.6.5
 
 COPY var /opt/couchbase/var
 COPY scripts/configure-node.sh /etc/service/config-couchbase/run
