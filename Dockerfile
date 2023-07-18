@@ -1,6 +1,6 @@
 FROM couchbase/server:6.6.5
 
-VOLUME ./var /opt/couchbase/var
+Copy ./var /opt/couchbase/var
 COPY scripts/configure-node.sh /etc/service/config-couchbase/run
 COPY scripts/create-document.txt /opt/couchbase
 COPY scripts/create-index.json /opt/couchbase
